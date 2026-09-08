@@ -27,7 +27,7 @@ const AboutPage: React.FC = () => {
           
           <AnimatedSection delay={0.1}>
              <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-               Hussain X Company is a premium Software House and Digital Marketing agency based in Model Town Q Block, Lahore. We transform ideas into powerful digital experiences.
+               Hussain X Solutions is a premium Software House and Digital Marketing agency based in Model Town Q Block, Lahore. We transform bold ideas into powerful, scalable digital experiences that drive real business results.
              </p>
           </AnimatedSection>
         </div>
@@ -62,10 +62,10 @@ const AboutPage: React.FC = () => {
              <AnimatedSection direction="left">
                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Empowering Businesses in the Digital Age</h2>
                <p className="text-slate-400 mb-6 leading-relaxed">
-                 From robust custom software solutions to data-driven social media marketing campaigns, our mission is to provide an all-in-one ecosystem for modern businesses to thrive. 
+                 From robust custom software and high-performance mobile applications to data-driven social media marketing and creative branding — our mission is to provide a complete, all-in-one digital ecosystem for modern businesses to thrive and grow.
                </p>
                <p className="text-slate-400 leading-relaxed">
-                 Located in the heart of Lahore, our talented team of developers, designers, and marketers work closely with clients worldwide to ensure their digital presence is powerful, engaging, and result-oriented.
+                 Based in the heart of Lahore, our expert team of developers, designers, and marketers collaborate closely with clients across Pakistan and worldwide — ensuring every digital solution we deliver is powerful, scalable, and results-oriented.
                </p>
              </AnimatedSection>
              <AnimatedSection direction="right" className="relative">

@@ -14,7 +14,7 @@ export const CTASection = () => {
             Ready to Build Your Digital Solution?
           </h2>
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10">
-            Let's discuss how HUSSAIN X COMPANY can transform your business with complete digital solutions.
+            Let's discuss how <span className="text-[#ED7A21] font-semibold">Hussain X Solutions</span> can transform your business with cutting-edge software, creative design, and powerful digital marketing strategies.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

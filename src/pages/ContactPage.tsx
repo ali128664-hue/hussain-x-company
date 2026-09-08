@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
                Get in <GradientText>Touch</GradientText>
             </h1>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-              Ready to start your digital journey? Contact us today to discuss your project.
+              Have a project in mind? We'd love to hear about it. Reach out to us and let's build something extraordinary together.
             </p>
           </AnimatedSection>
 
@@ -56,7 +56,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-medium mb-1">Email Address</h4>
-                    <a href="mailto:info@hussainxcompany.com" className="text-slate-400 hover:text-[#ED7A21] transition-colors">info@hussainxcompany.com</a>
+                    <a href="mailto:info@hussainxsolutions.com" className="text-slate-400 hover:text-[#ED7A21] transition-colors">info@hussainxsolutions.com</a>
                   </div>
                 </div>
               </AnimatedSection>

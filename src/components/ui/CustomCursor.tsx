@@ -1,87 +1,116 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 export const CustomCursor = () => {
-  const cursorX = useMotionValue(-100);
-  const cursorY = useMotionValue(-100);
+  // --- Dot (snappy, follows mouse exactly) ---
+  const dotX = useMotionValue(-100);
+  const dotY = useMotionValue(-100);
 
-  // Very snappy, high-stiffness spring for zero-lag feel
-  const springConfig = { damping: 25, stiffness: 600, mass: 0.1 };
-  const x = useSpring(cursorX, springConfig);
-  const y = useSpring(cursorY, springConfig);
+  // --- Ring (smooth, slightly lagged) ---
+  const ringX = useMotionValue(-100);
+  const ringY = useMotionValue(-100);
+  const springRing = { damping: 22, stiffness: 180, mass: 0.5 };
+  const smoothX = useSpring(ringX, springRing);
+  const smoothY = useSpring(ringY, springRing);
 
-  const [hoverState, setHoverState] = useState<'default' | 'hover'>('default');
+  const [isHovering, setIsHovering] = useState(false);
+  const [isClicking, setIsClicking] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX);
-      cursorY.set(e.clientY);
+    // Touch devices — hide cursor
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
+    const onMove = (e: MouseEvent) => {
+      dotX.set(e.clientX);
+      dotY.set(e.clientY);
+      ringX.set(e.clientX);
+      ringY.set(e.clientY);
       if (!isVisible) setIsVisible(true);
     };
 
-    const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const isClickable = 
-        target.closest('a') || 
-        target.closest('button') || 
-        window.getComputedStyle(target).cursor === 'pointer';
-        
-      setHoverState(isClickable ? 'hover' : 'default');
+    const onOver = (e: MouseEvent) => {
+      const el = e.target as HTMLElement;
+      const clickable =
+        el.closest('a') ||
+        el.closest('button') ||
+        el.closest('[role="button"]') ||
+        window.getComputedStyle(el).cursor === 'pointer';
+      setIsHovering(!!clickable);
     };
 
-    const handleMouseLeave = () => setIsVisible(false);
-    const handleMouseEnter = () => setIsVisible(true);
+    const onDown = () => setIsClicking(true);
+    const onUp   = () => setIsClicking(false);
+    const onLeave = () => setIsVisible(false);
+    const onEnter = () => setIsVisible(true);
 
-    window.addEventListener('mousemove', moveCursor);
-    window.addEventListener('mouseover', handleMouseOver);
-    document.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('mouseenter', handleMouseEnter);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseover', onOver);
+    window.addEventListener('mousedown', onDown);
+    window.addEventListener('mouseup', onUp);
+    document.addEventListener('mouseleave', onLeave);
+    document.addEventListener('mouseenter', onEnter);
 
     return () => {
-      window.removeEventListener('mousemove', moveCursor);
-      window.removeEventListener('mouseover', handleMouseOver);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      document.removeEventListener('mouseenter', handleMouseEnter);
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseover', onOver);
+      window.removeEventListener('mousedown', onDown);
+      window.removeEventListener('mouseup', onUp);
+      document.removeEventListener('mouseleave', onLeave);
+      document.removeEventListener('mouseenter', onEnter);
     };
-  }, [isVisible, cursorX, cursorY]);
+  }, [isVisible]);
 
+  // Hide on touch screens
   if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
     return null;
   }
 
-  const isHovering = hoverState === 'hover';
-
   return (
-    <motion.div
-      className="fixed top-0 left-0 rounded-full pointer-events-none z-[10000] flex items-center justify-center mix-blend-difference bg-white overflow-hidden"
-      style={{
-        x,
-        y,
-        translateX: '-50%',
-        translateY: '-50%',
-        width: isHovering ? '100px' : '20px',
-        height: isHovering ? '100px' : '20px',
-        opacity: isVisible ? 1 : 0,
-      }}
-      transition={{ 
-        width: { type: 'spring', damping: 20, stiffness: 300 },
-        height: { type: 'spring', damping: 20, stiffness: 300 }
-      }}
-    >
-      <motion.span
-        initial={false}
-        animate={{ 
-          opacity: isHovering ? 1 : 0, 
-          scale: isHovering ? 1 : 0,
-          y: isHovering ? 0 : 20
+    <>
+      {/* ── Outer ring ── */}
+      <motion.div
+        className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full border-2 border-[#ED7A21]"
+        style={{
+          x: smoothX,
+          y: smoothY,
+          translateX: '-50%',
+          translateY: '-50%',
+          opacity: isVisible ? 1 : 0,
         }}
-        transition={{ duration: 0.2 }}
-        className="text-black text-[11px] font-extrabold tracking-[0.25em] mix-blend-normal absolute whitespace-nowrap"
-      >
-        EXPLORE
-      </motion.span>
-    </motion.div>
+        animate={{
+          width:  isClicking ? 28 : isHovering ? 48 : 36,
+          height: isClicking ? 28 : isHovering ? 48 : 36,
+          backgroundColor: isHovering
+            ? 'rgba(237,122,33,0.12)'
+            : 'rgba(237,122,33,0)',
+          boxShadow: isHovering
+            ? '0 0 18px 4px rgba(237,122,33,0.35)'
+            : '0 0 0px 0px rgba(237,122,33,0)',
+        }}
+        transition={{ type: 'spring', damping: 20, stiffness: 250 }}
+      />
+
+      {/* ── Inner dot ── */}
+      <motion.div
+        className="fixed top-0 left-0 pointer-events-none z-[10000] rounded-full bg-[#ED7A21]"
+        style={{
+          x: dotX,
+          y: dotY,
+          translateX: '-50%',
+          translateY: '-50%',
+          opacity: isVisible ? 1 : 0,
+        }}
+        animate={{
+          width:  isClicking ? 5 : isHovering ? 6 : 8,
+          height: isClicking ? 5 : isHovering ? 6 : 8,
+          boxShadow: isHovering
+            ? '0 0 8px 2px rgba(237,122,33,0.7)'
+            : '0 0 0px 0px rgba(237,122,33,0)',
+        }}
+        transition={{ type: 'spring', damping: 25, stiffness: 700, mass: 0.1 }}
+      />
+    </>
   );
 };
 

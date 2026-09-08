@@ -363,8 +363,154 @@ export const services: Service[] = [
       { name: 'Code Refactoring', description: 'Improving existing code for better maintainability.' },
       { name: '24/7 Technical Support', description: 'Dedicated help desk for critical issues.' }
     ]
+  },
+  {
+    id: 'wordpress',
+    number: '19',
+    title: 'WordPress Development',
+    tagline: 'Powerful, flexible, and fully custom WordPress websites.',
+    description: 'We build fast, secure, and SEO-friendly WordPress websites tailored to your brand. From custom themes and page builders to WooCommerce stores and membership portals, we unlock the full power of the world\'s most popular CMS for your business.',
+    icon: 'Layout',
+    gradient: 'from-blue-500 to-indigo-600',
+    category: 'design',
+    technologies: ['WordPress', 'WooCommerce', 'Elementor', 'ACF', 'PHP', 'MySQL'],
+    subServices: [
+      { name: 'Custom Theme Development', description: 'Bespoke WordPress themes built from scratch to match your brand identity.' },
+      { name: 'Plugin Development', description: 'Custom plugins that add unique features not available off-the-shelf.' },
+      { name: 'WooCommerce Integration', description: 'Full-featured online stores powered by WooCommerce.' },
+      { name: 'WordPress Migration', description: 'Safely moving your site to WordPress from any other platform.' },
+      { name: 'Performance Optimization', description: 'Speed tuning, caching, and CDN setup for blazing-fast load times.' },
+      { name: 'WordPress SEO Setup', description: 'Technical SEO configuration with Yoast or RankMath.' },
+      { name: 'Security Hardening', description: 'Protecting your WordPress site from hackers and malware.' },
+      { name: 'Maintenance & Updates', description: 'Ongoing plugin, theme, and core updates to keep your site stable.' }
+    ]
+  },
+  {
+    id: 'shopify',
+    number: '20',
+    title: 'Shopify Development',
+    tagline: 'High-converting Shopify stores built to sell more.',
+    description: 'We design and develop professional Shopify stores that are optimized for sales, speed, and user experience. From custom Shopify themes to advanced app integrations and Shopify Plus solutions, we help your e-commerce business grow.',
+    icon: 'ShoppingCart',
+    gradient: 'from-green-400 to-emerald-600',
+    category: 'design',
+    technologies: ['Shopify', 'Shopify Plus', 'Liquid', 'JavaScript', 'Stripe', 'PayPal'],
+    subServices: [
+      { name: 'Custom Shopify Theme Design', description: 'Unique, brand-aligned store designs that convert browsers into buyers.' },
+      { name: 'Shopify Store Setup', description: 'Complete store configuration including products, collections, and shipping.' },
+      { name: 'Shopify App Integration', description: 'Connecting apps for reviews, loyalty programs, email marketing, and more.' },
+      { name: 'Payment Gateway Setup', description: 'Integrating Stripe, PayPal, and local Pakistani payment gateways.' },
+      { name: 'Shopify Plus Development', description: 'Enterprise-grade solutions for high-volume Shopify Plus merchants.' },
+      { name: 'Shopify Migration', description: 'Moving your store from WooCommerce, Magento, or any other platform.' },
+      { name: 'Conversion Rate Optimization', description: 'A/B testing and UX improvements to increase your store\'s sales rate.' },
+      { name: 'Shopify SEO', description: 'Optimizing product pages, collections, and site structure for Google rankings.' }
+    ]
+  },
+  {
+    id: 'ppc',
+    number: '21',
+    title: 'Pay-Per-Click Advertising (PPC)',
+    tagline: 'Targeted ad campaigns that deliver instant, measurable results.',
+    description: 'Our certified PPC specialists manage high-ROI advertising campaigns on Google, Meta, and other platforms. We create data-driven ad strategies that put your brand in front of the right audience at the right moment — maximizing every rupee of your ad budget.',
+    icon: 'BarChart',
+    gradient: 'from-yellow-400 to-orange-500',
+    category: 'marketing',
+    technologies: ['Google Ads', 'Meta Ads Manager', 'Google Analytics 4', 'Meta Pixel', 'Looker Studio', 'SEMrush'],
+    subServices: [
+      { name: 'Google Search Ads', description: 'Top-of-page ads targeting users actively searching for your services.' },
+      { name: 'Google Display Ads', description: 'Visual banner ads across millions of websites in Google\'s network.' },
+      { name: 'Meta (Facebook & Instagram) Ads', description: 'Highly targeted social ads based on demographics, interests, and behavior.' },
+      { name: 'YouTube Video Ads', description: 'Engaging video campaigns to build brand awareness and drive conversions.' },
+      { name: 'Remarketing Campaigns', description: 'Re-engaging website visitors who didn\'t convert the first time.' },
+      { name: 'Shopping Ads (Google & Meta)', description: 'Product listing ads for e-commerce stores to drive direct purchases.' },
+      { name: 'Ad Copywriting & Creative', description: 'Compelling ad copy and visuals designed to maximize click-through rates.' },
+      { name: 'Campaign Analytics & Reporting', description: 'Detailed monthly reports on spend, conversions, ROAS, and ROI.' }
+    ]
+  },
+  {
+    id: 'content-marketing',
+    number: '22',
+    title: 'Content Marketing',
+    tagline: 'Valuable content that attracts, engages, and converts your audience.',
+    description: 'We develop and execute comprehensive content marketing strategies that position your brand as an industry authority. From SEO-optimized blog articles to social media content, email newsletters, and video scripts — our content builds trust and drives organic growth.',
+    icon: 'PenTool',
+    gradient: 'from-teal-400 to-cyan-600',
+    category: 'marketing',
+    technologies: ['WordPress', 'HubSpot', 'Mailchimp', 'Google Analytics 4', 'SEMrush', 'Ahrefs'],
+    subServices: [
+      { name: 'Content Strategy & Planning', description: 'Building a results-focused content roadmap aligned with your business goals.' },
+      { name: 'SEO Blog Writing', description: 'Long-form, keyword-optimized articles that rank on Google and drive organic traffic.' },
+      { name: 'Website Copywriting', description: 'Persuasive page copy that communicates your value and converts visitors.' },
+      { name: 'Email Newsletter Content', description: 'Engaging email campaigns that nurture leads and retain customers.' },
+      { name: 'Social Media Content Creation', description: 'Platform-specific posts, captions, and content calendars.' },
+      { name: 'Video Script Writing', description: 'Compelling scripts for explainer videos, YouTube content, and reels.' },
+      { name: 'Case Studies & Whitepapers', description: 'In-depth content pieces that showcase your expertise and build credibility.' },
+      { name: 'Content Performance Analysis', description: 'Tracking engagement, traffic, and conversion metrics to refine strategy.' }
+    ]
+  },
+  {
+    id: 'logo-design',
+    number: '23',
+    title: 'Logo Design',
+    tagline: 'Iconic logos that capture your brand\'s essence at a glance.',
+    description: 'A great logo is the cornerstone of your brand identity. Our designers craft unique, versatile, and timeless logos that make a powerful first impression, communicate your values, and stand out in any market — from business cards to billboards.',
+    icon: 'PenTool',
+    gradient: 'from-violet-500 to-fuchsia-600',
+    category: 'creative',
+    subServices: [
+      { name: 'Brand Discovery Session', description: 'Understanding your business, target audience, and competitive landscape.' },
+      { name: 'Logo Concept Design', description: 'Multiple unique logo concepts presented for your review and feedback.' },
+      { name: 'Wordmark Logo', description: 'Typography-based logos focused on your company name.' },
+      { name: 'Lettermark Logo', description: 'Monogram-style logos using initials for a clean, minimal look.' },
+      { name: 'Pictorial / Icon Logo', description: 'Symbol-based logos with a distinctive graphic mark.' },
+      { name: 'Combination Mark Logo', description: 'A blend of icon and text for maximum versatility.' },
+      { name: 'Logo Refinement & Revisions', description: 'Refining your chosen concept until it\'s perfect.' },
+      { name: 'Final File Delivery', description: 'All formats delivered — SVG, PNG, PDF, and brand color codes.' }
+    ]
+  },
+  {
+    id: 'video-editing',
+    number: '24',
+    title: 'Video Editing & Production',
+    tagline: 'Professional video content that captures attention and drives results.',
+    description: 'In a world dominated by video content, we help your brand stand out with professionally edited, visually stunning video productions. From social media reels and YouTube content to corporate videos and motion graphics, we bring your vision to life.',
+    icon: 'Video',
+    gradient: 'from-rose-500 to-pink-600',
+    category: 'creative',
+    technologies: ['Adobe Premiere Pro', 'After Effects', 'DaVinci Resolve', 'Adobe Audition', 'Canva', 'CapCut'],
+    subServices: [
+      { name: 'Social Media Reels & Shorts', description: 'High-impact short-form videos for Instagram, TikTok, and YouTube Shorts.' },
+      { name: 'YouTube Video Editing', description: 'Professional editing for long-form YouTube content with thumbnails.' },
+      { name: 'Corporate & Brand Videos', description: 'Polished company profile and product showcase videos.' },
+      { name: 'Motion Graphics & Animation', description: 'Animated intros, outros, lower thirds, and infographic animations.' },
+      { name: 'Explainer Video Production', description: 'Simple, engaging videos that explain your product or service clearly.' },
+      { name: 'Ad Video Editing', description: 'High-converting video ads for Facebook, Instagram, and YouTube campaigns.' },
+      { name: 'Testimonial & Interview Videos', description: 'Professional editing for client testimonials and interview-style content.' },
+      { name: 'Color Grading & Sound Design', description: 'Cinematic color grading and professional audio enhancement.' }
+    ]
+  },
+  {
+    id: 'creative-design',
+    number: '25',
+    title: 'Creative Design',
+    tagline: 'Eye-catching visual designs that communicate your message powerfully.',
+    description: 'Our creative design team produces stunning visual assets across all media — digital and print. From social media graphics and marketing banners to pitch decks, infographics, and packaging, we make your brand look exceptional everywhere it appears.',
+    icon: 'Brush',
+    gradient: 'from-amber-500 to-orange-600',
+    category: 'creative',
+    subServices: [
+      { name: 'Social Media Graphics & Templates', description: 'Branded post templates, story designs, and banner graphics.' },
+      { name: 'Marketing Banners & Ads', description: 'Digital display banners and print ad designs for campaigns.' },
+      { name: 'Presentation & Pitch Deck Design', description: 'Visually compelling PowerPoint and Google Slides decks.' },
+      { name: 'Infographic Design', description: 'Complex data made visually engaging and easy to understand.' },
+      { name: 'Brochure & Flyer Design', description: 'Professional print-ready marketing collateral design.' },
+      { name: 'Business Card & Stationery', description: 'Cohesive corporate stationery that reinforces brand identity.' },
+      { name: 'Packaging & Label Design', description: 'Attractive product packaging that stands out on shelves.' },
+      { name: 'Event & Exhibition Design', description: 'Banners, standees, and booth designs for events and exhibitions.' }
+    ]
   }
 ];
+
 
 export interface NavCategory {
   title: string;
@@ -410,28 +556,28 @@ export const megaMenuCategories: NavCategory[] = [
 ];
 
 export const digitalJourneySteps = [
-  { number: '01', title: 'Discover', description: 'Understand the business and requirements.', icon: 'Search' },
-  { number: '02', title: 'Strategy', description: 'Define the technology and growth strategy.', icon: 'Target' },
-  { number: '03', title: 'Design', description: 'Create UX/UI and visual direction.', icon: 'Palette' },
-  { number: '04', title: 'Develop', description: 'Build the website, software or application.', icon: 'Code2' },
-  { number: '05', title: 'Test', description: 'Quality assurance and optimization.', icon: 'CheckCircle' },
-  { number: '06', title: 'Launch', description: 'Deploy and launch the solution.', icon: 'Rocket' },
-  { number: '07', title: 'Market', description: 'SEO, social media, PPC and digital marketing.', icon: 'TrendingUp' },
-  { number: '08', title: 'Grow', description: 'Continuous optimization, maintenance and support.', icon: 'BarChart3' },
+  { number: '01', title: 'Discovery', description: 'We deeply understand your business goals, target audience, and technical requirements through structured consultations.', icon: 'Search' },
+  { number: '02', title: 'Strategy', description: 'We craft a tailored roadmap covering technology choices, timelines, milestones, and measurable growth objectives.', icon: 'Target' },
+  { number: '03', title: 'Design', description: 'Our designers create intuitive wireframes, stunning UI/UX mockups, and a cohesive visual direction for your solution.', icon: 'Palette' },
+  { number: '04', title: 'Develop', description: 'Our engineers build your software, website, or app using industry best practices, clean code, and modern tech stacks.', icon: 'Code2' },
+  { number: '05', title: 'Test & QA', description: 'Rigorous quality assurance including automated testing, performance benchmarking, and cross-device compatibility checks.', icon: 'CheckCircle' },
+  { number: '06', title: 'Launch', description: 'We handle smooth deployment, go-live support, and ensure your product is fast, secure, and ready for the world.', icon: 'Rocket' },
+  { number: '07', title: 'Market', description: 'We amplify your launch with SEO, social media campaigns, Google/Meta Ads, and content marketing to maximize visibility.', icon: 'TrendingUp' },
+  { number: '08', title: 'Grow', description: 'Ongoing monitoring, analytics reporting, performance optimization, and new feature development to fuel continuous growth.', icon: 'BarChart3' },
 ];
 
 export const industries = [
-  { name: 'E-commerce', icon: 'ShoppingCart', description: 'Online stores and marketplaces' },
-  { name: 'Healthcare', icon: 'Heart', description: 'Clinics, hospitals and health tech' },
-  { name: 'Education', icon: 'GraduationCap', description: 'Schools, LMS and ed-tech' },
-  { name: 'Real Estate', icon: 'Building2', description: 'Property portals and management' },
-  { name: 'Travel & Tourism', icon: 'Plane', description: 'Booking and travel platforms' },
-  { name: 'Finance', icon: 'Landmark', description: 'Fintech and banking solutions' },
-  { name: 'Retail', icon: 'Store', description: 'POS and inventory systems' },
-  { name: 'Manufacturing', icon: 'Factory', description: 'ERP and production systems' },
-  { name: 'Professional Services', icon: 'Briefcase', description: 'CRM and workflow tools' },
-  { name: 'Startups', icon: 'Rocket', description: 'MVP development and scaling' },
-  { name: 'SMEs', icon: 'Building', description: 'Business management solutions' },
+  { name: 'E-Commerce & Retail', icon: 'ShoppingCart', description: 'Custom online stores, multi-vendor marketplaces & POS systems' },
+  { name: 'Healthcare & MedTech', icon: 'Heart', description: 'Patient management, clinic portals & health-tech platforms' },
+  { name: 'Education & E-Learning', icon: 'GraduationCap', description: 'LMS platforms, school ERP & interactive e-learning apps' },
+  { name: 'Real Estate & Property', icon: 'Building2', description: 'Property listing portals, CRM & management dashboards' },
+  { name: 'Travel & Hospitality', icon: 'Plane', description: 'Booking engines, hotel management & travel platforms' },
+  { name: 'Finance & Fintech', icon: 'Landmark', description: 'Secure fintech apps, banking portals & payment solutions' },
+  { name: 'Manufacturing & Industry', icon: 'Factory', description: 'ERP, production tracking & supply chain management systems' },
+  { name: 'Professional Services', icon: 'Briefcase', description: 'CRM, workflow automation & client management tools' },
+  { name: 'Startups & MVPs', icon: 'Rocket', description: 'Rapid MVP development, product scaling & investor-ready demos' },
+  { name: 'SMEs & Local Business', icon: 'Building', description: 'Affordable digital solutions to grow your local business online' },
+  { name: 'NGOs & Non-Profits', icon: 'Store', description: 'Donation platforms, volunteer management & awareness campaigns' },
 ];
 
 export const techStack = [

@@ -18,55 +18,55 @@ const servicesMenu = [
     title: "SOFTWARE DEVELOPMENT",
     icon: <Code size={14} />,
     items: [
-      { label: "Custom Software", icon: <Code size={16} /> },
-      { label: "Web Applications", icon: <Monitor size={16} /> },
-      { label: "Mobile Apps", icon: <Smartphone size={16} /> },
-      { label: "SaaS Development", icon: <Cloud size={16} /> },
-      { label: "API Integration", icon: <Settings size={16} /> }
+      { label: "Custom Software", icon: <Code size={16} />, path: "/services/custom-software" },
+      { label: "Web Applications", icon: <Monitor size={16} />, path: "/services/web-development" },
+      { label: "Mobile Apps", icon: <Smartphone size={16} />, path: "/services/mobile-apps" },
+      { label: "SaaS Development", icon: <Cloud size={16} />, path: "/services/saas" },
+      { label: "API Integration", icon: <Settings size={16} />, path: "/services/api-integration" }
     ]
   },
   {
     title: "DESIGN & DEVELOPMENT",
     icon: <Layout size={14} />,
     items: [
-      { label: "UI/UX Design", icon: <PenTool size={16} /> },
-      { label: "Web Development", icon: <Globe size={16} /> },
-      { label: "E-commerce", icon: <Layout size={16} /> },
-      { label: "WordPress", icon: <Layout size={16} /> },
-      { label: "Shopify", icon: <Layout size={16} /> }
+      { label: "UI/UX Design", icon: <PenTool size={16} />, path: "/services/ui-ux-design" },
+      { label: "Web Development", icon: <Globe size={16} />, path: "/services/web-development" },
+      { label: "E-commerce", icon: <Layout size={16} />, path: "/services/ecommerce" },
+      { label: "WordPress", icon: <Layout size={16} />, path: "/services/wordpress" },
+      { label: "Shopify", icon: <Layout size={16} />, path: "/services/shopify" }
     ]
   },
   {
     title: "TECHNOLOGY",
     icon: <Server size={14} />,
     items: [
-      { label: "Cloud & DevOps", icon: <Cloud size={16} /> },
-      { label: "Database Solutions", icon: <Database size={16} /> },
-      { label: "AI & Automation", icon: <Bot size={16} /> },
-      { label: "Cyber Security", icon: <Shield size={16} /> },
-      { label: "QA & Testing", icon: <Shield size={16} /> }
+      { label: "Cloud & DevOps", icon: <Cloud size={16} />, path: "/services/cloud-devops" },
+      { label: "Database Solutions", icon: <Database size={16} />, path: "/services/database" },
+      { label: "AI & Automation", icon: <Bot size={16} />, path: "/services/ai-automation" },
+      { label: "Cyber Security", icon: <Shield size={16} />, path: "/services/cyber-security" },
+      { label: "QA & Testing", icon: <Shield size={16} />, path: "/services/qa-testing" }
     ]
   },
   {
     title: "DIGITAL GROWTH",
     icon: <TrendingUp size={14} />,
     items: [
-      { label: "SEO", icon: <Search size={16} /> },
-      { label: "Digital Marketing", icon: <Share2 size={16} /> },
-      { label: "Social Media", icon: <Share2 size={16} /> },
-      { label: "PPC", icon: <BarChart size={16} /> },
-      { label: "Content Marketing", icon: <PenTool size={16} /> }
+      { label: "SEO", icon: <Search size={16} />, path: "/services/seo-services" },
+      { label: "Digital Marketing", icon: <Share2 size={16} />, path: "/services/digital-marketing" },
+      { label: "Social Media", icon: <Share2 size={16} />, path: "/services/social-media-marketing" },
+      { label: "PPC", icon: <BarChart size={16} />, path: "/services/ppc" },
+      { label: "Content Marketing", icon: <PenTool size={16} />, path: "/services/content-marketing" }
     ]
   },
   {
     title: "CREATIVE",
     icon: <Lightbulb size={14} />,
     items: [
-      { label: "Branding", icon: <Lightbulb size={16} /> },
-      { label: "Logo Design", icon: <PenTool size={16} /> },
-      { label: "Video Editing", icon: <Video size={16} /> },
-      { label: "Creative Design", icon: <Layout size={16} /> },
-      { label: "Business Automation", icon: <Settings size={16} /> }
+      { label: "Branding", icon: <Lightbulb size={16} />, path: "/services/branding" },
+      { label: "Logo Design", icon: <PenTool size={16} />, path: "/services/logo-design" },
+      { label: "Video Editing", icon: <Video size={16} />, path: "/services/video-editing" },
+      { label: "Creative Design", icon: <Layout size={16} />, path: "/services/creative-design" },
+      { label: "Business Automation", icon: <Settings size={16} />, path: "/services/business-automation" }
     ]
   }
 ];
@@ -93,8 +93,8 @@ export function Navbar() {
           <a href="tel:+923480766608" className="flex items-center gap-2 hover:text-primary transition-colors">
             <Phone size={12} /> 0348-0766608
           </a>
-          <a href="mailto:info@hussainxcompany.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-            <Mail size={12} /> info@hussainxcompany.com
+          <a href="mailto:info@hussainxsolutions.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <Mail size={12} /> info@hussainxsolutions.com
           </a>
         </div>
         <div className="flex items-center gap-4">
@@ -115,7 +115,7 @@ export function Navbar() {
           <Link to="/" className="flex items-center gap-1 shrink-0">
             <span className="font-bold text-xl md:text-2xl text-white tracking-tight">HUSSAIN</span>
             <span className="font-bold text-xl md:text-2xl text-primary">X</span>
-            <span className="font-bold text-sm md:text-lg text-white ml-1 tracking-widest">COMPANY</span>
+            <span className="font-bold text-sm md:text-lg text-white ml-1 tracking-widest">SOLUTIONS</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -173,12 +173,16 @@ export function Navbar() {
                     <ul className="flex flex-col gap-3">
                       {col.items.map((item, j) => (
                         <li key={j}>
-                          <a href="#" className="group flex items-center gap-3 text-sm text-slate-400 hover:text-primary transition-colors">
+                          <Link
+                            to={item.path}
+                            onClick={() => setMegaMenuOpen(false)}
+                            className="group flex items-center gap-3 text-sm text-slate-400 hover:text-primary transition-colors"
+                          >
                             <span className="opacity-70 group-hover:opacity-100 transition-opacity">
                               {item.icon}
                             </span>
                             {item.label}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -186,9 +190,13 @@ export function Navbar() {
                 ))}
               </div>
               <div className="mt-10 pt-6 border-t border-[#222] text-center">
-                <a href="/services" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-light transition-colors">
+                <Link
+                  to="/services"
+                  onClick={() => setMegaMenuOpen(false)}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-light transition-colors"
+                >
                   View All Services <ChevronRight size={16} />
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -208,7 +216,7 @@ export function Navbar() {
               <Link to="/" className="flex items-center gap-1 shrink-0">
                 <span className="font-bold text-xl text-white tracking-tight">HUSSAIN</span>
                 <span className="font-bold text-xl text-primary">X</span>
-                <span className="font-bold text-sm text-white ml-1 tracking-widest">COMPANY</span>
+                <span className="font-bold text-sm text-white ml-1 tracking-widest">SOLUTIONS</span>
               </Link>
               <button 
                 onClick={() => setMobileMenuOpen(false)}
@@ -244,9 +252,13 @@ export function Navbar() {
                           <ul className="flex flex-col gap-3">
                             {col.items.map((item, j) => (
                               <li key={j}>
-                                <a href="#" className="flex items-center gap-3 text-sm text-slate-300">
+                                <Link
+                                  to={item.path}
+                                  onClick={() => { setMobileMenuOpen(false); setMobileServicesOpen(false); }}
+                                  className="flex items-center gap-3 text-sm text-slate-300 hover:text-primary transition-colors"
+                                >
                                   {item.icon} {item.label}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>

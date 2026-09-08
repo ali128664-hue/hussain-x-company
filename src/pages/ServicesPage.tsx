@@ -18,15 +18,17 @@ const ServicesPage: React.FC = () => {
         
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <AnimatedSection>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ED7A21]/30 bg-[#ED7A21]/5 mb-8">
+              <span className="text-sm font-medium text-[#ED7A21] tracking-wide uppercase">18 Specialized Services</span>
+            </div>
              <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
-                Our <GradientText>Expertise</GradientText>
+                Our <GradientText>Expertise</GradientText> &amp; Services
              </h1>
           </AnimatedSection>
           
           <AnimatedSection delay={0.1}>
              <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-               We deliver end-to-end digital solutions tailored to your business. 
-               Explore our comprehensive range of services designed to accelerate your growth.
+               From custom software and mobile apps to digital marketing and creative branding — we are your all-in-one digital partner. Every service is delivered with precision, passion, and a commitment to real, measurable results.
              </p>
           </AnimatedSection>
         </div>

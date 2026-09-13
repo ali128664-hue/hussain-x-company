@@ -70,7 +70,7 @@ export const CustomCursor = () => {
     <>
       {/* ── Outer ring ── */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full border-2 border-[#FF6A00]"
+        className="fixed top-0 left-0 pointer-events-none z-[999998] rounded-full border-2 border-[#FF6A00]"
         style={{
           x: smoothX,
           y: smoothY,
@@ -93,7 +93,7 @@ export const CustomCursor = () => {
 
       {/* ── Inner dot ── */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[10000] rounded-full bg-[#FF6A00]"
+        className="fixed top-0 left-0 pointer-events-none z-[999999] rounded-full bg-[#FF6A00]"
         style={{
           x: dotX,
           y: dotY,

@@ -2,8 +2,11 @@ import React from 'react';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { ShinyButton } from '@/components/ui/ShinyButton';
 import { BorderBeam } from '@/components/ui/BorderBeam';
+import { useConsultationModal } from '@/context/ConsultationModalContext';
 
 export const CTASection = () => {
+  const { openModal } = useConsultationModal();
+
   return (
     <section className="py-24 relative mt-12 px-6">
       <AnimatedSection className="max-w-5xl mx-auto relative rounded-3xl bg-gradient-to-b from-[#2B1A12] to-[#0A0A0A] border border-[#3A2920] p-12 md:p-20 text-center overflow-hidden shadow-2xl">
@@ -18,9 +21,7 @@ export const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/contact">
-              <ShinyButton variant="primary">Get a Free Consultation</ShinyButton>
-            </a>
+            <ShinyButton variant="primary" onClick={() => openModal()}>Get a Free Consultation</ShinyButton>
             <a href="/services">
               <ShinyButton variant="outline" className="bg-transparent text-white border-white/40 hover:bg-white/10 hover:text-white hover:border-white">View All Services</ShinyButton>
             </a>

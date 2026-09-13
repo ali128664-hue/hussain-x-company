@@ -12,6 +12,7 @@ import {
 import { cn } from '@/lib/utils';
 // If useLenisScroll is not exported this way, compilation might fail, but following instructions:
 import { ShinyButton } from '@/components/ui/ShinyButton';
+import { useConsultationModal } from '@/context/ConsultationModalContext';
 
 const servicesMenu = [
   {
@@ -72,6 +73,7 @@ const servicesMenu = [
 ];
 
 export function Navbar() {
+  const { openModal } = useConsultationModal();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
@@ -142,7 +144,7 @@ export function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:block">
-            <ShinyButton>Get Free Consultation</ShinyButton>
+            <ShinyButton onClick={() => openModal()}>Get Free Consultation</ShinyButton>
           </div>
 
           {/* Mobile Toggle */}
@@ -281,7 +283,7 @@ export function Navbar() {
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-bold text-[#0A0A0A] hover:text-[#FF6A00] transition-colors">Contact</Link>
               
               <div className="mt-auto pt-8 flex flex-col gap-6">
-                <ShinyButton onClick={() => setMobileMenuOpen(false)}>Get Free Consultation</ShinyButton>
+                <ShinyButton onClick={() => { setMobileMenuOpen(false); openModal(); }}>Get Free Consultation</ShinyButton>
                 <div className="flex items-center gap-6 justify-center text-[#5C504A]">
                   <a href="#" className="hover:text-[#FF6A00] transition-colors"><Facebook size={20} /></a>
                   <a href="#" className="hover:text-[#FF6A00] transition-colors"><Instagram size={20} /></a>

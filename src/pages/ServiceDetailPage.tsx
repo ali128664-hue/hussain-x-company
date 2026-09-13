@@ -6,8 +6,10 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionHeading from '@/components/ui/SectionHeading';
 import ServiceCard from '@/components/ui/ServiceCard';
 import ShinyButton from '@/components/ui/ShinyButton';
+import { useConsultationModal } from '@/context/ConsultationModalContext';
 
 const ServiceDetailPage: React.FC = () => {
+  const { openModal } = useConsultationModal();
   const { serviceId } = useParams<{ serviceId: string }>();
   const navigate = useNavigate();
   
@@ -165,9 +167,7 @@ const ServiceDetailPage: React.FC = () => {
               Let's discuss your {service.title} needs and see how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link to="/contact">
-                <ShinyButton>Book Free Consultation</ShinyButton>
-              </Link>
+              <ShinyButton onClick={() => openModal(service.title)}>Book Free Consultation</ShinyButton>
               <Link to="/services" className="text-[#FF6A00] hover:text-[#E85D00] transition-colors font-semibold">
                 ← Back to All Services
               </Link>

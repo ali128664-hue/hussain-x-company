@@ -12,25 +12,33 @@ import TermsOfServicePage from './pages/TermsOfServicePage';
 import SitemapPage from './pages/SitemapPage';
 import { CustomCursor } from './components/ui/CustomCursor';
 
+import { ConsultationModalProvider } from './context/ConsultationModalContext';
+import { ConsultationModal } from './components/ConsultationModal';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+
 function App() {
   return (
-    <SmoothScrollProvider>
-      <CustomCursor />
-      <div className="min-h-screen bg-background text-foreground">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-          <Route path="/sitemap" element={<SitemapPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </SmoothScrollProvider>
+    <ConsultationModalProvider>
+      <SmoothScrollProvider>
+        <CustomCursor />
+        <div className="min-h-screen bg-background text-foreground">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+            <Route path="/sitemap" element={<SitemapPage />} />
+          </Routes>
+          <Footer />
+          <ConsultationModal />
+          <FloatingWhatsApp />
+        </div>
+      </SmoothScrollProvider>
+    </ConsultationModalProvider>
   );
 }
 

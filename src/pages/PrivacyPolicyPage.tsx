@@ -56,7 +56,7 @@ const sections = [
       '• Right to Rectification: Request correction of inaccurate or incomplete data.',
       '• Right to Erasure: Request deletion of your personal data.',
       '• Right to Object: Object to our processing of your personal data.',
-      'To exercise any of these rights, please contact us at info@hussainxsolutions.com.',
+      'To exercise any of these rights, please contact us at info@hussainxsolution.com.',
     ],
   },
   {
@@ -70,7 +70,7 @@ const sections = [
     title: '8. Contact Us',
     content: [
       'If you have any questions about this Privacy Policy, please contact us:',
-      'Email: info@hussainxsolutions.com',
+      'Email: info@hussainxsolution.com',
       'Phone: +92 348 0766608',
       'Address: Model Town Q Block, Lahore, Pakistan',
     ],
@@ -81,34 +81,34 @@ const PrivacyPolicyPage: React.FC = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20">
-      <section className="relative overflow-hidden py-16 border-b border-white/5 text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#ED7A21]/10 blur-[120px] rounded-full pointer-events-none" />
+    <div className="min-h-screen bg-[#FFFFFF] pt-24 pb-20">
+      <section className="relative overflow-hidden py-16 border-b border-[#E5DED9] text-center bg-[#FFFFFF]">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FF6A00]/5 blur-[120px] rounded-full pointer-events-none" />
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <AnimatedSection>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ED7A21]/30 bg-[#ED7A21]/5 mb-6">
-              <span className="text-sm font-medium text-[#ED7A21] tracking-wide uppercase">Legal Document</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#E5DED9] bg-[#FAF8F6] mb-6">
+              <span className="text-xs font-semibold text-[#FF6A00] tracking-wide uppercase">Legal Document</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0A0A0A] mb-4">
               Privacy <GradientText>Policy</GradientText>
             </h1>
-            <p className="text-slate-500 mb-4">Last Updated: September 2025</p>
-            <p className="text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              At Hussain X Solutions, your privacy is our priority. This policy explains how we collect, use, and protect your personal information when you use our website or services.
+            <p className="text-[#5C504A] text-sm mb-4">Last Updated: September 2026</p>
+            <p className="text-[#5C504A] max-w-2xl mx-auto leading-relaxed">
+              At <strong className="text-[#0A0A0A]">HUSSAIN X SOLUTION</strong>, your privacy is our priority. This policy explains how we collect, use, and protect your personal information when you use our website or services.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 bg-[#FFFFFF]">
         <div className="container mx-auto px-6 max-w-4xl space-y-8">
           {sections.map((section, i) => (
             <AnimatedSection key={i} delay={0.05 * i}>
-              <div className="bg-[#111] border border-white/5 rounded-2xl p-8">
-                <h2 className="text-lg font-bold text-[#ED7A21] mb-4">{section.title}</h2>
+              <div className="bg-[#FAF8F6] border border-[#E5DED9] rounded-2xl p-8 shadow-sm">
+                <h2 className="text-lg font-bold text-[#FF6A00] mb-4">{section.title}</h2>
                 <div className="space-y-3">
                   {section.content.map((para, j) => (
-                    <p key={j} className="text-slate-400 leading-relaxed text-sm">{para}</p>
+                    <p key={j} className="text-[#5C504A] leading-relaxed text-sm">{para}</p>
                   ))}
                 </div>
               </div>

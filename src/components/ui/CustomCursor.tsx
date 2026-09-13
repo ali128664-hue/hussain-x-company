@@ -70,7 +70,7 @@ export const CustomCursor = () => {
     <>
       {/* ── Outer ring ── */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full border-2 border-[#ED7A21]"
+        className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full border-2 border-[#FF6A00]"
         style={{
           x: smoothX,
           y: smoothY,
@@ -82,18 +82,18 @@ export const CustomCursor = () => {
           width:  isClicking ? 28 : isHovering ? 48 : 36,
           height: isClicking ? 28 : isHovering ? 48 : 36,
           backgroundColor: isHovering
-            ? 'rgba(237,122,33,0.12)'
-            : 'rgba(237,122,33,0)',
+            ? 'rgba(255, 106, 0, 0.15)'
+            : 'rgba(255, 106, 0, 0)',
           boxShadow: isHovering
-            ? '0 0 18px 4px rgba(237,122,33,0.35)'
-            : '0 0 0px 0px rgba(237,122,33,0)',
+            ? '0 0 20px 5px rgba(255, 106, 0, 0.35)'
+            : '0 0 0px 0px rgba(255, 106, 0, 0)',
         }}
         transition={{ type: 'spring', damping: 20, stiffness: 250 }}
       />
 
       {/* ── Inner dot ── */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[10000] rounded-full bg-[#ED7A21]"
+        className="fixed top-0 left-0 pointer-events-none z-[10000] rounded-full bg-[#FF6A00]"
         style={{
           x: dotX,
           y: dotY,
@@ -105,8 +105,8 @@ export const CustomCursor = () => {
           width:  isClicking ? 5 : isHovering ? 6 : 8,
           height: isClicking ? 5 : isHovering ? 6 : 8,
           boxShadow: isHovering
-            ? '0 0 8px 2px rgba(237,122,33,0.7)'
-            : '0 0 0px 0px rgba(237,122,33,0)',
+            ? '0 0 10px 3px rgba(255, 106, 0, 0.8)'
+            : '0 0 0px 0px rgba(255, 106, 0, 0)',
         }}
         transition={{ type: 'spring', damping: 25, stiffness: 700, mass: 0.1 }}
       />

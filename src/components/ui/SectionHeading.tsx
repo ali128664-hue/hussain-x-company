@@ -6,6 +6,7 @@ interface SectionHeadingProps {
   title: string;
   description?: string;
   align?: 'left' | 'center';
+  dark?: boolean;
   className?: string;
 }
 
@@ -14,6 +15,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   title,
   description,
   align = 'left',
+  dark = false,
   className,
 }) => {
   return (
@@ -25,15 +27,15 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       )}
     >
       {label && (
-        <span className="text-xs uppercase tracking-widest text-[#ED7A21] font-mono font-semibold">
+        <span className="text-xs uppercase tracking-widest text-[#FF6A00] font-mono font-semibold px-3 py-1 rounded-full bg-[#FAF8F6] border border-[#E5DED9]">
           {label}
         </span>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+      <h2 className={cn("text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight", dark ? "text-white" : "text-[#0A0A0A]")}>
         {title}
       </h2>
       {description && (
-        <p className="text-slate-400 max-w-2xl text-lg mt-4">
+        <p className={cn("max-w-2xl text-base md:text-lg mt-2 leading-relaxed", dark ? "text-[#D8D2CE]" : "text-[#5C504A]")}>
           {description}
         </p>
       )}

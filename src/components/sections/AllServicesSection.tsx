@@ -34,7 +34,7 @@ const AllServicesSection: React.FC = () => {
                   <ServiceCard number={service.number} 
                     title={service.title}
                     description={service.description}
-                    icon={<IconComponent size={32} className="text-white" />}
+                    icon={<IconComponent size={32} className="text-[#FF6A00]" />}
                     gradient={service.gradient}
                   />
                 </div>

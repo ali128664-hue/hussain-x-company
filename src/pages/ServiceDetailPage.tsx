@@ -53,35 +53,35 @@ const ServiceDetailPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-0">
+    <div className="min-h-screen bg-[#FFFFFF] pt-24 pb-0">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 bg-background border-b border-card-border/30">
-        <div className="absolute inset-0 bg-primary/5 pointer-events-none"></div>
-        <div className="absolute top-10 right-10 p-12 overflow-hidden pointer-events-none opacity-[0.03] select-none flex items-center justify-center">
-          <span className="text-9xl font-bold text-primary">{service.number}</span>
+      <section className="relative overflow-hidden py-20 bg-[#FFFFFF] border-b border-[#E5DED9]">
+        <div className="absolute inset-0 bg-[#FF6A00]/5 pointer-events-none"></div>
+        <div className="absolute top-10 right-10 p-12 overflow-hidden pointer-events-none opacity-[0.04] select-none flex items-center justify-center">
+          <span className="text-9xl font-bold text-[#FF6A00]">{service.number}</span>
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection>
-            <div className="flex items-center space-x-2 text-sm text-slate-400 mb-8">
-              <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+            <div className="flex items-center space-x-2 text-sm text-[#5C504A] mb-8">
+              <Link to="/" className="hover:text-[#FF6A00] transition-colors">Home</Link>
               <span>/</span>
-              <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
+              <Link to="/services" className="hover:text-[#FF6A00] transition-colors">Services</Link>
               <span>/</span>
-              <span className="text-white">{service.title}</span>
+              <span className="text-[#0A0A0A] font-medium">{service.title}</span>
             </div>
             
             <div className="max-w-4xl">
-              <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-8`}>
-                <IconComponent size={40} className="text-white" />
+              <div className="w-16 h-16 rounded-2xl bg-white border border-[#E5DED9] shadow-sm flex items-center justify-center mb-8 text-[#FF6A00]">
+                <IconComponent size={36} />
               </div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold text-[#0A0A0A] mb-6">
                 {service.title}
               </h1>
-              <p className="text-xl text-primary font-medium mb-6">
+              <p className="text-xl text-[#FF6A00] font-semibold mb-6">
                 {service.tagline}
               </p>
-              <p className="text-lg text-slate-400 leading-relaxed">
+              <p className="text-lg text-[#5C504A] leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -90,7 +90,7 @@ const ServiceDetailPage: React.FC = () => {
       </section>
 
       {/* Sub-Services Grid */}
-      <section className="py-20 bg-background border-b border-card-border/30">
+      <section className="py-20 bg-[#FFFFFF] border-b border-[#E5DED9]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <SectionHeading label="Detailed Offerings" title="What's Included" />
@@ -99,10 +99,10 @@ const ServiceDetailPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {service.subServices.map((sub, index) => (
               <AnimatedSection key={index} delay={index * 0.05} className="h-full">
-                <div className="bg-card border border-card-border p-6 rounded-xl h-full flex flex-col relative overflow-hidden group hover:border-primary/50 transition-colors">
-                  <div className="h-0.5 w-12 bg-primary mb-5"></div>
-                  <h3 className="font-semibold text-white text-lg mb-3">{sub.name}</h3>
-                  <p className="text-sm text-slate-400 flex-grow">{sub.description}</p>
+                <div className="bg-[#FAF8F6] border border-[#E5DED9] p-6 rounded-xl h-full flex flex-col relative overflow-hidden group hover:border-[#FF6A00]/50 transition-all duration-300 shadow-sm">
+                  <div className="h-0.5 w-12 bg-[#FF6A00] mb-5"></div>
+                  <h3 className="font-bold text-[#0A0A0A] text-lg mb-3 group-hover:text-[#FF6A00] transition-colors">{sub.name}</h3>
+                  <p className="text-sm text-[#5C504A] flex-grow leading-relaxed">{sub.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -112,7 +112,7 @@ const ServiceDetailPage: React.FC = () => {
 
       {/* Technologies Section */}
       {service.technologies && service.technologies.length > 0 && (
-        <section className="py-20 bg-background border-b border-card-border/30">
+        <section className="py-20 bg-[#FFFFFF] border-b border-[#E5DED9]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <SectionHeading label="Tech Stack" title="Technologies & Tools" />
@@ -120,7 +120,7 @@ const ServiceDetailPage: React.FC = () => {
                 {service.technologies.map((tech, index) => (
                   <span 
                     key={index}
-                    className="px-4 py-2 bg-card border border-card-border rounded-full text-sm font-medium text-slate-300 shadow-sm"
+                    className="px-4 py-2 bg-[#FAF8F6] border border-[#E5DED9] rounded-full text-sm font-semibold text-[#0A0A0A] shadow-sm"
                   >
                     {tech}
                   </span>
@@ -132,22 +132,22 @@ const ServiceDetailPage: React.FC = () => {
       )}
 
       {/* Process Section */}
-      <section className="py-20 bg-background border-b border-card-border/30">
+      <section className="py-20 bg-[#FFFFFF] border-b border-[#E5DED9]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <SectionHeading label="Methodology" title="Our Development Process" />
           </AnimatedSection>
           
           <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-6 left-0 right-0 h-0.5 bg-card-border z-0"></div>
+            <div className="hidden md:block absolute top-6 left-0 right-0 h-0.5 bg-[#E5DED9] z-0"></div>
             {processSteps.map((step, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <div className="relative z-10 flex flex-col items-start md:items-center text-left md:text-center">
-                  <div className="w-12 h-12 rounded-full bg-card border-2 border-primary flex items-center justify-center text-primary font-bold mb-6">
+                  <div className="w-12 h-12 rounded-full bg-[#FAF8F6] border-2 border-[#FF6A00] flex items-center justify-center text-[#FF6A00] font-bold mb-6 shadow-sm">
                     {index + 1}
                   </div>
-                  <h3 className="text-white font-semibold mb-3">{step.title}</h3>
-                  <p className="text-slate-400 text-sm">{step.description}</p>
+                  <h3 className="text-[#0A0A0A] font-bold mb-3">{step.title}</h3>
+                  <p className="text-[#5C504A] text-sm leading-relaxed">{step.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -156,19 +156,19 @@ const ServiceDetailPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-card border-b border-card-border/30 relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+      <section className="py-24 bg-[#FAF8F6] border-b border-[#E5DED9] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#FF6A00]/5 pointer-events-none"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimatedSection>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A0A0A] mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-[#5C504A] mb-8 max-w-2xl mx-auto">
               Let's discuss your {service.title} needs and see how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link to="/contact">
                 <ShinyButton>Book Free Consultation</ShinyButton>
               </Link>
-              <Link to="/services" className="text-primary hover:text-primary/80 transition-colors font-medium">
+              <Link to="/services" className="text-[#FF6A00] hover:text-[#E85D00] transition-colors font-semibold">
                 ← Back to All Services
               </Link>
             </div>
@@ -177,7 +177,7 @@ const ServiceDetailPage: React.FC = () => {
       </section>
 
       {/* Related Services */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-[#FFFFFF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <SectionHeading label="More Expertise" title="Related Services" />
@@ -192,7 +192,7 @@ const ServiceDetailPage: React.FC = () => {
                     <ServiceCard number={relatedService.number}
                       title={relatedService.title}
                       description={relatedService.description}
-                      icon={<RelatedIconComponent size={32} className="text-white" />}
+                      icon={<RelatedIconComponent size={32} className="text-[#FF6A00]" />}
                       gradient={relatedService.gradient}
                     />
                   </div>

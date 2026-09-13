@@ -18,11 +18,11 @@ export const ShinyButton: React.FC<ShinyButtonProps> = ({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={cn(
-        'group relative inline-flex items-center justify-center overflow-hidden rounded-full font-medium transition-all focus:outline-none focus:ring-2 focus:ring-[#ED7A21] focus:ring-offset-2 focus:ring-offset-[#0a0a0a]',
+        'group relative inline-flex items-center justify-center overflow-hidden rounded-full font-medium transition-all focus:outline-none focus:ring-2 focus:ring-[#FF6A00] focus:ring-offset-2 focus:ring-offset-white',
         variant === 'primary' 
-          ? 'bg-gradient-to-r from-[#ED7A21] to-[#FF9030] text-white' 
-          : 'bg-transparent text-[#ED7A21] border border-[#ED7A21] hover:bg-[#ED7A21]/10',
-        'px-6 py-3',
+          ? 'bg-[#FF6A00] hover:bg-[#E85D00] text-white shadow-md shadow-[#FF6A00]/20' 
+          : 'bg-white text-[#0A0A0A] border border-[#0A0A0A] hover:bg-[#FAF8F6] hover:border-[#FF6A00] hover:text-[#FF6A00]',
+        'px-6 py-3 text-sm font-semibold',
         className
       )}
       {...props}

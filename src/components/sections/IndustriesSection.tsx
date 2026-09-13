@@ -20,12 +20,13 @@ const industries = [
 
 export const IndustriesSection = () => {
   return (
-    <section className="py-24 bg-[#0d0d0d]">
+    <section className="py-24 bg-[#FFFFFF] border-t border-[#E5DED9]/60">
       <div className="container mx-auto px-6 max-w-6xl">
         <AnimatedSection>
           <SectionHeading
             label="Industries"
             title="Industries We Serve"
+            description="Proven domain expertise across diverse sectors empowering business growth through tailored digital solutions."
             align="center"
             className="mb-16"
           />
@@ -36,13 +37,13 @@ export const IndustriesSection = () => {
             const Icon = ind.icon;
             return (
               <AnimatedSection key={ind.name} delay={i * 0.05}>
-                <div className="group flex items-start gap-4 p-6 rounded-2xl bg-[#161616] border border-[#222] hover:border-[#ED7A21]/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
-                  <div className="w-12 h-12 rounded-full bg-[#ED7A21]/10 flex items-center justify-center shrink-0 group-hover:bg-[#ED7A21]/20 transition-colors">
-                    <Icon className="w-6 h-6 text-[#ED7A21]" />
+                <div className="group flex items-start gap-4 p-6 rounded-2xl bg-[#FAF8F6] border border-[#E5DED9] hover:border-[#FF6A00]/50 transition-all duration-300 hover:shadow-md hover:scale-[1.01] cursor-pointer">
+                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E5DED9] flex items-center justify-center shrink-0 group-hover:border-[#FF6A00]/40 transition-colors shadow-sm">
+                    <Icon className="w-6 h-6 text-[#FF6A00]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white mb-1">{ind.name}</h3>
-                    <p className="text-sm text-slate-400">{ind.desc}</p>
+                    <h3 className="font-bold text-[#0A0A0A] mb-1 group-hover:text-[#FF6A00] transition-colors">{ind.name}</h3>
+                    <p className="text-sm text-[#5C504A] leading-relaxed">{ind.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>

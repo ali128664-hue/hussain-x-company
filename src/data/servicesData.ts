@@ -24,7 +24,7 @@ export const services: Service[] = [
     tagline: 'End-to-end social media management, from post planning to viral growth.',
     description: 'We handle your entire social media presence. From deciding what to post and designing eye-catching creatives, to scheduling content calendars and running targeted ads, we build a loyal community around your brand.',
     icon: 'Share2',
-    gradient: 'from-pink-500 to-rose-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'marketing',
     technologies: ['Meta Business Suite', 'TikTok Ads Manager', 'Hootsuite', 'Canva', 'Adobe Premiere Pro', 'Figma'],
     subServices: [
@@ -44,7 +44,7 @@ export const services: Service[] = [
     tagline: 'Dominate Google rankings with deep technical and content strategies.',
     description: 'Our comprehensive SEO approach ensures your website ranks at the top of Google. We handle everything from finding the exact keywords your customers use, to fixing technical website issues and building high-authority backlinks.',
     icon: 'Search',
-    gradient: 'from-emerald-400 to-teal-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'marketing',
     technologies: ['Google Search Console', 'Google Analytics 4', 'SEMrush', 'Ahrefs', 'Yoast SEO', 'Screaming Frog'],
     subServices: [
@@ -64,7 +64,7 @@ export const services: Service[] = [
     tagline: 'Beautiful, intuitive interfaces that users love.',
     description: 'We design digital experiences that are not only visually stunning but also highly functional. Our user-centric approach ensures higher engagement and conversion rates.',
     icon: 'Palette',
-    gradient: 'from-pink-500 to-purple-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'design',
     subServices: [
       { name: 'Wireframing & Prototyping', description: 'Visualizing layout and flow before development.' },
@@ -84,7 +84,7 @@ export const services: Service[] = [
     tagline: 'High-performance, modern websites built for scale.',
     description: 'From landing pages to complex web applications, we build fast, secure, and SEO-friendly websites using the latest modern tech stacks like React and Next.js.',
     icon: 'MonitorSmartphone',
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'design',
     subServices: [
       { name: 'Frontend Development', description: 'Building responsive, interactive UIs with React and Vue.' },
@@ -104,7 +104,7 @@ export const services: Service[] = [
     tagline: 'Native and cross-platform apps for iOS and Android.',
     description: 'We build seamless, high-performance mobile applications that keep your users engaged. Whether native or cross-platform, we deliver excellence in your pocket.',
     icon: 'Smartphone',
-    gradient: 'from-violet-500 to-purple-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'software',
     subServices: [
       { name: 'iOS App Development', description: 'Native apps for iPhones and iPads using Swift.' },
@@ -123,7 +123,7 @@ export const services: Service[] = [
     tagline: 'Tailored solutions to power your specific business needs.',
     description: 'We build scalable, secure, and robust custom software solutions designed exactly for your unique operational requirements. From simple tools to complex enterprise systems, we engineer software that drives efficiency and growth.',
     icon: 'Code2',
-    gradient: 'from-orange-500 to-amber-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'software',
     subServices: [
       { name: 'Custom Business Software', description: 'Bespoke applications tailored to your daily operations.' },
@@ -145,7 +145,7 @@ export const services: Service[] = [
     tagline: 'High-converting online stores and marketplaces.',
     description: 'We build robust, secure, and scalable e-commerce platforms that drive sales. From Shopify to custom multi-vendor marketplaces, we power your digital retail business.',
     icon: 'ShoppingCart',
-    gradient: 'from-green-500 to-emerald-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'design',
     subServices: [
       { name: 'Shopify Development', description: 'Custom themes and apps for Shopify stores.' },
@@ -165,7 +165,7 @@ export const services: Service[] = [
     tagline: 'Comprehensive campaigns to scale your overall revenue.',
     description: 'Beyond SMM and SEO, we handle complete digital ecosystems including email automation, conversion rate optimization, and advanced analytics to ensure every dollar spent returns maximum value.',
     icon: 'TrendingUp',
-    gradient: 'from-orange-400 to-orange-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'marketing',
     technologies: ['Google Analytics 4', 'Meta Business Manager', 'Google Ads', 'Mailchimp', 'HubSpot', 'Looker Studio'],
     subServices: [
@@ -184,7 +184,7 @@ export const services: Service[] = [
     tagline: 'Crafting compelling visual identities that resonate and endure.',
     description: 'Your brand is more than a logo. We create cohesive, memorable visual identities and creative assets that tell your story, differentiate you from competitors, and forge an emotional connection with your audience.',
     icon: 'Brush',
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'creative',
     subServices: [
       { name: 'Logo Design', description: 'Memorable marks that capture your brand essence.' },
@@ -203,7 +203,7 @@ export const services: Service[] = [
     tagline: 'Replacing manual effort with efficient digital workflows.',
     description: 'Free your team from repetitive tasks. We analyze your business processes and implement smart automation tools that save time, reduce human error, and allow your staff to focus on high-value work.',
     icon: 'Workflow',
-    gradient: 'from-indigo-500 to-violet-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'software',
     subServices: [
       { name: 'Process Analysis', description: 'Identifying bottlenecks suitable for automation.' },
@@ -221,7 +221,7 @@ export const services: Service[] = [
     tagline: 'Harness the power of Artificial Intelligence for your business.',
     description: 'We integrate cutting-edge AI technologies into your workflows. From smart chatbots to predictive analytics, we help you stay ahead of the curve.',
     icon: 'Bot',
-    gradient: 'from-cyan-500 to-blue-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'technology',
     subServices: [
       { name: 'AI Chatbots', description: 'Intelligent virtual assistants for customer support.' },
@@ -240,7 +240,7 @@ export const services: Service[] = [
     tagline: 'Scalable, secure, and highly available infrastructure.',
     description: 'We architect and manage cloud environments that ensure your applications are always fast, secure, and ready to scale with your business growth.',
     icon: 'Cloud',
-    gradient: 'from-sky-400 to-blue-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'technology',
     subServices: [
       { name: 'Cloud Migration', description: 'Moving on-premise systems to AWS, Azure, or GCP.' },
@@ -259,7 +259,7 @@ export const services: Service[] = [
     tagline: 'Protecting your digital assets and sensitive data.',
     description: 'We implement robust security measures to protect your software, networks, and data from breaches, ensuring compliance and peace of mind.',
     icon: 'Shield',
-    gradient: 'from-red-500 to-rose-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'technology',
     subServices: [
       { name: 'Vulnerability Assessments', description: 'Scanning systems for known security flaws.' },
@@ -278,7 +278,7 @@ export const services: Service[] = [
     tagline: 'Ensuring flawless performance and bug-free experiences.',
     description: 'Our rigorous quality assurance processes guarantee that your software works perfectly under all conditions, providing a seamless experience for your users.',
     icon: 'CheckCircle',
-    gradient: 'from-teal-400 to-emerald-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'technology',
     subServices: [
       { name: 'Manual Testing', description: 'Human-driven exploration to find edge cases.' },
@@ -297,7 +297,7 @@ export const services: Service[] = [
     tagline: 'Connecting your tools for seamless data flow.',
     description: 'We connect disparate software systems, allowing them to communicate securely and share data in real-time, eliminating data silos in your organization.',
     icon: 'Zap',
-    gradient: 'from-yellow-400 to-orange-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'technology',
     subServices: [
       { name: 'Custom API Development', description: 'Building secure REST and GraphQL endpoints.' },
@@ -316,7 +316,7 @@ export const services: Service[] = [
     tagline: 'Secure, scalable, and optimized data architecture.',
     description: 'We design and optimize databases that can handle massive amounts of data efficiently, ensuring your applications run fast and your data remains secure.',
     icon: 'Database',
-    gradient: 'from-slate-500 to-gray-700',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'technology',
     subServices: [
       { name: 'Database Architecture', description: 'Designing optimized relational or NoSQL schemas.' },
@@ -334,7 +334,7 @@ export const services: Service[] = [
     tagline: 'Building the next generation of subscription software.',
     description: 'We help startups and enterprises build scalable Software-as-a-Service platforms. From multi-tenant architecture to subscription billing, we cover it all.',
     icon: 'CloudLightning',
-    gradient: 'from-fuchsia-500 to-pink-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'software',
     subServices: [
       { name: 'Multi-Tenant Architecture', description: 'Securely isolating data for different clients.' },
@@ -352,7 +352,7 @@ export const services: Service[] = [
     tagline: 'Keeping your digital assets secure and up-to-date.',
     description: 'Technology changes rapidly. We provide ongoing support, security patches, and updates to ensure your software and websites continue to operate flawlessly.',
     icon: 'Wrench',
-    gradient: 'from-gray-400 to-slate-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'technology',
     subServices: [
       { name: 'Security Patching', description: 'Applying updates to fix known vulnerabilities.' },
@@ -371,7 +371,7 @@ export const services: Service[] = [
     tagline: 'Powerful, flexible, and fully custom WordPress websites.',
     description: 'We build fast, secure, and SEO-friendly WordPress websites tailored to your brand. From custom themes and page builders to WooCommerce stores and membership portals, we unlock the full power of the world\'s most popular CMS for your business.',
     icon: 'Layout',
-    gradient: 'from-blue-500 to-indigo-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'design',
     technologies: ['WordPress', 'WooCommerce', 'Elementor', 'ACF', 'PHP', 'MySQL'],
     subServices: [
@@ -392,7 +392,7 @@ export const services: Service[] = [
     tagline: 'High-converting Shopify stores built to sell more.',
     description: 'We design and develop professional Shopify stores that are optimized for sales, speed, and user experience. From custom Shopify themes to advanced app integrations and Shopify Plus solutions, we help your e-commerce business grow.',
     icon: 'ShoppingCart',
-    gradient: 'from-green-400 to-emerald-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'design',
     technologies: ['Shopify', 'Shopify Plus', 'Liquid', 'JavaScript', 'Stripe', 'PayPal'],
     subServices: [
@@ -413,7 +413,7 @@ export const services: Service[] = [
     tagline: 'Targeted ad campaigns that deliver instant, measurable results.',
     description: 'Our certified PPC specialists manage high-ROI advertising campaigns on Google, Meta, and other platforms. We create data-driven ad strategies that put your brand in front of the right audience at the right moment — maximizing every rupee of your ad budget.',
     icon: 'BarChart',
-    gradient: 'from-yellow-400 to-orange-500',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'marketing',
     technologies: ['Google Ads', 'Meta Ads Manager', 'Google Analytics 4', 'Meta Pixel', 'Looker Studio', 'SEMrush'],
     subServices: [
@@ -434,7 +434,7 @@ export const services: Service[] = [
     tagline: 'Valuable content that attracts, engages, and converts your audience.',
     description: 'We develop and execute comprehensive content marketing strategies that position your brand as an industry authority. From SEO-optimized blog articles to social media content, email newsletters, and video scripts — our content builds trust and drives organic growth.',
     icon: 'PenTool',
-    gradient: 'from-teal-400 to-cyan-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'marketing',
     technologies: ['WordPress', 'HubSpot', 'Mailchimp', 'Google Analytics 4', 'SEMrush', 'Ahrefs'],
     subServices: [
@@ -455,7 +455,7 @@ export const services: Service[] = [
     tagline: 'Iconic logos that capture your brand\'s essence at a glance.',
     description: 'A great logo is the cornerstone of your brand identity. Our designers craft unique, versatile, and timeless logos that make a powerful first impression, communicate your values, and stand out in any market — from business cards to billboards.',
     icon: 'PenTool',
-    gradient: 'from-violet-500 to-fuchsia-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'creative',
     subServices: [
       { name: 'Brand Discovery Session', description: 'Understanding your business, target audience, and competitive landscape.' },
@@ -475,7 +475,7 @@ export const services: Service[] = [
     tagline: 'Professional video content that captures attention and drives results.',
     description: 'In a world dominated by video content, we help your brand stand out with professionally edited, visually stunning video productions. From social media reels and YouTube content to corporate videos and motion graphics, we bring your vision to life.',
     icon: 'Video',
-    gradient: 'from-rose-500 to-pink-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'creative',
     technologies: ['Adobe Premiere Pro', 'After Effects', 'DaVinci Resolve', 'Adobe Audition', 'Canva', 'CapCut'],
     subServices: [
@@ -496,7 +496,7 @@ export const services: Service[] = [
     tagline: 'Eye-catching visual designs that communicate your message powerfully.',
     description: 'Our creative design team produces stunning visual assets across all media — digital and print. From social media graphics and marketing banners to pitch decks, infographics, and packaging, we make your brand look exceptional everywhere it appears.',
     icon: 'Brush',
-    gradient: 'from-amber-500 to-orange-600',
+    gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'creative',
     subServices: [
       { name: 'Social Media Graphics & Templates', description: 'Branded post templates, story designs, and banner graphics.' },

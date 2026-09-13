@@ -90,7 +90,7 @@ export const SmoothScrollProvider: React.FC<{ children: React.ReactNode }> = ({ 
     <SmoothScrollContext.Provider value={{ lenis, ...scrollState, scrollTo }}>
       {/* Cinematic Top Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#ED7A21] via-amber-500 to-[#ED7A21] origin-left z-[9999]"
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#FF6A00] to-[#E85D00] origin-left z-[9999]"
         style={{ scaleX }}
       />
       {children}

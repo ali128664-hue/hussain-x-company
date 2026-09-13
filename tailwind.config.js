@@ -8,18 +8,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0a0a0a',
-        foreground: '#f5f5f5',
-        card: '#161616',
-        'card-hover': '#1a1a1a',
-        'card-border': '#222222',
-        primary: {
-          DEFAULT: '#ED7A21',
-          light: '#ff9a45',
-          dark: '#c96218',
+        background: '#FFFFFF',
+        foreground: '#0A0A0A',
+        secondary: '#2B1A12',
+        'secondary-light': '#3A241A',
+        'secondary-text': '#5C504A',
+        muted: '#5C504A',
+        card: '#FAF8F6',
+        'card-hover': '#F5F0EB',
+        'card-border': '#E5DED9',
+        border: '#E5DED9',
+        input: {
+          DEFAULT: '#FFFFFF',
+          border: '#E5DED9',
+          placeholder: '#8A817C',
         },
-        accent: '#FF6B00',
-        secondary: '#181818',
+        primary: {
+          DEFAULT: '#FF6A00',
+          hover: '#E85D00',
+          light: '#FF8533',
+          dark: '#CC5500',
+        },
+        accent: '#FF6A00',
+        dark: {
+          bg: '#0A0A0A',
+          secondary: '#2B1A12',
+          card: '#15100D',
+          border: '#3A2920',
+          text: '#FFFFFF',
+          muted: '#D8D2CE',
+        },
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
@@ -37,8 +55,8 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
         'pulse-glow': {
-          '0%, 100%': { opacity: 1, boxShadow: '0 0 0 0 rgba(237, 122, 33, 0.4)' },
-          '50%': { opacity: .5, boxShadow: '0 0 0 10px rgba(237, 122, 33, 0)' },
+          '0%, 100%': { opacity: 1, boxShadow: '0 0 0 0 rgba(255, 106, 0, 0.4)' },
+          '50%': { opacity: .5, boxShadow: '0 0 0 10px rgba(255, 106, 0, 0)' },
         },
         shimmer: {
           from: { backgroundPosition: '200% 0' },

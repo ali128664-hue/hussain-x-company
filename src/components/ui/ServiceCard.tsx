@@ -26,25 +26,22 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       whileHover={{ scale: 1.02 }}
       onClick={onClick}
       className={cn(
-        'group relative overflow-hidden rounded-2xl bg-[#161616] border border-[#222222] p-8 transition-all duration-300 hover:border-[#ED7A21]/30 hover:shadow-[0_0_30px_-5px_rgba(237,122,33,0.15)] cursor-pointer',
+        'group relative overflow-hidden rounded-2xl bg-[#FAF8F6] border border-[#E5DED9] p-8 transition-all duration-300 hover:border-[#FF6A00]/50 hover:shadow-[0_4px_20px_-5px_rgba(255,106,0,0.15)] cursor-pointer',
         className
       )}
     >
-      <div className="absolute top-4 right-4 text-8xl font-black text-white opacity-5 select-none pointer-events-none transition-opacity duration-300 group-hover:opacity-10">
+      <div className="absolute top-4 right-4 text-8xl font-black text-[#0A0A0A] opacity-5 select-none pointer-events-none transition-opacity duration-300 group-hover:opacity-10">
         {number}
       </div>
 
       <div
-        className={cn(
-          'mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br',
-          gradient
-        )}
+        className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white border border-[#E5DED9] shadow-sm group-hover:border-[#FF6A00]/40 transition-colors"
       >
-        <div className="text-white">{icon}</div>
+        <div className="text-[#FF6A00]">{icon}</div>
       </div>
 
-      <h3 className="mb-4 text-2xl font-bold text-white">{title}</h3>
-      <p className="text-slate-400 leading-relaxed">{description}</p>
+      <h3 className="mb-4 text-2xl font-bold text-[#0A0A0A] group-hover:text-[#FF6A00] transition-colors">{title}</h3>
+      <p className="text-[#5C504A] leading-relaxed">{description}</p>
     </motion.div>
   );
 };

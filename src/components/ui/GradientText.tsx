@@ -11,8 +11,8 @@ interface GradientTextProps {
 export const GradientText: React.FC<GradientTextProps> = ({
   children,
   className,
-  from = 'from-orange-500',
-  to = 'to-amber-500',
+  from = 'from-[#FF6A00]',
+  to = 'to-[#E85D00]',
 }) => {
   return (
     <span

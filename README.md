@@ -1,4 +1,4 @@
-# Hussain X Solutions — Official Web Application
+# HUSSAIN X SOLUTION — Official Web Application
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react&logoColor=black" alt="React 18" />
@@ -12,7 +12,7 @@
 
 ## 🌟 Overview
 
-**Hussain X Solutions** is a modern, high-performance web platform representing a premier Software House & Digital Growth Agency based in Lahore, Pakistan. 
+**HUSSAIN X SOLUTION** is a modern, high-performance web platform representing a premier Software House & Digital Growth Agency based in Lahore, Pakistan. 
 
 The application is engineered with an emphasis on speed, cutting-edge micro-interactions, responsive design, and an extensive service ecosystem covering **25 individual digital services** across software engineering, creative design, and performance marketing.
 
@@ -170,14 +170,14 @@ npm run preview
 
 ## 📞 Contact & Business Inquiries
 
-* **Company:** Hussain X Solutions
+* **Company:** HUSSAIN X SOLUTION
 * **Location:** Model Town Q Block, Lahore, Pakistan
 * **Phone:** [+92 348 0766608](tel:+923480766608)
-* **Email:** [info@hussainxsolutions.com](mailto:info@hussainxsolutions.com)
+* **Email:** [info@hussainxsolution.com](mailto:info@hussainxsolution.com)
 * **WhatsApp:** [+92 348 0766608](https://wa.me/923480766608)
 
 ---
 
 ## 📄 License & Copyright
 
-© 2026 **Hussain X Solutions**. All rights reserved.
+© 2026 **HUSSAIN X SOLUTION**. All rights reserved.

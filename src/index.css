@@ -31,7 +31,7 @@ html.lenis, html.lenis body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-[#0a0a0a];
+  @apply bg-[#FAF8F6];
 }
 ::-webkit-scrollbar-thumb {
   @apply bg-primary rounded-full;

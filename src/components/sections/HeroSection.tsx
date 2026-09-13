@@ -17,7 +17,7 @@ export const HeroSection = () => {
   const opacityDashboard = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-24 pb-16 bg-[#FFFFFF] overflow-hidden">
+    <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-36 md:pt-44 lg:pt-48 pb-16 lg:pb-24 bg-[#FFFFFF] overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#FF6A00]/5 blur-[140px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-6 max-w-6xl relative z-10 grid lg:grid-cols-2 gap-12 items-center">

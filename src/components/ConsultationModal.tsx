@@ -142,22 +142,29 @@ _Sent via hussainxsolution.com_`;
             
             <div className="p-6 sm:p-8">
               <div className="flex items-start justify-between gap-4 mb-6">
-                <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF8F6] border border-[#E5DED9] text-[#FF6A00] text-xs font-semibold mb-2">
-                    <Sparkles size={13} />
-                    <span>Instant Free Consultation</span>
+                <div className="flex items-start gap-3.5">
+                  <img 
+                    src="/favicon.png" 
+                    alt="HUSSAIN X" 
+                    className="w-11 h-11 rounded-xl object-contain border border-[#E5DED9] bg-[#FAF8F6] p-1.5 shadow-sm shrink-0 mt-1" 
+                  />
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF8F6] border border-[#E5DED9] text-[#FF6A00] text-xs font-semibold mb-2">
+                      <Sparkles size={13} />
+                      <span>Instant Free Consultation</span>
+                    </div>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-[#0A0A0A] tracking-tight">
+                      Discuss Your Project
+                    </h3>
+                    <p className="text-sm text-[#5C504A] mt-1">
+                      Fill the quick details below to directly connect with our experts on WhatsApp.
+                    </p>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-[#0A0A0A] tracking-tight">
-                    Discuss Your Project
-                  </h3>
-                  <p className="text-sm text-[#5C504A] mt-1">
-                    Fill the quick details below to directly connect with our experts on WhatsApp.
-                  </p>
                 </div>
                 <button
                   onClick={closeModal}
                   aria-label="Close modal"
-                  className="p-2 rounded-full text-[#5C504A] hover:text-[#0A0A0A] hover:bg-[#FAF8F6] transition-colors border border-transparent hover:border-[#E5DED9]"
+                  className="p-2 rounded-full text-[#5C504A] hover:text-[#0A0A0A] hover:bg-[#FAF8F6] transition-colors border border-transparent hover:border-[#E5DED9] shrink-0"
                 >
                   <X size={20} />
                 </button>
@@ -165,8 +172,11 @@ _Sent via hussainxsolution.com_`;
 
               {success ? (
                 <div className="py-12 flex flex-col items-center justify-center text-center space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-[#25D366]/10 text-[#25D366] flex items-center justify-center">
-                    <CheckCircle2 size={36} />
+                  <div className="relative">
+                    <img src="/favicon.png" alt="HX" className="w-16 h-16 rounded-2xl object-contain border border-[#E5DED9] bg-[#FAF8F6] p-2 shadow-sm" />
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow">
+                      <CheckCircle2 size={16} />
+                    </div>
                   </div>
                   <h4 className="text-xl font-bold text-[#0A0A0A]">Transferring to WhatsApp...</h4>
                   <p className="text-sm text-[#5C504A] max-w-sm">

@@ -140,7 +140,6 @@ export function Navbar() {
             
             <Link to="/about" className="text-sm font-medium text-[#0A0A0A] hover:text-[#FF6A00] transition-colors">About</Link>
             <Link to="/contact" className="text-sm font-medium text-[#0A0A0A] hover:text-[#FF6A00] transition-colors">Contact</Link>
-            <Link to="/login" className="text-sm font-medium text-[#0A0A0A] hover:text-[#FF6A00] transition-colors">Login</Link>
           </div>
 
           {/* CTA */}
@@ -282,7 +281,6 @@ export function Navbar() {
 
               <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-bold text-[#0A0A0A] hover:text-[#FF6A00] transition-colors">About</Link>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-bold text-[#0A0A0A] hover:text-[#FF6A00] transition-colors">Contact</Link>
-              <Link to="/login" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-bold text-[#0A0A0A] hover:text-[#FF6A00] transition-colors">Login</Link>
               
               <div className="mt-auto pt-8 flex flex-col gap-6">
                 <ShinyButton onClick={() => { setMobileMenuOpen(false); openModal(); }}>Get Free Consultation</ShinyButton>

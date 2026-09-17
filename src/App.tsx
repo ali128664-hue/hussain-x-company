@@ -10,7 +10,6 @@ import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
 import SitemapPage from './pages/SitemapPage';
-import LoginPage from './pages/LoginPage';
 import ProposalPage from './pages/ProposalPage';
 import { CustomCursor } from './components/ui/CustomCursor';
 
@@ -35,7 +34,6 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />
             <Route path="/sitemap" element={<SitemapPage />} />
-            <Route path="/login" element={<LoginPage />} />
           </Routes>
           <Footer />
           <ConsultationModal />

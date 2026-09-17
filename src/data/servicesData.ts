@@ -369,7 +369,7 @@ export const services: Service[] = [
     number: '19',
     title: 'WordPress Development',
     tagline: 'Powerful, flexible, and fully custom WordPress websites.',
-    description: 'We build fast, secure, and SEO-friendly WordPress websites tailored to your brand. From custom themes and page builders to WooCommerce stores and membership portals, we unlock the full power of the world\. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.'s most popular CMS for your business.',
+    description: 'We build fast, secure, and SEO-friendly WordPress websites tailored to your brand. From custom themes and page builders to WooCommerce stores and membership portals, we unlock the full power of the world\'s most popular CMS for your business. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.',
     icon: 'Layout',
     gradient: 'from-[#FF6A00] to-[#E85D00]',
     category: 'design',
@@ -402,7 +402,7 @@ export const services: Service[] = [
       { name: 'Payment Gateway Setup', description: 'Integrating Stripe, PayPal, and local Pakistani payment gateways. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Shopify Plus Development', description: 'Enterprise-grade solutions for high-volume Shopify Plus merchants. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Shopify Migration', description: 'Moving your store from WooCommerce, Magento, or any other platform. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
-      { name: 'Conversion Rate Optimization', description: 'A/B testing and UX improvements to increase your store\. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.'s sales rate.' },
+      { name: 'Conversion Rate Optimization', description: 'A/B testing and UX improvements to increase your store\'s sales rate. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Shopify SEO', description: 'Optimizing product pages, collections, and site structure for Google rankings. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' }
     ]
   },
@@ -418,10 +418,10 @@ export const services: Service[] = [
     technologies: ['Google Ads', 'Meta Ads Manager', 'Google Analytics 4', 'Meta Pixel', 'Looker Studio', 'SEMrush'],
     subServices: [
       { name: 'Google Search Ads', description: 'Top-of-page ads targeting users actively searching for your services. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
-      { name: 'Google Display Ads', description: 'Visual banner ads across millions of websites in Google\. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.'s network.' },
+      { name: 'Google Display Ads', description: 'Visual banner ads across millions of websites in Google\'s network. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Meta (Facebook & Instagram) Ads', description: 'Highly targeted social ads based on demographics, interests, and behavior. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'YouTube Video Ads', description: 'Engaging video campaigns to build brand awareness and drive conversions. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
-      { name: 'Remarketing Campaigns', description: 'Re-engaging website visitors who didn\. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.'t convert the first time.' },
+      { name: 'Remarketing Campaigns', description: 'Re-engaging website visitors who didn\'t convert the first time. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Shopping Ads (Google & Meta)', description: 'Product listing ads for e-commerce stores to drive direct purchases. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Ad Copywriting & Creative', description: 'Compelling ad copy and visuals designed to maximize click-through rates. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Campaign Analytics & Reporting', description: 'Detailed monthly reports on spend, conversions, ROAS, and ROI. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' }
@@ -464,7 +464,7 @@ export const services: Service[] = [
       { name: 'Lettermark Logo', description: 'Monogram-style logos using initials for a clean, minimal look. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Pictorial / Icon Logo', description: 'Symbol-based logos with a distinctive graphic mark. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Combination Mark Logo', description: 'A blend of icon and text for maximum versatility. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
-      { name: 'Logo Refinement & Revisions', description: 'Refining your chosen concept until it\. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.'s perfect.' },
+      { name: 'Logo Refinement & Revisions', description: 'Refining your chosen concept until it\'s perfect. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
       { name: 'Final File Delivery', description: 'All formats delivered — SVG, PNG, PDF, and brand color codes. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' }
     ]
   },
@@ -556,14 +556,14 @@ export const megaMenuCategories: NavCategory[] = [
 ];
 
 export const digitalJourneySteps = [
-  { number: '01', title: 'Discovery', description: 'We deeply understand your business goals, target audience, and technical requirements through structured consultations. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.', icon: 'Search' },
-  { number: '02', title: 'Strategy', description: 'We craft a tailored roadmap covering technology choices, timelines, milestones, and measurable growth objectives. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.', icon: 'Target' },
-  { number: '03', title: 'Design', description: 'Our designers create intuitive wireframes, stunning UI/UX mockups, and a cohesive visual direction for your solution. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.', icon: 'Palette' },
-  { number: '04', title: 'Develop', description: 'Our engineers build your software, website, or app using industry best practices, clean code, and modern tech stacks. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.', icon: 'Code2' },
-  { number: '05', title: 'Test & QA', description: 'Rigorous quality assurance including automated testing, performance benchmarking, and cross-device compatibility checks. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.', icon: 'CheckCircle' },
-  { number: '06', title: 'Launch', description: 'We handle smooth deployment, go-live support, and ensure your product is fast, secure, and ready for the world. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.', icon: 'Rocket' },
-  { number: '07', title: 'Market', description: 'We amplify your launch with SEO, social media campaigns, Google/Meta Ads, and content marketing to maximize visibility. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.', icon: 'TrendingUp' },
-  { number: '08', title: 'Grow', description: 'Ongoing monitoring, analytics reporting, performance optimization, and new feature development to fuel continuous growth. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.', icon: 'BarChart3' },
+  { number: '01', title: 'Discovery', description: 'We deeply understand your business goals, target audience, and technical requirements through structured consultations.', icon: 'Search. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
+  { number: '02', title: 'Strategy', description: 'We craft a tailored roadmap covering technology choices, timelines, milestones, and measurable growth objectives.', icon: 'Target. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
+  { number: '03', title: 'Design', description: 'Our designers create intuitive wireframes, stunning UI/UX mockups, and a cohesive visual direction for your solution.', icon: 'Palette. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
+  { number: '04', title: 'Develop', description: 'Our engineers build your software, website, or app using industry best practices, clean code, and modern tech stacks.', icon: 'Code2. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
+  { number: '05', title: 'Test & QA', description: 'Rigorous quality assurance including automated testing, performance benchmarking, and cross-device compatibility checks.', icon: 'CheckCircle. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
+  { number: '06', title: 'Launch', description: 'We handle smooth deployment, go-live support, and ensure your product is fast, secure, and ready for the world.', icon: 'Rocket. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
+  { number: '07', title: 'Market', description: 'We amplify your launch with SEO, social media campaigns, Google/Meta Ads, and content marketing to maximize visibility.', icon: 'TrendingUp. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
+  { number: '08', title: 'Grow', description: 'Ongoing monitoring, analytics reporting, performance optimization, and new feature development to fuel continuous growth.', icon: 'BarChart3. We offer these top-tier services across Pakistan, including Lahore, Karachi, Islamabad, and Pakpattan.' },
 ];
 
 export const industries = [

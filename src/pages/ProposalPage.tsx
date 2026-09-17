@@ -43,6 +43,7 @@ function makeDefaultState(service: ServiceType = 'Social Media Marketing'): Prop
       logo: null,
       coverImage: null,
       requirements: '',
+      reelGifs: [],
     },
     sections: JSON.parse(JSON.stringify(template.sections)),
     selectedPackageId: null,
@@ -82,6 +83,80 @@ function ImageUploader({ label, value, onChange }: { label: string; value: strin
     </div>
   );
 }
+
+// ─── GIF / Video Multi-Uploader ───────────────────────────────────────────────
+
+function GifUploader({ values, onChange }: { values: string[]; onChange: (files: string[]) => void }) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleFiles = (files: FileList | null) => {
+    if (!files) return;
+    Array.from(files).forEach(file => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const result = e.target?.result as string;
+        onChange([...values, result]);
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const remove = (idx: number) => onChange(values.filter((_, i) => i !== idx));
+
+  return (
+    <div>
+      <label className="text-xs font-bold uppercase text-[#5C504A] mb-1.5 block">
+        Client GIFs / Reels Content
+        <span className="ml-2 text-[10px] normal-case font-normal text-[#8A817C]">(GIF, MP4, WEBM, PNG — appears in PDF)</span>
+      </label>
+
+      {/* Upload zone */}
+      <div
+        onDragOver={e => e.preventDefault()}
+        onDrop={e => { e.preventDefault(); handleFiles(e.dataTransfer.files); }}
+        onClick={() => inputRef.current?.click()}
+        className="border-2 border-dashed border-[#E5DED9] rounded-xl p-5 cursor-pointer hover:border-[#FF6A00] transition-colors bg-[#FAF8F6] flex flex-col items-center justify-center gap-2 min-h-[90px] mb-3"
+      >
+        <span className="text-2xl">🎬</span>
+        <span className="text-[11px] font-bold text-[#5C504A]">Click or drag GIFs / Videos here</span>
+        <span className="text-[10px] text-[#8A817C]">Multiple files supported</span>
+        <input
+          ref={inputRef}
+          type="file"
+          accept="image/gif,image/*,video/mp4,video/webm,video/*"
+          multiple
+          className="hidden"
+          onChange={e => handleFiles(e.target.files)}
+        />
+      </div>
+
+      {/* Previews grid */}
+      {values.length > 0 && (
+        <div className="grid grid-cols-3 gap-2">
+          {values.map((src, i) => (
+            <div key={i} className="relative rounded-lg overflow-hidden border border-[#E5DED9] bg-black aspect-[9/16]">
+              {src.startsWith('data:video') ? (
+                <video src={src} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+              ) : (
+                <img src={src} alt={`reel ${i+1}`} className="w-full h-full object-cover" />
+              )}
+              {/* Orange badge */}
+              <div className="absolute bottom-1 left-1 bg-[#FF6A00] text-white text-[8px] font-bold px-2 py-0.5 rounded-full">
+                Reel {i + 1}
+              </div>
+              {/* Remove button */}
+              <button
+                onClick={e => { e.stopPropagation(); remove(i); }}
+                className="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white rounded-full text-[10px] font-bold flex items-center justify-center hover:bg-red-700 transition-colors"
+              >×</button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 
 // ─── Main Component ────────────────────────────────────────────────────────────
 
@@ -307,6 +382,14 @@ const ProposalPage: React.FC = () => {
                 <div className="grid grid-cols-2 gap-3">
                   <ImageUploader label="Client Logo" value={data.client.logo} onChange={logo => updateClient({ logo })} />
                   <ImageUploader label="Cover Image" value={data.client.coverImage} onChange={coverImage => updateClient({ coverImage })} />
+                </div>
+
+                {/* GIF / Reels upload */}
+                <div className="pt-2 border-t border-[#E5DED9]">
+                  <GifUploader
+                    values={data.client.reelGifs || []}
+                    onChange={reelGifs => updateClient({ reelGifs })}
+                  />
                 </div>
               </>
             )}

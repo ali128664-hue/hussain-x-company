@@ -238,7 +238,7 @@ Reports are delivered by the 5th of each month with strategic recommendations fo
     packages: [
       {
         id: 'smm-basic', name: 'Basic', tagline: 'Get Started Online', description: 'Ideal for new businesses establishing their social media presence',
-        price_pkr: 25000, price_usd: 89, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 30000, price_usd: 109, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: '2 Platforms (Facebook + Instagram)', included: true },
           { text: '12 Feed Posts / Month', included: true },
@@ -255,7 +255,7 @@ Reports are delivered by the 5th of each month with strategic recommendations fo
       },
       {
         id: 'smm-starter', name: 'Starter', tagline: 'Build Consistent Presence', description: 'Perfect for small businesses ready to grow consistently',
-        price_pkr: 40000, price_usd: 143, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 50000, price_usd: 179, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: '3 Platforms (FB + IG + LinkedIn/TikTok)', included: true },
           { text: '16 Feed Posts / Month', included: true },
@@ -272,7 +272,7 @@ Reports are delivered by the 5th of each month with strategic recommendations fo
       },
       {
         id: 'smm-growth', name: 'Growth', tagline: 'Accelerate Your Brand', description: 'For growing brands ready to dominate their niche',
-        price_pkr: 65000, price_usd: 232, billingFrequency: 'Monthly', recommended: true,
+        price_pkr: 80000, price_usd: 286, billingFrequency: 'Monthly', recommended: true,
         features: [
           { text: '3 Platforms + TikTok', included: true },
           { text: '20 Feed Posts / Month', included: true },
@@ -289,7 +289,7 @@ Reports are delivered by the 5th of each month with strategic recommendations fo
       },
       {
         id: 'smm-premium', name: 'Premium', tagline: 'Total Social Domination', description: 'Complete social media management for serious brands',
-        price_pkr: 100000, price_usd: 357, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 130000, price_usd: 464, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: 'All Platforms (FB, IG, TikTok, LinkedIn, Twitter/X)', included: true },
           { text: '30 Feed Posts / Month', included: true },
@@ -379,7 +379,7 @@ Reports delivered monthly via PDF + Google Data Studio dashboard access.`,
     packages: [
       {
         id: 'seo-local', name: 'Local SEO', tagline: 'Dominate Your City', description: 'Perfect for local businesses targeting customers in a specific city',
-        price_pkr: 30000, price_usd: 107, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 38000, price_usd: 135, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: 'Technical SEO Audit', included: true },
           { text: '10 Target Keywords', included: true },
@@ -394,7 +394,7 @@ Reports delivered monthly via PDF + Google Data Studio dashboard access.`,
       },
       {
         id: 'seo-standard', name: 'Standard', tagline: 'Grow Your Organic Traffic', description: 'For established businesses targeting regional reach',
-        price_pkr: 50000, price_usd: 179, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 65000, price_usd: 230, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: 'Comprehensive Technical Audit', included: true },
           { text: '20 Target Keywords', included: true },
@@ -410,7 +410,7 @@ Reports delivered monthly via PDF + Google Data Studio dashboard access.`,
       },
       {
         id: 'seo-growth', name: 'Growth', tagline: 'Scale Your Search Visibility', description: 'Aggressive SEO for businesses serious about organic growth',
-        price_pkr: 80000, price_usd: 286, billingFrequency: 'Monthly', recommended: true,
+        price_pkr: 105000, price_usd: 375, billingFrequency: 'Monthly', recommended: true,
         features: [
           { text: 'Full Technical + Content Audit', included: true },
           { text: '40 Target Keywords', included: true },
@@ -426,7 +426,7 @@ Reports delivered monthly via PDF + Google Data Studio dashboard access.`,
       },
       {
         id: 'seo-enterprise', name: 'Enterprise', tagline: 'National / International Domination', description: 'For large businesses and e-commerce targeting national/global reach',
-        price_pkr: 150000, price_usd: 536, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 195000, price_usd: 695, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: 'Deep Technical + Site Architecture Audit', included: true },
           { text: '80+ Target Keywords', included: true },
@@ -500,7 +500,7 @@ NOTE: Ad budget (spend) is separate from management fee.`,
     packages: [
       {
         id: 'gads-starter', name: 'Starter', tagline: 'Launch Your First Campaign', description: 'For small businesses starting with Google Ads',
-        price_pkr: 35000, price_usd: 125, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 45000, price_usd: 160, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: 'Up to 2 Campaigns', included: true },
           { text: 'Keyword Research (50 keywords)', included: true },
@@ -514,7 +514,7 @@ NOTE: Ad budget (spend) is separate from management fee.`,
       },
       {
         id: 'gads-growth', name: 'Growth', tagline: 'Scale Your Campaigns', description: 'For businesses ready to invest seriously in paid search',
-        price_pkr: 60000, price_usd: 214, billingFrequency: 'Monthly', recommended: true,
+        price_pkr: 80000, price_usd: 285, billingFrequency: 'Monthly', recommended: true,
         features: [
           { text: 'Up to 5 Campaigns', included: true },
           { text: 'Keyword Research (150+ keywords)', included: true },
@@ -528,7 +528,7 @@ NOTE: Ad budget (spend) is separate from management fee.`,
       },
       {
         id: 'gads-premium', name: 'Premium', tagline: 'Maximum PPC Performance', description: 'Full-scale Google Ads management for high-growth businesses',
-        price_pkr: 100000, price_usd: 357, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 135000, price_usd: 480, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: 'Unlimited Campaigns', included: true },
           { text: 'Comprehensive Keyword Strategy', included: true },
@@ -599,7 +599,7 @@ NOTE: Ad spend budget is NOT included in management fee.`,
     packages: [
       {
         id: 'meta-starter', name: 'Starter', tagline: 'Start Advertising Smart', description: 'Entry-level Meta Ads for local businesses',
-        price_pkr: 30000, price_usd: 107, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 42000, price_usd: 150, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: '2 Active Campaigns', included: true },
           { text: '4 Ad Creatives (static)', included: true },
@@ -613,7 +613,7 @@ NOTE: Ad spend budget is NOT included in management fee.`,
       },
       {
         id: 'meta-growth', name: 'Growth', tagline: 'Scale Your Meta Presence', description: 'For businesses investing seriously in paid social',
-        price_pkr: 55000, price_usd: 196, billingFrequency: 'Monthly', recommended: true,
+        price_pkr: 75000, price_usd: 268, billingFrequency: 'Monthly', recommended: true,
         features: [
           { text: '4 Active Campaigns', included: true },
           { text: '8 Ad Creatives (static + carousel)', included: true },
@@ -627,7 +627,7 @@ NOTE: Ad spend budget is NOT included in management fee.`,
       },
       {
         id: 'meta-premium', name: 'Premium', tagline: 'Dominate Meta Advertising', description: 'Full-funnel Meta advertising for maximum conversions',
-        price_pkr: 90000, price_usd: 321, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 125000, price_usd: 446, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: 'Unlimited Campaigns', included: true },
           { text: '15+ Ad Creatives (static + carousel + video)', included: true },
@@ -709,7 +709,7 @@ Timeline may vary based on scope. Rush delivery available at additional cost.`,
     packages: [
       {
         id: 'web-landing', name: 'Landing Page', tagline: 'Single High-Converting Page', description: 'Perfect for product launches, campaigns, and lead generation',
-        price_pkr: 25000, price_usd: 89, billingFrequency: 'One-time', recommended: false,
+        price_pkr: 35000, price_usd: 125, billingFrequency: 'One-time', recommended: false,
         features: [
           { text: '1 Page Design + Development', included: true },
           { text: 'Mobile Responsive', included: true },
@@ -724,7 +724,7 @@ Timeline may vary based on scope. Rush delivery available at additional cost.`,
       },
       {
         id: 'web-business', name: 'Business Website', tagline: 'Professional Corporate Presence', description: 'Complete website for businesses and service providers',
-        price_pkr: 80000, price_usd: 286, billingFrequency: 'One-time', recommended: false,
+        price_pkr: 110000, price_usd: 395, billingFrequency: 'One-time', recommended: false,
         features: [
           { text: 'Up to 8 Pages', included: true },
           { text: 'Custom Design (not a template)', included: true },
@@ -739,7 +739,7 @@ Timeline may vary based on scope. Rush delivery available at additional cost.`,
       },
       {
         id: 'web-ecommerce', name: 'E-Commerce', tagline: 'Sell Online 24/7', description: 'Full online store with payment integration and product management',
-        price_pkr: 180000, price_usd: 643, billingFrequency: 'One-time', recommended: true,
+        price_pkr: 240000, price_usd: 855, billingFrequency: 'One-time', recommended: true,
         features: [
           { text: 'Unlimited Products', included: true },
           { text: 'Payment Gateway (JazzCash, EasyPaisa, Card)', included: true },
@@ -819,7 +819,7 @@ OUR WORDPRESS EXPERTISE:
     packages: [
       {
         id: 'wp-basic', name: 'Basic', tagline: 'Quick & Clean WordPress Site', description: 'Simple WordPress site with premium theme',
-        price_pkr: 30000, price_usd: 107, billingFrequency: 'One-time', recommended: false,
+        price_pkr: 42000, price_usd: 150, billingFrequency: 'One-time', recommended: false,
         features: [
           { text: 'Premium Theme Installation', included: true },
           { text: 'Up to 5 Pages', included: true },
@@ -833,7 +833,7 @@ OUR WORDPRESS EXPERTISE:
       },
       {
         id: 'wp-professional', name: 'Professional', tagline: 'Custom WordPress Website', description: 'Custom-designed WordPress website with full functionality',
-        price_pkr: 70000, price_usd: 250, billingFrequency: 'One-time', recommended: true,
+        price_pkr: 95000, price_usd: 340, billingFrequency: 'One-time', recommended: true,
         features: [
           { text: 'Custom Design (Elementor Pro / Custom)', included: true },
           { text: 'Up to 10 Pages', included: true },
@@ -847,7 +847,7 @@ OUR WORDPRESS EXPERTISE:
       },
       {
         id: 'wp-ecommerce', name: 'WooCommerce Store', tagline: 'Sell on WordPress', description: 'Full WooCommerce e-commerce store on WordPress',
-        price_pkr: 120000, price_usd: 429, billingFrequency: 'One-time', recommended: false,
+        price_pkr: 165000, price_usd: 590, billingFrequency: 'One-time', recommended: false,
         features: [
           { text: 'Custom WooCommerce Theme', included: true },
           { text: 'Unlimited Products', included: true },
@@ -912,7 +912,7 @@ OUR SHOPIFY EXPERTISE:
     packages: [
       {
         id: 'shopify-basic', name: 'Basic Store', tagline: 'Launch Your Shopify Store', description: 'Simple Shopify store with theme setup',
-        price_pkr: 40000, price_usd: 143, billingFrequency: 'One-time', recommended: false,
+        price_pkr: 55000, price_usd: 195, billingFrequency: 'One-time', recommended: false,
         features: [
           { text: 'Theme Selection & Setup', included: true },
           { text: 'Up to 20 Products', included: true },
@@ -926,7 +926,7 @@ OUR SHOPIFY EXPERTISE:
       },
       {
         id: 'shopify-professional', name: 'Professional', tagline: 'Custom Branded Store', description: 'Fully customized Shopify store with premium design',
-        price_pkr: 90000, price_usd: 321, billingFrequency: 'One-time', recommended: true,
+        price_pkr: 130000, price_usd: 465, billingFrequency: 'One-time', recommended: true,
         features: [
           { text: 'Custom Theme Design', included: true },
           { text: 'Up to 100 Products', included: true },
@@ -940,7 +940,7 @@ OUR SHOPIFY EXPERTISE:
       },
       {
         id: 'shopify-enterprise', name: 'Enterprise', tagline: 'High-Volume E-Commerce', description: 'Advanced Shopify store for serious e-commerce businesses',
-        price_pkr: 180000, price_usd: 643, billingFrequency: 'One-time', recommended: false,
+        price_pkr: 250000, price_usd: 895, billingFrequency: 'One-time', recommended: false,
         features: [
           { text: 'Custom Theme Development (from scratch)', included: true },
           { text: 'Unlimited Products', included: true },
@@ -1004,7 +1004,7 @@ OUR DESIGN CAPABILITIES:
     packages: [
       {
         id: 'design-basic', name: 'Basic', tagline: 'Essential Design Package', description: 'Ideal for single-project design needs',
-        price_pkr: 15000, price_usd: 54, billingFrequency: 'Per Project', recommended: false,
+        price_pkr: 22000, price_usd: 78, billingFrequency: 'Per Project', recommended: false,
         features: [
           { text: '1 Logo Design (3 concepts)', included: true },
           { text: '2 Revision Rounds', included: true },
@@ -1018,7 +1018,7 @@ OUR DESIGN CAPABILITIES:
       },
       {
         id: 'design-standard', name: 'Standard', tagline: 'Complete Brand Identity', description: 'Full branding package for businesses',
-        price_pkr: 40000, price_usd: 143, billingFrequency: 'Per Project', recommended: true,
+        price_pkr: 55000, price_usd: 195, billingFrequency: 'Per Project', recommended: true,
         features: [
           { text: 'Logo Design (5 concepts)', included: true },
           { text: '3 Revision Rounds', included: true },
@@ -1033,7 +1033,7 @@ OUR DESIGN CAPABILITIES:
       },
       {
         id: 'design-premium', name: 'Premium', tagline: 'Enterprise Brand Package', description: 'Comprehensive branding for established businesses',
-        price_pkr: 80000, price_usd: 286, billingFrequency: 'Per Project', recommended: false,
+        price_pkr: 110000, price_usd: 395, billingFrequency: 'Per Project', recommended: false,
         features: [
           { text: 'Complete Logo Suite (primary, secondary, icon)', included: true },
           { text: 'Unlimited Revisions', included: true },
@@ -1099,7 +1099,7 @@ OUR CONTENT SERVICES:
     packages: [
       {
         id: 'content-basic', name: 'Basic', tagline: 'Start Your Content Journey', description: 'Entry-level content marketing for small businesses',
-        price_pkr: 20000, price_usd: 71, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 28000, price_usd: 100, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: '2 Blog Articles / Month (800–1000 words)', included: true },
           { text: 'SEO Keyword Research', included: true },
@@ -1112,7 +1112,7 @@ OUR CONTENT SERVICES:
       },
       {
         id: 'content-standard', name: 'Standard', tagline: 'Build Content Authority', description: 'Regular content publishing for consistent organic growth',
-        price_pkr: 40000, price_usd: 143, billingFrequency: 'Monthly', recommended: true,
+        price_pkr: 55000, price_usd: 195, billingFrequency: 'Monthly', recommended: true,
         features: [
           { text: '4 Blog Articles / Month (1000–1500 words)', included: true },
           { text: 'Advanced SEO Keyword Targeting', included: true },
@@ -1125,7 +1125,7 @@ OUR CONTENT SERVICES:
       },
       {
         id: 'content-premium', name: 'Premium', tagline: 'Content Dominance', description: 'Comprehensive content marketing for maximum authority',
-        price_pkr: 75000, price_usd: 268, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 105000, price_usd: 375, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: '8 Blog Articles / Month (1500–2000 words)', included: true },
           { text: '1 Long-form Pillar Content / Month (3000+ words)', included: true },
@@ -1192,7 +1192,7 @@ Our team works as one unit — the SEO team informs content, content feeds socia
     packages: [
       {
         id: 'cdm-gold', name: 'Gold', tagline: 'Start Growing Digitally', description: 'Essential digital marketing covering core channels',
-        price_pkr: 120000, price_usd: 429, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 160000, price_usd: 570, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: 'Social Media (FB + IG) — 16 Posts + 3 Reels', included: true },
           { text: 'SEO — 15 Keywords, On-page Optimization', included: true },
@@ -1206,7 +1206,7 @@ Our team works as one unit — the SEO team informs content, content feeds socia
       },
       {
         id: 'cdm-platinum', name: 'Platinum', tagline: 'Serious Digital Growth', description: 'Full multi-channel digital marketing for growing businesses',
-        price_pkr: 200000, price_usd: 714, billingFrequency: 'Monthly', recommended: true,
+        price_pkr: 275000, price_usd: 980, billingFrequency: 'Monthly', recommended: true,
         features: [
           { text: 'Social Media (FB + IG + TikTok) — 24 Posts + 6 Reels', included: true },
           { text: 'SEO — 30 Keywords, Full Optimization + 5 Links/month', included: true },
@@ -1220,7 +1220,7 @@ Our team works as one unit — the SEO team informs content, content feeds socia
       },
       {
         id: 'cdm-diamond', name: 'Diamond', tagline: 'Total Digital Domination', description: 'The ultimate all-inclusive digital marketing powerhouse',
-        price_pkr: 350000, price_usd: 1250, billingFrequency: 'Monthly', recommended: false,
+        price_pkr: 480000, price_usd: 1715, billingFrequency: 'Monthly', recommended: false,
         features: [
           { text: 'All Platforms — 30+ Posts + 10 Reels/month', included: true },
           { text: 'Enterprise SEO — 60+ Keywords + 15 Links/month', included: true },

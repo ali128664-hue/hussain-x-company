@@ -86,6 +86,7 @@ export interface ClientData {
   logo: string | null;        // base64
   coverImage: string | null;  // base64
   requirements: string;
+  reelGifs: string[];         // base64 GIF/video files provided by client for reels section
 }
 
 // ─── Master Company Data ─────────────────────────────────────────────────────

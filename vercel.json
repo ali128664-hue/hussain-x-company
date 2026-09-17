@@ -1,0 +1,129 @@
+{
+  "redirects": [
+    {
+      "source": "/services/social-media-marketing",
+      "destination": "/services/social-media-marketing-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/seo-services",
+      "destination": "/services/seo-services-company",
+      "permanent": true
+    },
+    {
+      "source": "/services/ui-ux-design",
+      "destination": "/services/ui-ux-design-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/web-development",
+      "destination": "/services/web-development-company",
+      "permanent": true
+    },
+    {
+      "source": "/services/mobile-apps",
+      "destination": "/services/mobile-app-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-software",
+      "destination": "/services/custom-software-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/ecommerce",
+      "destination": "/services/ecommerce-website-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/digital-marketing",
+      "destination": "/services/digital-marketing-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding",
+      "destination": "/services/branding-and-creative-agency",
+      "permanent": true
+    },
+    {
+      "source": "/services/business-automation",
+      "destination": "/services/business-automation-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/ai-automation",
+      "destination": "/services/ai-automation-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/services/cloud-devops",
+      "destination": "/services/cloud-devops-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/cyber-security",
+      "destination": "/services/cyber-security-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/qa-testing",
+      "destination": "/services/software-qa-testing",
+      "permanent": true
+    },
+    {
+      "source": "/services/api-integration",
+      "destination": "/services/api-integration-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/database",
+      "destination": "/services/database-development-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/saas",
+      "destination": "/services/saas-application-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/maintenance",
+      "destination": "/services/website-maintenance-support",
+      "permanent": true
+    },
+    {
+      "source": "/services/wordpress",
+      "destination": "/services/wordpress-development-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/shopify",
+      "destination": "/services/shopify-store-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/ppc",
+      "destination": "/services/ppc-advertising-management",
+      "permanent": true
+    },
+    {
+      "source": "/services/content-marketing",
+      "destination": "/services/content-marketing-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/logo-design",
+      "destination": "/services/professional-logo-design",
+      "permanent": true
+    },
+    {
+      "source": "/services/video-editing",
+      "destination": "/services/professional-video-editing",
+      "permanent": true
+    },
+    {
+      "source": "/services/creative-design",
+      "destination": "/services/creative-design-services",
+      "permanent": true
+    }
+  ]
+}

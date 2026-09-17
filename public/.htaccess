@@ -1,0 +1,38 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# 301 Redirects for SEO
+RewriteRule ^services/social-media-marketing/?$ /services/social-media-marketing-services [R=301,L]
+RewriteRule ^services/seo-services/?$ /services/seo-services-company [R=301,L]
+RewriteRule ^services/ui-ux-design/?$ /services/ui-ux-design-services [R=301,L]
+RewriteRule ^services/web-development/?$ /services/web-development-company [R=301,L]
+RewriteRule ^services/mobile-apps/?$ /services/mobile-app-development [R=301,L]
+RewriteRule ^services/custom-software/?$ /services/custom-software-development [R=301,L]
+RewriteRule ^services/ecommerce/?$ /services/ecommerce-website-development [R=301,L]
+RewriteRule ^services/digital-marketing/?$ /services/digital-marketing-services [R=301,L]
+RewriteRule ^services/branding/?$ /services/branding-and-creative-agency [R=301,L]
+RewriteRule ^services/business-automation/?$ /services/business-automation-services [R=301,L]
+RewriteRule ^services/ai-automation/?$ /services/ai-automation-solutions [R=301,L]
+RewriteRule ^services/cloud-devops/?$ /services/cloud-devops-services [R=301,L]
+RewriteRule ^services/cyber-security/?$ /services/cyber-security-services [R=301,L]
+RewriteRule ^services/qa-testing/?$ /services/software-qa-testing [R=301,L]
+RewriteRule ^services/api-integration/?$ /services/api-integration-services [R=301,L]
+RewriteRule ^services/database/?$ /services/database-development-services [R=301,L]
+RewriteRule ^services/saas/?$ /services/saas-application-development [R=301,L]
+RewriteRule ^services/maintenance/?$ /services/website-maintenance-support [R=301,L]
+RewriteRule ^services/wordpress/?$ /services/wordpress-development-services [R=301,L]
+RewriteRule ^services/shopify/?$ /services/shopify-store-development [R=301,L]
+RewriteRule ^services/ppc/?$ /services/ppc-advertising-management [R=301,L]
+RewriteRule ^services/content-marketing/?$ /services/content-marketing-services [R=301,L]
+RewriteRule ^services/logo-design/?$ /services/professional-logo-design [R=301,L]
+RewriteRule ^services/video-editing/?$ /services/professional-video-editing [R=301,L]
+RewriteRule ^services/creative-design/?$ /services/creative-design-services [R=301,L]
+
+
+# React Router SPA catch-all
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+</IfModule>

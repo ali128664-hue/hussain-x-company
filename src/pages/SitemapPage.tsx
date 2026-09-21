@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { GradientText } from '@/components/ui/GradientText';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { ChevronRight } from 'lucide-react';
+import { SEOHead } from '@/components/SEOHead';
 
 const sitemapData = [
   {
@@ -17,44 +18,51 @@ const sitemapData = [
   {
     category: 'Software Development',
     links: [
-      { label: 'Custom Software Development', path: '/services/custom-software' },
-      { label: 'Mobile App Development', path: '/services/mobile-apps' },
-      { label: 'SaaS Development', path: '/services/saas' },
-      { label: 'Business Automation', path: '/services/business-automation' },
-      { label: 'AI & Automation Solutions', path: '/services/ai-automation' },
+      { label: 'Custom Software Development', path: '/services/custom-software-development' },
+      { label: 'Mobile App Development', path: '/services/mobile-app-development' },
+      { label: 'SaaS Development', path: '/services/saas-application-development' },
+      { label: 'Business Automation', path: '/services/business-automation-services' },
+      { label: 'AI & Automation Solutions', path: '/services/ai-automation-solutions' },
     ],
   },
   {
     category: 'Web & E-Commerce',
     links: [
-      { label: 'Web Development', path: '/services/web-development' },
-      { label: 'E-Commerce Development', path: '/services/ecommerce' },
-      { label: 'UI/UX Design', path: '/services/ui-ux-design' },
+      { label: 'Web Development', path: '/services/web-development-company' },
+      { label: 'E-Commerce Development', path: '/services/ecommerce-website-development' },
+      { label: 'WordPress Development', path: '/services/wordpress-development-services' },
+      { label: 'Shopify Development', path: '/services/shopify-store-development' },
+      { label: 'UI/UX Design', path: '/services/ui-ux-design-services' },
     ],
   },
   {
     category: 'Digital Marketing',
     links: [
-      { label: 'Social Media Marketing', path: '/services/social-media-marketing' },
-      { label: 'Search Engine Optimization (SEO)', path: '/services/seo-services' },
-      { label: 'Digital Marketing & Growth', path: '/services/digital-marketing' },
+      { label: 'Social Media Marketing', path: '/services/social-media-marketing-services' },
+      { label: 'Search Engine Optimization (SEO)', path: '/services/seo-services-company' },
+      { label: 'Digital Marketing & Growth', path: '/services/digital-marketing-services' },
+      { label: 'PPC Advertising Management', path: '/services/ppc-advertising-management' },
+      { label: 'Content Marketing Services', path: '/services/content-marketing-services' },
     ],
   },
   {
     category: 'Creative & Branding',
     links: [
-      { label: 'Branding & Creative Design', path: '/services/branding' },
+      { label: 'Branding & Creative Agency', path: '/services/branding-and-creative-agency' },
+      { label: 'Professional Logo Design', path: '/services/professional-logo-design' },
+      { label: 'Professional Video Editing', path: '/services/professional-video-editing' },
+      { label: 'Creative Design Services', path: '/services/creative-design-services' },
     ],
   },
   {
     category: 'Technology & Infrastructure',
     links: [
-      { label: 'Cloud & DevOps', path: '/services/cloud-devops' },
-      { label: 'Cyber Security', path: '/services/cyber-security' },
-      { label: 'API & System Integration', path: '/services/api-integration' },
-      { label: 'Database Development', path: '/services/database' },
-      { label: 'Software Testing & QA', path: '/services/qa-testing' },
-      { label: 'Maintenance & Support', path: '/services/maintenance' },
+      { label: 'Cloud & DevOps', path: '/services/cloud-devops-services' },
+      { label: 'Cyber Security', path: '/services/cyber-security-services' },
+      { label: 'API & System Integration', path: '/services/api-integration-services' },
+      { label: 'Database Development', path: '/services/database-development-services' },
+      { label: 'Software Testing & QA', path: '/services/software-qa-testing' },
+      { label: 'Maintenance & Support', path: '/services/website-maintenance-support' },
     ],
   },
   {
@@ -72,6 +80,11 @@ const SitemapPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#FFFFFF] pt-24 pb-20">
+      <SEOHead
+        title="HTML Website Sitemap"
+        description="Explore all services, solutions, and pages on the official Hussain X Solution website sitemap."
+        canonicalPath="/sitemap"
+      />
       <section className="relative overflow-hidden py-16 border-b border-[#E5DED9] text-center bg-[#FFFFFF]">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FF6A00]/5 blur-[120px] rounded-full pointer-events-none" />
         <div className="container mx-auto px-6 max-w-4xl relative z-10">

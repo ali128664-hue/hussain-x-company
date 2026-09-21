@@ -32,13 +32,13 @@ export function Footer() {
           <div className="flex flex-col gap-6">
             <h3 className="text-[#FFFFFF] font-semibold text-lg">Our Services</h3>
             <ul className="flex flex-col gap-3">
-              <li><Link to="/services/custom-software" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Custom Software Development</Link></li>
-              <li><Link to="/services/web-development" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Web Design &amp; Development</Link></li>
-              <li><Link to="/services/mobile-apps" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Mobile App Development</Link></li>
-              <li><Link to="/services/ecommerce" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">E-Commerce Development</Link></li>
-              <li><Link to="/services/social-media-marketing" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Social Media Marketing</Link></li>
-              <li><Link to="/services/seo-services" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Search Engine Optimization</Link></li>
-              <li><Link to="/services/branding" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Branding &amp; Creative Design</Link></li>
+              <li><Link to="/services/custom-software-development" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Custom Software Development</Link></li>
+              <li><Link to="/services/web-development-company" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Web Design &amp; Development</Link></li>
+              <li><Link to="/services/mobile-app-development" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Mobile App Development</Link></li>
+              <li><Link to="/services/ecommerce-website-development" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">E-Commerce Development</Link></li>
+              <li><Link to="/services/social-media-marketing-services" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Social Media Marketing</Link></li>
+              <li><Link to="/services/seo-services-company" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Search Engine Optimization</Link></li>
+              <li><Link to="/services/branding-and-creative-agency" className="text-[#FFFFFF] hover:text-[#FF6A00] transition-colors text-sm">Branding &amp; Creative Design</Link></li>
               <li><Link to="/services" className="text-[#FF6A00] hover:text-[#E85D00] transition-colors text-sm font-semibold">View All 25 Services →</Link></li>
             </ul>
           </div>

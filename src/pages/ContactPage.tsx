@@ -3,6 +3,7 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { GradientText } from '@/components/ui/GradientText';
 import { MapPin, Phone, Mail, CheckCircle2 } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
+import { SEOHead } from '@/components/SEOHead';
 
 const servicesList = [
   'Custom Software Development',
@@ -85,6 +86,11 @@ _Sent via hussainxsolution.com/contact_`;
 
   return (
     <div className="min-h-screen bg-[#FFFFFF] pt-36 md:pt-40 pb-0">
+      <SEOHead
+        title="Contact Us | Start Your Project with Hussain X Solution"
+        description="Get in touch with HUSSAIN X SOLUTION. Request a consultation, ask for a proposal, or visit our Lahore office in Model Town Q Block."
+        canonicalPath="/contact"
+      />
       <section className="py-16 md:py-20 relative overflow-hidden bg-[#FFFFFF]">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FF6A00]/5 blur-[140px] rounded-full pointer-events-none" />
         

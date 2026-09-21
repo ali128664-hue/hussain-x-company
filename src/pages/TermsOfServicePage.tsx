@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { GradientText } from '@/components/ui/GradientText';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { SEOHead } from '@/components/SEOHead';
 
 const sections = [
   {
@@ -107,6 +108,11 @@ const TermsOfServicePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#FFFFFF] pt-24 pb-20">
+      <SEOHead
+        title="Terms of Service"
+        description="Read the Terms of Service for Hussain X Solution. Understand our project agreements, delivery processes, and service policies."
+        canonicalPath="/terms-of-service"
+      />
       <section className="relative overflow-hidden py-16 border-b border-[#E5DED9] text-center bg-[#FFFFFF]">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FF6A00]/5 blur-[120px] rounded-full pointer-events-none" />
         <div className="container mx-auto px-6 max-w-4xl relative z-10">

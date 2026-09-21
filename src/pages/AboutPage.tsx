@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { GradientText } from '@/components/ui/GradientText';
 import { CheckCircle2, Trophy, Users2, Rocket } from 'lucide-react';
+import { SEOHead } from '@/components/SEOHead';
 
 const AboutPage: React.FC = () => {
   useEffect(() => {
@@ -10,6 +11,11 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#FFFFFF] pt-24 pb-0">
+      <SEOHead
+        title="About Us | Leading Software House & Growth Agency"
+        description="Learn about HUSSAIN X SOLUTION — our mission, leadership, core values, and proven methodology for engineering digital excellence in Pakistan and worldwide."
+        canonicalPath="/about"
+      />
       {/* Hero */}
       <section className="relative overflow-hidden py-20 bg-[#FFFFFF] border-b border-[#E5DED9] text-center">
         <div className="absolute inset-0 bg-[#FF6A00]/5 pointer-events-none"></div>

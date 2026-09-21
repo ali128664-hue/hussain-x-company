@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { GradientText } from '@/components/ui/GradientText';
 import AllServicesSection from '@/components/sections/AllServicesSection';
+import { SEOHead } from '@/components/SEOHead';
 
 const ServicesPage: React.FC = () => {
   // Scroll to top on mount
@@ -11,6 +12,11 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#FFFFFF] pt-24 pb-0">
+      <SEOHead
+        title="All Digital Services & Technology Solutions"
+        description="Explore 25+ premium digital services by HUSSAIN X SOLUTION: Custom Software, Web Development, Mobile Apps, SEO, Social Media Marketing, and Cloud DevOps."
+        canonicalPath="/services"
+      />
       {/* Services Hero */}
       <section className="relative overflow-hidden py-24 bg-[#FFFFFF] border-b border-[#E5DED9] text-center">
         <div className="absolute inset-0 bg-[#FF6A00]/5 pointer-events-none"></div>

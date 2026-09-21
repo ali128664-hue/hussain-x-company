@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, Navigate } from 'react-router-dom';
 import * as LucideIcons from 'lucide-react';
 import { services } from '@/data/servicesData';
 import AnimatedSection from '@/components/ui/AnimatedSection';
@@ -7,11 +7,45 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import ServiceCard from '@/components/ui/ServiceCard';
 import ShinyButton from '@/components/ui/ShinyButton';
 import { useConsultationModal } from '@/context/ConsultationModalContext';
+import { SEOHead } from '@/components/SEOHead';
+
+const slugRedirects: Record<string, string> = {
+  'social-media-marketing': 'social-media-marketing-services',
+  'seo-services': 'seo-services-company',
+  'ui-ux-design': 'ui-ux-design-services',
+  'web-development': 'web-development-company',
+  'mobile-apps': 'mobile-app-development',
+  'custom-software': 'custom-software-development',
+  'ecommerce': 'ecommerce-website-development',
+  'digital-marketing': 'digital-marketing-services',
+  'branding': 'branding-and-creative-agency',
+  'business-automation': 'business-automation-services',
+  'ai-automation': 'ai-automation-solutions',
+  'cloud-devops': 'cloud-devops-services',
+  'cyber-security': 'cyber-security-services',
+  'qa-testing': 'software-qa-testing',
+  'api-integration': 'api-integration-services',
+  'database': 'database-development-services',
+  'saas': 'saas-application-development',
+  'maintenance': 'website-maintenance-support',
+  'wordpress': 'wordpress-development-services',
+  'shopify': 'shopify-store-development',
+  'ppc': 'ppc-advertising-management',
+  'content-marketing': 'content-marketing-services',
+  'logo-design': 'professional-logo-design',
+  'video-editing': 'professional-video-editing',
+  'creative-design': 'creative-design-services'
+};
 
 const ServiceDetailPage: React.FC = () => {
   const { openModal } = useConsultationModal();
   const { serviceId } = useParams<{ serviceId: string }>();
   const navigate = useNavigate();
+
+  // Redirect legacy short slugs to canonical SEO slugs
+  if (serviceId && slugRedirects[serviceId]) {
+    return <Navigate to={`/services/${slugRedirects[serviceId]}`} replace />;
+  }
   
   const service = services.find(s => s.id === serviceId);
 
@@ -54,8 +88,35 @@ const ServiceDetailPage: React.FC = () => {
     { title: 'Deployment & Support', description: 'Smooth launch followed by ongoing maintenance and optimization.' }
   ];
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': service.title,
+    'description': service.description,
+    'provider': {
+      '@type': 'Organization',
+      'name': 'HUSSAIN X SOLUTION',
+      'url': 'https://www.hussainxsolution.com',
+      'logo': 'https://www.hussainxsolution.com/logo-dark.png',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Lahore',
+        'addressRegion': 'Punjab',
+        'addressCountry': 'Pakistan'
+      }
+    },
+    'serviceType': service.category,
+    'areaServed': 'Pakistan, Global'
+  };
+
   return (
     <div className="min-h-screen bg-[#FFFFFF] pt-24 pb-0">
+      <SEOHead
+        title={`${service.title} | Top ${service.title} Agency`}
+        description={service.description}
+        canonicalPath={`/services/${service.id}`}
+        schema={schema}
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 bg-[#FFFFFF] border-b border-[#E5DED9]">
         <div className="absolute inset-0 bg-[#FF6A00]/5 pointer-events-none"></div>

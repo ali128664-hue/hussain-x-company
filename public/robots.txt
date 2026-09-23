@@ -1,5 +1,50 @@
+# Robots.txt for HUSSAIN X SOLUTION (https://hussainxsolution.com)
+# Sitemaps and AI Bot discovery instructions
+
 User-agent: *
 Allow: /
 Disallow: /proposal
 
+# Explicit Permissions for AI Search Engines & Knowledge Crawlers
+User-agent: GPTBot
+Allow: /
+Disallow: /proposal
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /proposal
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /proposal
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /proposal
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /proposal
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /proposal
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /proposal
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /proposal
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /proposal
+
+# Primary XML Sitemap
 Sitemap: https://hussainxsolution.com/sitemap.xml
+
+# LLM Documentation Files
+# https://hussainxsolution.com/llms.txt
+# https://hussainxsolution.com/llms-full.txt

@@ -25,6 +25,26 @@ export default function HomePage() {
     'telephone': '+923480766608',
     'priceRange': '$$',
     'openingHours': 'Mo-Sa 09:00-18:00',
+    'areaServed': [
+      { '@type': 'Country', 'name': 'Pakistan' },
+      { '@type': 'City', 'name': 'Lahore' },
+      { '@type': 'City', 'name': 'Karachi' },
+      { '@type': 'City', 'name': 'Islamabad' },
+      { '@type': 'City', 'name': 'Pakpattan' },
+      { '@type': 'Country', 'name': 'United States' },
+      { '@type': 'Country', 'name': 'United Kingdom' },
+      { '@type': 'Country', 'name': 'United Arab Emirates' }
+    ],
+    'knowsAbout': [
+      'Custom Software Development',
+      'Artificial Intelligence & Automation',
+      'Search Engine Optimization (SEO)',
+      'Social Media Marketing & Management',
+      'Web Application Development',
+      'Mobile App Development',
+      'UI/UX Design & Prototyping',
+      'Cloud DevOps & Security'
+    ],
     'sameAs': [
       'https://facebook.com',
       'https://instagram.com',

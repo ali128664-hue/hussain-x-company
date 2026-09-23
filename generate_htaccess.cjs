@@ -66,6 +66,14 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
 </IfModule>
+
+# Allow CORS and set charset for LLM context files
+<FilesMatch "^(llms|llms-full)\\.txt$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+        Header set Content-Type "text/plain; charset=utf-8"
+    </IfModule>
+</FilesMatch>
 `;
 
 fs.writeFileSync('public/.htaccess', htaccess, 'utf-8');

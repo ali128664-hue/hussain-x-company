@@ -22,7 +22,7 @@ export default function HomePage() {
       'addressRegion': 'Punjab',
       'addressCountry': 'Pakistan'
     },
-    'telephone': '+923067800030',
+    'telephone': '+923480766608',
     'priceRange': '$$',
     'openingHours': 'Mo-Sa 09:00-18:00',
     'sameAs': [

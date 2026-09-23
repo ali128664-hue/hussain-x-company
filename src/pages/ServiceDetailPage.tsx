@@ -96,8 +96,8 @@ const ServiceDetailPage: React.FC = () => {
     'provider': {
       '@type': 'Organization',
       'name': 'HUSSAIN X SOLUTION',
-      'url': 'https://www.hussainxsolution.com',
-      'logo': 'https://www.hussainxsolution.com/logo-dark.png',
+      'url': 'https://hussainxsolution.com',
+      'logo': 'https://hussainxsolution.com/logo-dark.png',
       'address': {
         '@type': 'PostalAddress',
         'addressLocality': 'Lahore',

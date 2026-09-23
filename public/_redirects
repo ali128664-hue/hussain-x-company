@@ -1,3 +1,9 @@
+# Canonical Domain Redirects
+http://hussainxsolution.com/* https://hussainxsolution.com/:splat 301!
+http://www.hussainxsolution.com/* https://hussainxsolution.com/:splat 301!
+https://www.hussainxsolution.com/* https://hussainxsolution.com/:splat 301!
+
+# 301 Redirects for Legacy Slugs
 /services/social-media-marketing /services/social-media-marketing-services 301
 /services/seo-services /services/seo-services-company 301
 /services/ui-ux-design /services/ui-ux-design-services 301
@@ -23,3 +29,6 @@
 /services/logo-design /services/professional-logo-design 301
 /services/video-editing /services/professional-video-editing 301
 /services/creative-design /services/creative-design-services 301
+
+# SPA catch-all
+/* /index.html 200

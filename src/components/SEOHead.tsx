@@ -33,7 +33,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     const normalizedPath = canonicalPath
       ? (canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`)
       : (window.location.pathname === '/' ? '' : window.location.pathname);
-    const canonicalUrl = `https://www.hussainxsolution.com${normalizedPath}`;
+    const canonicalUrl = `https://hussainxsolution.com${normalizedPath}`;
 
     let linkCanonical = document.querySelector('link[rel="canonical"]');
     if (!linkCanonical) {

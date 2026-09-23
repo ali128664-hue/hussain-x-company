@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /proposal
 
-Sitemap: https://www.hussainxsolution.com/sitemap.xml
+Sitemap: https://hussainxsolution.com/sitemap.xml

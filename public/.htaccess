@@ -2,7 +2,26 @@
 RewriteEngine On
 RewriteBase /
 
-# 301 Redirects for SEO
+# ══════════════════════════════════════════════════════════
+# Canonical Domain Enforcement: https://hussainxsolution.com
+# Redirects:
+#   http://hussainxsolution.com       -> https://hussainxsolution.com
+#   http://www.hussainxsolution.com   -> https://hussainxsolution.com
+#   https://www.hussainxsolution.com  -> https://hussainxsolution.com
+# ══════════════════════════════════════════════════════════
+
+# 1. Redirect WWW to non-WWW (HTTP & HTTPS)
+RewriteCond %{HTTP_HOST} ^www\.hussainxsolution\.com$ [NC]
+RewriteRule ^(.*)$ https://hussainxsolution.com/$1 [L,R=301]
+
+# 2. Force HTTPS (if not already HTTPS)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://hussainxsolution.com/$1 [L,R=301]
+
+# ══════════════════════════════════════════════════════════
+# 301 Redirects for Legacy Service Slugs
+# ══════════════════════════════════════════════════════════
 RewriteRule ^services/social-media-marketing/?$ /services/social-media-marketing-services [R=301,L]
 RewriteRule ^services/seo-services/?$ /services/seo-services-company [R=301,L]
 RewriteRule ^services/ui-ux-design/?$ /services/ui-ux-design-services [R=301,L]
@@ -29,8 +48,9 @@ RewriteRule ^services/logo-design/?$ /services/professional-logo-design [R=301,L
 RewriteRule ^services/video-editing/?$ /services/professional-video-editing [R=301,L]
 RewriteRule ^services/creative-design/?$ /services/creative-design-services [R=301,L]
 
-
-# React Router SPA catch-all
+# ══════════════════════════════════════════════════════════
+# React Router SPA Catch-All
+# ══════════════════════════════════════════════════════════
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

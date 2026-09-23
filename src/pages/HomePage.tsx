@@ -12,8 +12,8 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     'name': 'HUSSAIN X SOLUTION',
-    'url': 'https://www.hussainxsolution.com',
-    'logo': 'https://www.hussainxsolution.com/logo-dark.png',
+    'url': 'https://hussainxsolution.com',
+    'logo': 'https://hussainxsolution.com/logo-dark.png',
     'description': 'Premier Software House & Digital Growth Agency based in Lahore, Pakistan. Offering custom software, web & mobile app development, UI/UX, SEO, and full-suite digital marketing.',
     'address': {
       '@type': 'PostalAddress',

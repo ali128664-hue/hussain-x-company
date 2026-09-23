@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { SmoothScrollProvider } from './components/SmoothScrollProvider';
 import { Navbar } from './components/Navbar';
@@ -18,6 +19,17 @@ import { ConsultationModal } from './components/ConsultationModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 function App() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const host = window.location.hostname;
+      const isWww = host === 'www.hussainxsolution.com' || host.startsWith('www.');
+      const isHttp = window.location.protocol === 'http:' && !host.includes('localhost') && !host.includes('127.0.0.1');
+      if (isWww || isHttp) {
+        const canonicalHost = host.replace(/^www\./, '');
+        window.location.replace(`https://${canonicalHost}${window.location.pathname}${window.location.search}${window.location.hash}`);
+      }
+    }
+  }, []);
   return (
     <ConsultationModalProvider>
       <SmoothScrollProvider>

@@ -32,7 +32,22 @@ let htaccess = `<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 
+# ══════════════════════════════════════════════════════════
+# Canonical Domain Enforcement: https://hussainxsolution.com
+# ══════════════════════════════════════════════════════════
+
+# 1. Redirect WWW to non-WWW (HTTP & HTTPS)
+RewriteCond %{HTTP_HOST} ^www\\.hussainxsolution\\.com$ [NC]
+RewriteRule ^(.*)$ https://hussainxsolution.com/$1 [L,R=301]
+
+# 2. Force HTTPS (if not already HTTPS)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://hussainxsolution.com/$1 [L,R=301]
+
+# ══════════════════════════════════════════════════════════
 # 301 Redirects for SEO
+# ══════════════════════════════════════════════════════════
 `;
 
 for (const [oldSlug, newSlug] of Object.entries(slugMapping)) {
@@ -43,7 +58,9 @@ for (const [oldSlug, newSlug] of Object.entries(slugMapping)) {
 
 htaccess += `
 
-# React Router SPA catch-all
+# ══════════════════════════════════════════════════════════
+# React Router SPA Catch-All
+# ══════════════════════════════════════════════════════════
 RewriteRule ^index\\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

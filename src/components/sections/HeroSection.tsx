@@ -29,7 +29,7 @@ export const HeroSection = () => {
             </div>
           </AnimatedSection>
           
-          <div className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0A0A0A] leading-[1.1]">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0A0A0A] leading-[1.1]">
             <TextReveal text="WE BUILD" delay={0.15} />
             <div className="flex gap-4 flex-wrap">
               <GradientText><TextReveal text="DIGITAL" delay={0.2} /></GradientText>
@@ -39,7 +39,7 @@ export const HeroSection = () => {
               <GradientText><TextReveal text="MODERN" delay={0.3} /></GradientText>
               <TextReveal text="BUSINESSES." delay={0.35} />
             </div>
-          </div>
+          </h1>
 
           <AnimatedSection delay={0.4}>
             <p className="text-lg sm:text-xl text-[#5C504A] max-w-xl leading-relaxed">

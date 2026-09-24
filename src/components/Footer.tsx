@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Twitter, MapPin, Phone, Mail, MessageSquare, Clock } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail, MessageSquare, Clock } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -21,10 +21,9 @@ export function Footer() {
               Your trusted digital technology &amp; growth partner based in Lahore, Pakistan. We deliver innovative software, stunning designs, and result-driven marketing strategies to help modern businesses scale.
             </p>
             <div className="flex items-center gap-4 text-[#B8B0AB]">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#FF6A00] transition-colors"><Facebook size={20} /></a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#FF6A00] transition-colors"><Instagram size={20} /></a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[#FF6A00] transition-colors"><Linkedin size={20} /></a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-[#FF6A00] transition-colors"><Twitter size={20} /></a>
+              <a href="https://www.facebook.com/hussainxsolution" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-[#FF6A00] transition-colors"><Facebook size={20} /></a>
+              <a href="https://www.instagram.com/hussainxsolution/" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-[#FF6A00] transition-colors"><Instagram size={20} /></a>
+              <a href="https://www.linkedin.com/company/hussain-x-solution" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-[#FF6A00] transition-colors"><Linkedin size={20} /></a>
             </div>
           </div>
 

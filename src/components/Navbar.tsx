@@ -100,9 +100,9 @@ export function Navbar() {
           </a>
         </div>
         <div className="flex items-center gap-4">
-          <a href="#" className="hover:text-[#FF6A00] transition-colors text-[#5C504A]"><Facebook size={14} /></a>
-          <a href="#" className="hover:text-[#FF6A00] transition-colors text-[#5C504A]"><Instagram size={14} /></a>
-          <a href="#" className="hover:text-[#FF6A00] transition-colors text-[#5C504A]"><Linkedin size={14} /></a>
+          <a href="https://www.facebook.com/hussainxsolution" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-[#FF6A00] transition-colors text-[#5C504A]"><Facebook size={14} /></a>
+          <a href="https://www.instagram.com/hussainxsolution/" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-[#FF6A00] transition-colors text-[#5C504A]"><Instagram size={14} /></a>
+          <a href="https://www.linkedin.com/company/hussain-x-solution" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-[#FF6A00] transition-colors text-[#5C504A]"><Linkedin size={14} /></a>
         </div>
       </div>
 
@@ -285,9 +285,9 @@ export function Navbar() {
               <div className="mt-auto pt-8 flex flex-col gap-6">
                 <ShinyButton onClick={() => { setMobileMenuOpen(false); openModal(); }}>Get Free Consultation</ShinyButton>
                 <div className="flex items-center gap-6 justify-center text-[#5C504A]">
-                  <a href="#" className="hover:text-[#FF6A00] transition-colors"><Facebook size={20} /></a>
-                  <a href="#" className="hover:text-[#FF6A00] transition-colors"><Instagram size={20} /></a>
-                  <a href="#" className="hover:text-[#FF6A00] transition-colors"><Linkedin size={20} /></a>
+                  <a href="https://www.facebook.com/hussainxsolution" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-[#FF6A00] transition-colors"><Facebook size={20} /></a>
+                  <a href="https://www.instagram.com/hussainxsolution/" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-[#FF6A00] transition-colors"><Instagram size={20} /></a>
+                  <a href="https://www.linkedin.com/company/hussain-x-solution" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-[#FF6A00] transition-colors"><Linkedin size={20} /></a>
                 </div>
               </div>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { GradientText } from '@/components/ui/GradientText';
-import { MapPin, Phone, Mail, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, CheckCircle2, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 import { SEOHead } from '@/components/SEOHead';
 
@@ -161,6 +161,40 @@ _Sent via hussainxsolution.com/contact_`;
                   <div>
                     <h4 className="text-[#0A0A0A] font-semibold mb-1">Office Location</h4>
                     <p className="text-[#5C504A] text-sm">Model Town Q Block,<br />Lahore, Pakistan</p>
+                  </div>
+                </div>
+
+                {/* Social Profiles */}
+                <div className="p-4 rounded-xl bg-[#FAF8F6] border border-[#E5DED9]">
+                  <h4 className="text-[#0A0A0A] font-semibold mb-3 text-sm">Follow &amp; Connect With Us</h4>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <a 
+                      href="https://www.facebook.com/hussainxsolution" 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      aria-label="Facebook"
+                      className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-[#E5DED9] text-[#5C504A] hover:text-[#FF6A00] hover:border-[#FF6A00]/40 transition-colors text-xs font-medium shadow-xs"
+                    >
+                      <Facebook size={15} /> Facebook
+                    </a>
+                    <a 
+                      href="https://www.instagram.com/hussainxsolution/" 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      aria-label="Instagram"
+                      className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-[#E5DED9] text-[#5C504A] hover:text-[#FF6A00] hover:border-[#FF6A00]/40 transition-colors text-xs font-medium shadow-xs"
+                    >
+                      <Instagram size={15} /> Instagram
+                    </a>
+                    <a 
+                      href="https://www.linkedin.com/company/hussain-x-solution" 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      aria-label="LinkedIn"
+                      className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-[#E5DED9] text-[#5C504A] hover:text-[#FF6A00] hover:border-[#FF6A00]/40 transition-colors text-xs font-medium shadow-xs"
+                    >
+                      <Linkedin size={15} /> LinkedIn
+                    </a>
                   </div>
                 </div>
               </AnimatedSection>

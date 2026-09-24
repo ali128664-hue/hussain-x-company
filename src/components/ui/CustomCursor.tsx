@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 export const CustomCursor = () => {
+  const [isTouch, setIsTouch] = useState(false);
+
   // --- Dot (snappy, follows mouse exactly) ---
   const dotX = useMotionValue(-100);
   const dotY = useMotionValue(-100);
@@ -18,8 +20,11 @@ export const CustomCursor = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Touch devices — hide cursor
-    if (window.matchMedia('(pointer: coarse)').matches) return;
+    // Touch devices — disable cursor completely
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      setIsTouch(true);
+      return;
+    }
 
     const onMove = (e: MouseEvent) => {
       dotX.set(e.clientX);

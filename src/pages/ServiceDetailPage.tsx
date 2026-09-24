@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate, Navigate } from 'react-router-dom';
-import * as LucideIcons from 'lucide-react';
+import { ServiceIcon } from '@/components/ServiceIcon';
 import { services } from '@/data/servicesData';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -65,8 +65,6 @@ const ServiceDetailPage: React.FC = () => {
       </div>
     );
   }
-
-  const IconComponent = (LucideIcons as unknown as Record<string, React.ElementType>)[service.icon] || LucideIcons.MonitorSmartphone;
 
   // Find related services
   const relatedServices = services
@@ -136,7 +134,7 @@ const ServiceDetailPage: React.FC = () => {
             
             <div className="max-w-4xl">
               <div className="w-16 h-16 rounded-2xl bg-white border border-[#E5DED9] shadow-sm flex items-center justify-center mb-8 text-[#FF6A00]">
-                <IconComponent size={36} />
+                <ServiceIcon name={service.icon} size={36} />
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold text-[#0A0A0A] mb-6">
                 {service.title}

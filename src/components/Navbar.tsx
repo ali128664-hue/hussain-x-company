@@ -120,6 +120,8 @@ export function Navbar() {
             <img 
               src="/logo.png" 
               alt="HUSSAIN X SOLUTION" 
+              width={180}
+              height={44}
               className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-200" 
             />
           </Link>
@@ -224,6 +226,8 @@ export function Navbar() {
                 <img 
                   src="/logo.png" 
                   alt="HUSSAIN X SOLUTION" 
+                  width={150}
+                  height={36}
                   className="h-8 md:h-9 w-auto object-contain" 
                 />
               </Link>

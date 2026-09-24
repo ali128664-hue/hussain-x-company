@@ -1,0 +1,47 @@
+{
+  "$schema": "https://agentdiscovery.org/schemas/v1/ai-catalog.json",
+  "version": "1.0",
+  "name": "HUSSAIN X SOLUTION",
+  "description": "Premier digital technology partner, custom software development house, AI automation agency, and full-spectrum digital marketing firm based in Lahore, Pakistan.",
+  "url": "https://hussainxsolution.com",
+  "provider": {
+    "name": "HUSSAIN X SOLUTION",
+    "url": "https://hussainxsolution.com",
+    "contact": "info@hussainxsolution.com"
+  },
+  "capabilities": [
+    "custom-software-development",
+    "web-development",
+    "mobile-app-development",
+    "ai-automation-solutions",
+    "ui-ux-design",
+    "seo-services",
+    "digital-marketing",
+    "ecommerce-development",
+    "cloud-devops"
+  ],
+  "resources": [
+    {
+      "name": "LLM Context",
+      "type": "text/markdown",
+      "url": "https://hussainxsolution.com/llms.txt",
+      "description": "LLM-ready context file summarizing Hussain X Solution capabilities, services, and tech stack."
+    },
+    {
+      "name": "LLM Full Documentation",
+      "type": "text/markdown",
+      "url": "https://hussainxsolution.com/llms-full.txt",
+      "description": "Comprehensive LLM documentation for all 25 services, pricing models, and technical specifications."
+    },
+    {
+      "name": "Sitemap",
+      "type": "application/xml",
+      "url": "https://hussainxsolution.com/sitemap.xml",
+      "description": "Complete XML sitemap of all public routes and specialized service endpoints."
+    }
+  ],
+  "contact": {
+    "email": "info@hussainxsolution.com",
+    "telephone": "+923480766608"
+  }
+}

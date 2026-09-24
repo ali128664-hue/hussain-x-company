@@ -14,6 +14,9 @@ export function Footer() {
               <img 
                 src="/logo-dark.png" 
                 alt="HUSSAIN X SOLUTION" 
+                width={180}
+                height={44}
+                loading="lazy"
                 className="h-11 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-200" 
               />
             </Link>

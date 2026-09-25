@@ -1,9 +1,9 @@
 import HeroSection from '@/components/sections/HeroSection';
 import CategoriesSection from '@/components/sections/CategoriesSection';
-import AllServicesSection from '@/components/sections/AllServicesSection';
 import JourneySection from '@/components/sections/JourneySection';
 import TechStackSection from '@/components/sections/TechStackSection';
 import IndustriesSection from '@/components/sections/IndustriesSection';
+import AllServicesSection from '@/components/sections/AllServicesSection';
 import CTASection from '@/components/sections/CTASection';
 import { SEOHead } from '@/components/SEOHead';
 
@@ -14,7 +14,7 @@ export default function HomePage() {
     'name': 'HUSSAIN X SOLUTION',
     'url': 'https://hussainxsolution.com',
     'logo': 'https://hussainxsolution.com/logo-dark.png',
-    'description': 'Premier Software House & Digital Growth Agency based in Lahore, Pakistan. Offering custom software, web & mobile app development, UI/UX, SEO, and full-suite digital marketing.',
+    'description': 'HUSSAIN X SOLUTION is a premier software house and digital growth agency based in Lahore, Pakistan. We deliver custom software, web & mobile apps, AI automation, SEO, and full-suite digital marketing.',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': 'Model Town Q Block',
@@ -30,7 +30,6 @@ export default function HomePage() {
       { '@type': 'City', 'name': 'Lahore' },
       { '@type': 'City', 'name': 'Karachi' },
       { '@type': 'City', 'name': 'Islamabad' },
-      { '@type': 'City', 'name': 'Pakpattan' },
       { '@type': 'Country', 'name': 'United States' },
       { '@type': 'Country', 'name': 'United Kingdom' },
       { '@type': 'Country', 'name': 'United Arab Emirates' }
@@ -43,29 +42,43 @@ export default function HomePage() {
       'Web Application Development',
       'Mobile App Development',
       'UI/UX Design & Prototyping',
-      'Cloud DevOps & Security'
+      'Cloud DevOps & Cybersecurity'
     ],
     'sameAs': [
-      'https://facebook.com',
-      'https://instagram.com',
-      'https://linkedin.com'
+      'https://www.facebook.com/hussainxsolution',
+      'https://www.instagram.com/hussainxsolution/',
+      'https://www.linkedin.com/company/hussain-x-solution'
     ]
   };
 
   return (
     <main>
       <SEOHead
-        title="HUSSAIN X SOLUTION | Premium Digital Technology & Growth Partner"
-        description="Transform your business with HUSSAIN X SOLUTION — Lahore's leading software development and digital marketing agency. Bespoke web apps, mobile solutions, SEO & growth strategies."
+        title="HUSSAIN X SOLUTION | Software & Digital Growth Agency"
+        description="HUSSAIN X SOLUTION is a premier software development and digital marketing agency in Lahore, Pakistan. We engineer bespoke apps, web solutions & SEO growth."
         canonicalPath="/"
         schema={homeSchema}
       />
+
+      {/* 1. Hero — First impression, above the fold */}
       <HeroSection />
+
+      {/* 2. Services Overview — What we offer, grouped by category */}
       <CategoriesSection />
-      <AllServicesSection />
+
+      {/* 3. Process — How we work (builds trust) */}
       <JourneySection />
+
+      {/* 4. Tech Stack — Credibility through technology */}
       <TechStackSection />
+
+      {/* 5. Industries — Who we serve */}
       <IndustriesSection />
+
+      {/* 6. All Services — Full list for SEO & exploration */}
+      <AllServicesSection />
+
+      {/* 7. CTA — Final conversion push */}
       <CTASection />
     </main>
   );

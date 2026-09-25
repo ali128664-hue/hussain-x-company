@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { ArrowUpRight } from 'lucide-react';
 
 interface ServiceCardProps {
   number: string;
@@ -17,31 +18,42 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   icon,
-  gradient = 'from-orange-500/20 to-amber-500/20',
   onClick,
   className,
 }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
+      whileHover={{ y: -4 }}
       onClick={onClick}
+      transition={{ duration: 0.2 }}
       className={cn(
-        'group relative overflow-hidden rounded-2xl bg-[#FAF8F6] border border-[#E5DED9] p-8 transition-all duration-300 hover:border-[#FF6A00]/50 hover:shadow-[0_4px_20px_-5px_rgba(255,106,0,0.15)] cursor-pointer',
+        'group relative overflow-hidden rounded-2xl bg-white border border-[#E5DED9] p-7 transition-all duration-300 hover:border-[#FF6A00]/60 hover:shadow-[0_12px_40px_-12px_rgba(255,106,0,0.2)] cursor-pointer flex flex-col h-full',
         className
       )}
     >
-      <div className="absolute top-4 right-4 text-8xl font-black text-[#0A0A0A] opacity-5 select-none pointer-events-none transition-opacity duration-300 group-hover:opacity-10">
-        {number}
+      {/* Top row: icon + number */}
+      <div className="flex items-start justify-between mb-6">
+        <div className="w-14 h-14 rounded-xl bg-[#FAF8F6] border border-[#E5DED9] flex items-center justify-center group-hover:bg-[#FF6A00]/10 group-hover:border-[#FF6A00]/30 transition-all duration-300 shadow-sm">
+          <div className="text-[#FF6A00]">{icon}</div>
+        </div>
+        <span className="text-5xl font-black text-[#0A0A0A] opacity-[0.06] select-none group-hover:opacity-[0.12] transition-opacity duration-300 leading-none">
+          {number}
+        </span>
       </div>
 
-      <div
-        className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white border border-[#E5DED9] shadow-sm group-hover:border-[#FF6A00]/40 transition-colors"
-      >
-        <div className="text-[#FF6A00]">{icon}</div>
+      {/* Content */}
+      <h3 className="text-lg font-bold text-[#0A0A0A] group-hover:text-[#FF6A00] transition-colors duration-200 mb-3 leading-tight">
+        {title}
+      </h3>
+      <p className="text-sm text-[#5C504A] leading-relaxed flex-1">{description}</p>
+
+      {/* Bottom arrow */}
+      <div className="mt-5 flex items-center gap-1.5 text-xs font-semibold text-[#FF6A00] opacity-0 group-hover:opacity-100 transition-all duration-200 translate-y-1 group-hover:translate-y-0">
+        Learn More <ArrowUpRight size={13} />
       </div>
 
-      <h3 className="mb-4 text-2xl font-bold text-[#0A0A0A] group-hover:text-[#FF6A00] transition-colors">{title}</h3>
-      <p className="text-[#5C504A] leading-relaxed">{description}</p>
+      {/* Hover left accent bar */}
+      <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#FF6A00] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom rounded-full" />
     </motion.div>
   );
 };

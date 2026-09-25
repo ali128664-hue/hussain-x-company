@@ -44,10 +44,3 @@ html.lenis, html.lenis body {
 ::selection {
   @apply bg-primary text-white;
 }
-
-/* Hide default cursor on non-touch devices */
-@media (pointer: fine) {
-  *, *::before, *::after {
-    cursor: none !important;
-  }
-}

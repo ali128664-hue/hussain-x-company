@@ -1,76 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Phone, Mail, Facebook, Instagram, Linkedin, 
-  Menu, X, ChevronDown, ChevronRight, 
-  Code, Layout, Server, TrendingUp, Lightbulb,
-  Smartphone, Monitor, Globe, Cloud, Database,
-  Shield, Bot, Search, Share2, BarChart, Video,
-  PenTool, Settings
+import {
+  Phone, Mail, Facebook, Instagram, Linkedin,
+  Menu, X, ChevronDown, ChevronRight,
+  Code2, Globe, Smartphone, ShoppingBag,
+  Layers, Sparkles, Search, Megaphone,
+  Brain, Cloud, ShieldCheck, Headphones
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-// If useLenisScroll is not exported this way, compilation might fail, but following instructions:
 import { ShinyButton } from '@/components/ui/ShinyButton';
 import { useConsultationModal } from '@/context/ConsultationModalContext';
 
 const servicesMenu = [
   {
-    title: "SOFTWARE DEVELOPMENT",
-    icon: <Code size={14} />,
+    title: "BUILD",
+    icon: <Code2 size={14} />,
     items: [
-      { label: "Custom Software", icon: <Code size={16} />, path: "/services/custom-software-development" },
-      { label: "Web Applications", icon: <Monitor size={16} />, path: "/services/web-development-company" },
-      { label: "Mobile Apps", icon: <Smartphone size={16} />, path: "/services/mobile-app-development" },
-      { label: "SaaS Development", icon: <Cloud size={16} />, path: "/services/saas-application-development" },
-      { label: "API Integration", icon: <Settings size={16} />, path: "/services/api-integration-services" }
+      { label: "Custom Software", icon: <Code2 size={15} />, path: "/services/software-development" },
+      { label: "Web Development", icon: <Globe size={15} />, path: "/services/web-development" },
+      { label: "Mobile Apps", icon: <Smartphone size={15} />, path: "/services/mobile-app-development" },
+      { label: "E-Commerce", icon: <ShoppingBag size={15} />, path: "/services/ecommerce-solutions" },
     ]
   },
   {
-    title: "DESIGN & DEVELOPMENT",
-    icon: <Layout size={14} />,
+    title: "DESIGN",
+    icon: <Layers size={14} />,
     items: [
-      { label: "UI/UX Design", icon: <PenTool size={16} />, path: "/services/ui-ux-design-services" },
-      { label: "Web Development", icon: <Globe size={16} />, path: "/services/web-development-company" },
-      { label: "E-commerce", icon: <Layout size={16} />, path: "/services/ecommerce-website-development" },
-      { label: "WordPress", icon: <Layout size={16} />, path: "/services/wordpress-development-services" },
-      { label: "Shopify", icon: <Layout size={16} />, path: "/services/shopify-store-development" }
+      { label: "UI/UX & Product Design", icon: <Layers size={15} />, path: "/services/ui-ux-design" },
+      { label: "Brand Identity & Creative", icon: <Sparkles size={15} />, path: "/services/branding-creative" },
+    ]
+  },
+  {
+    title: "GROW",
+    icon: <Megaphone size={14} />,
+    items: [
+      { label: "SEO & Organic Growth", icon: <Search size={15} />, path: "/services/seo-services" },
+      { label: "Digital Marketing & Ads", icon: <Megaphone size={15} />, path: "/services/digital-marketing" },
     ]
   },
   {
     title: "TECHNOLOGY",
-    icon: <Server size={14} />,
+    icon: <Brain size={14} />,
     items: [
-      { label: "Cloud & DevOps", icon: <Cloud size={16} />, path: "/services/cloud-devops-services" },
-      { label: "Database Solutions", icon: <Database size={16} />, path: "/services/database-development-services" },
-      { label: "AI & Automation", icon: <Bot size={16} />, path: "/services/ai-automation-solutions" },
-      { label: "Cyber Security", icon: <Shield size={16} />, path: "/services/cyber-security-services" },
-      { label: "QA & Testing", icon: <Shield size={16} />, path: "/services/software-qa-testing" }
+      { label: "AI & Business Automation", icon: <Brain size={15} />, path: "/services/ai-automation" },
+      { label: "Cloud, DevOps & Security", icon: <Cloud size={15} />, path: "/services/cloud-devops" },
+      { label: "QA Testing & Reliability", icon: <ShieldCheck size={15} />, path: "/services/qa-testing" },
+      { label: "Website Care & Support", icon: <Headphones size={15} />, path: "/services/website-support" },
     ]
   },
-  {
-    title: "DIGITAL GROWTH",
-    icon: <TrendingUp size={14} />,
-    items: [
-      { label: "SEO", icon: <Search size={16} />, path: "/services/seo-services-company" },
-      { label: "Digital Marketing", icon: <Share2 size={16} />, path: "/services/digital-marketing-services" },
-      { label: "Social Media", icon: <Share2 size={16} />, path: "/services/social-media-marketing-services" },
-      { label: "PPC", icon: <BarChart size={16} />, path: "/services/ppc-advertising-management" },
-      { label: "Content Marketing", icon: <PenTool size={16} />, path: "/services/content-marketing-services" }
-    ]
-  },
-  {
-    title: "CREATIVE",
-    icon: <Lightbulb size={14} />,
-    items: [
-      { label: "Branding", icon: <Lightbulb size={16} />, path: "/services/branding-and-creative-agency" },
-      { label: "Logo Design", icon: <PenTool size={16} />, path: "/services/professional-logo-design" },
-      { label: "Video Editing", icon: <Video size={16} />, path: "/services/professional-video-editing" },
-      { label: "Creative Design", icon: <Layout size={16} />, path: "/services/creative-design-services" },
-      { label: "Business Automation", icon: <Settings size={16} />, path: "/services/business-automation-services" }
-    ]
-  }
 ];
+
 
 export function Navbar() {
   const { openModal } = useConsultationModal();

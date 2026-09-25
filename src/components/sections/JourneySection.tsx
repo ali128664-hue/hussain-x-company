@@ -1,90 +1,82 @@
 import React, { useState } from 'react';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import {
-  Lightbulb, Target, PenTool, Code, CheckSquare, Rocket, TrendingUp, BarChart
-} from 'lucide-react';
+import { ServiceIcon } from '@/components/ServiceIcon';
+import { processSteps } from '@/data/servicesData';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
-
-const steps = [
-  { id: 1, title: 'Discover', desc: 'Deep-dive into your goals, users, and market landscape.', icon: Lightbulb, color: '#FF6A00' },
-  { id: 2, title: 'Strategy', desc: 'Define a clear roadmap with milestones and KPIs.', icon: Target, color: '#FF6A00' },
-  { id: 3, title: 'Design', desc: 'Craft pixel-perfect UI/UX wireframes and prototypes.', icon: PenTool, color: '#FF6A00' },
-  { id: 4, title: 'Develop', desc: 'Build scalable, tested, production-ready code.', icon: Code, color: '#FF6A00' },
-  { id: 5, title: 'Test', desc: 'Rigorous QA across devices, browsers, and edge cases.', icon: CheckSquare, color: '#FF6A00' },
-  { id: 6, title: 'Launch', desc: 'Deploy securely with zero downtime.', icon: Rocket, color: '#FF6A00' },
-  { id: 7, title: 'Market', desc: 'SEO, ads, and campaigns to attract qualified users.', icon: TrendingUp, color: '#FF6A00' },
-  { id: 8, title: 'Grow', desc: 'Analytics, iterations, and scaling for long-term success.', icon: BarChart, color: '#FF6A00' },
-];
 
 export const JourneySection = () => {
   const [hoveredStep, setHoveredStep] = useState<number | null>(null);
 
   return (
-    <section className="py-28 relative overflow-hidden bg-[#FAFAF9] border-t border-[#E5DED9]/60">
-      {/* Background pattern */}
+    <section className="py-28 relative overflow-hidden bg-[#F9F8F6] border-t border-[#E8E4E0]">
+      {/* Background dot grid */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.025]"
+        className="absolute inset-0 pointer-events-none opacity-[0.035]"
         style={{
-          backgroundImage: 'radial-gradient(circle, #0A0A0A 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #111111 1px, transparent 1px)',
           backgroundSize: '32px 32px',
         }}
       />
 
-      <div className="container mx-auto px-6 max-w-6xl relative z-10">
+      <div className="container mx-auto px-6 max-w-5xl relative z-10">
         <AnimatedSection>
           <SectionHeading
-            label="Our Process"
-            title="From Idea to Scalable Growth"
-            accentWord="Scalable Growth"
-            description="A proven, transparent step-by-step engineering roadmap executed for every client project."
+            label="How We Work"
+            title="Five Steps. Zero Surprises."
+            accentWord="Zero Surprises."
+            description="A transparent, proven process that takes your idea from a concept to a live, growing product — with you in the loop at every step."
             align="center"
             className="mb-20"
           />
         </AnimatedSection>
 
-        {/* Desktop: horizontal timeline */}
+        {/* Desktop: 5-step horizontal flow */}
         <div className="hidden md:block relative">
-          {/* Progress bar */}
-          <div className="absolute top-8 left-0 right-0 h-px bg-[#E5DED9] z-0" />
+          {/* Animated progress line */}
+          <div className="absolute top-10 left-[10%] right-[10%] h-px bg-[#E8E4E0] z-0" />
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.5, ease: 'easeOut' }}
-            className="absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-[#FF6A00] to-[#FF6A00]/20 z-0 origin-left"
+            transition={{ duration: 1.8, ease: 'easeOut' }}
+            className="absolute top-10 left-[10%] right-[10%] h-px bg-gradient-to-r from-[#F5620F] to-[#F5620F]/20 z-0 origin-left"
           />
 
-          <div className="flex justify-between gap-2 relative z-10">
-            {steps.map((step, i) => {
-              const Icon = step.icon;
-              const isHovered = hoveredStep === step.id;
+          <div className="flex justify-between gap-4 relative z-10">
+            {processSteps.map((step, i) => {
+              const isHovered = hoveredStep === i;
               return (
-                <AnimatedSection key={step.id} delay={i * 0.08} className="flex flex-col items-center text-center flex-1">
+                <AnimatedSection key={step.number} delay={i * 0.1} className="flex flex-col items-center text-center flex-1">
                   <div
-                    onMouseEnter={() => setHoveredStep(step.id)}
+                    onMouseEnter={() => setHoveredStep(i)}
                     onMouseLeave={() => setHoveredStep(null)}
                     className={cn(
-                      'relative w-16 h-16 rounded-2xl border-2 bg-white flex items-center justify-center transition-all duration-300 cursor-pointer shadow-sm mb-5',
+                      'relative w-20 h-20 rounded-2xl border-2 bg-white flex items-center justify-center transition-all duration-300 cursor-pointer shadow-sm mb-6',
                       isHovered
-                        ? 'border-[#FF6A00] shadow-[0_0_24px_rgba(255,106,0,0.25)] -translate-y-2 bg-[#FF6A00]'
-                        : 'border-[#E5DED9]'
+                        ? 'border-[#F5620F] shadow-[0_0_28px_rgba(245,98,15,0.22)] -translate-y-3 bg-[#F5620F]'
+                        : 'border-[#E8E4E0]'
                     )}
                   >
-                    <Icon
-                      className={cn('w-6 h-6 transition-colors duration-200', isHovered ? 'text-white' : 'text-[#5C504A]')}
+                    <ServiceIcon
+                      name={step.icon}
+                      size={24}
+                      className={cn('transition-colors duration-200', isHovered ? 'text-white' : 'text-[#6B6560]')}
                     />
-                    {/* Step number badge */}
-                    <div className="absolute -top-2.5 -right-2.5 w-5 h-5 rounded-full bg-[#FF6A00] flex items-center justify-center text-[9px] font-black text-white shadow">
-                      {step.id}
+                    {/* Step badge */}
+                    <div className="absolute -top-3 -right-3 w-6 h-6 rounded-full bg-[#F5620F] flex items-center justify-center text-[10px] font-black text-white shadow-md">
+                      {step.number}
                     </div>
                   </div>
 
-                  <h4 className={cn('font-bold text-sm mb-1 transition-colors duration-200', isHovered ? 'text-[#FF6A00]' : 'text-[#0A0A0A]')}>
+                  <h4 className={cn(
+                    'font-bold text-sm mb-2 transition-colors duration-200',
+                    isHovered ? 'text-[#F5620F]' : 'text-[#111111]'
+                  )}>
                     {step.title}
                   </h4>
-                  <p className="text-[11px] text-[#5C504A] max-w-[100px] leading-relaxed">{step.desc}</p>
+                  <p className="text-xs text-[#6B6560] max-w-[130px] leading-relaxed">{step.description}</p>
                 </AnimatedSection>
               );
             })}
@@ -92,25 +84,24 @@ export const JourneySection = () => {
         </div>
 
         {/* Mobile: vertical list */}
-        <div className="md:hidden flex flex-col gap-5 relative">
-          <div className="absolute left-7 top-0 bottom-0 w-px bg-[#E5DED9]" />
-          {steps.map((step, i) => {
-            const Icon = step.icon;
-            return (
-              <AnimatedSection key={step.id} delay={i * 0.07} className="flex items-start gap-5">
-                <div className="relative w-14 h-14 rounded-xl bg-white border-2 border-[#E5DED9] flex items-center justify-center shrink-0 shadow-sm z-10">
-                  <Icon className="w-5 h-5 text-[#FF6A00]" />
-                  <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#FF6A00] flex items-center justify-center text-[9px] font-black text-white">
-                    {step.id}
-                  </div>
+        <div className="md:hidden flex flex-col gap-6 relative">
+          <div className="absolute left-9 top-0 bottom-0 w-px bg-[#E8E4E0]" />
+          {processSteps.map((step, i) => (
+            <AnimatedSection key={step.number} delay={i * 0.08} className="flex items-start gap-5">
+              <div className="relative w-18 h-18 flex-shrink-0">
+                <div className="w-16 h-16 rounded-xl bg-white border-2 border-[#E8E4E0] flex items-center justify-center shadow-sm z-10 relative">
+                  <ServiceIcon name={step.icon} size={20} className="text-[#F5620F]" />
                 </div>
-                <div className="pt-2">
-                  <h4 className="font-bold text-[#0A0A0A] mb-1">{step.title}</h4>
-                  <p className="text-sm text-[#5C504A] leading-relaxed">{step.desc}</p>
+                <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#F5620F] flex items-center justify-center text-[9px] font-black text-white">
+                  {step.number}
                 </div>
-              </AnimatedSection>
-            );
-          })}
+              </div>
+              <div className="pt-2">
+                <h4 className="font-bold text-[#111111] mb-1">{step.title}</h4>
+                <p className="text-sm text-[#6B6560] leading-relaxed">{step.description}</p>
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
       </div>
     </section>

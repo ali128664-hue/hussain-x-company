@@ -1,36 +1,43 @@
 import React from 'react';
 import {
-  Share2, Search, Palette, MonitorSmartphone,
-  Smartphone, Code2, ShoppingCart, TrendingUp,
-  Brush, Workflow, Bot, Cloud,
-  Shield, CheckCircle, Zap, Database,
-  CloudLightning, Wrench, Layout, BarChart,
-  PenTool, Video, HelpCircle
+  Code2, Globe, Smartphone, ShoppingBag,
+  Layers, Sparkles, Search, Megaphone,
+  Brain, Cloud, ShieldCheck, Headphones,
+  HelpCircle
 } from 'lucide-react';
 
 const iconMap: Record<string, React.ElementType> = {
-  Share2,
-  Search,
-  Palette,
-  MonitorSmartphone,
-  Smartphone,
+  // New 12-service icons
   Code2,
-  ShoppingCart,
-  TrendingUp,
-  Brush,
-  Workflow,
-  Bot,
+  Globe,
+  Smartphone,
+  ShoppingBag,
+  Layers,
+  Sparkles,
+  Search,
+  Megaphone,
+  Brain,
   Cloud,
-  Shield,
-  CheckCircle,
-  Zap,
-  Database,
-  CloudLightning,
-  Wrench,
-  Layout,
-  BarChart,
-  PenTool,
-  Video
+  ShieldCheck,
+  Headphones,
+  // Legacy icons (kept for backward compatibility)
+  Share2: Megaphone,
+  Palette: Layers,
+  MonitorSmartphone: Globe,
+  TrendingUp: Megaphone,
+  Brush: Sparkles,
+  Workflow: Brain,
+  Bot: Brain,
+  Shield: ShieldCheck,
+  CheckCircle: ShieldCheck,
+  Zap: Code2,
+  Database: Cloud,
+  CloudLightning: Cloud,
+  Wrench: Headphones,
+  Layout: Globe,
+  BarChart: Megaphone,
+  PenTool: Sparkles,
+  Video: Sparkles,
 };
 
 interface ServiceIconProps {

@@ -29,7 +29,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     return (
       <>
         {parts[0]}
-        <span className="text-[#FF6A00]">{accentWord}</span>
+        <span className="text-[#F5620F]">{accentWord}</span>
         {parts[1]}
       </>
     );
@@ -44,8 +44,8 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       )}
     >
       {label && (
-        <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#FF6A00] font-mono font-semibold px-3 py-1.5 rounded-full bg-[#FF6A00]/8 border border-[#FF6A00]/20">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#FF6A00] inline-block" />
+        <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#F5620F] font-mono font-semibold px-3 py-1.5 rounded-full bg-[#F5620F]/8 border border-[#F5620F]/20">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#F5620F] inline-block" />
           {label}
         </span>
       )}

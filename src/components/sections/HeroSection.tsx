@@ -74,22 +74,22 @@ export const HeroSection = () => {
             </AnimatedSection>
 
             {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl xl:text-7xl font-extrabold tracking-tight text-[#0A0A0A] leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-[#0A0A0A] leading-[1.08]">
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="block"
+                className="block text-[#0A0A0A]"
               >
-                WE BUILD
+                PAKISTAN'S PREMIER
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="block"
+                className="block text-[#0A0A0A]"
               >
-                <GradientText>DIGITAL</GradientText>
+                SOFTWARE HOUSE &
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
@@ -97,7 +97,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="block"
               >
-                SOLUTIONS THAT
+                <GradientText>DIGITAL GROWTH</GradientText>
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
@@ -106,13 +106,13 @@ export const HeroSection = () => {
                 className="block"
               >
                 <span className="relative inline-block">
-                  GROW BRANDS.
+                  STUDIO.
                   {/* underline accent */}
                   <motion.span
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
-                    className="absolute -bottom-2 left-0 right-0 h-1 bg-[#FF6A00] rounded-full origin-left"
+                    className="absolute -bottom-2 left-0 right-0 h-1 bg-[#F5620F] rounded-full origin-left"
                   />
                 </span>
               </motion.span>
@@ -121,9 +121,7 @@ export const HeroSection = () => {
             {/* Sub-copy */}
             <AnimatedSection delay={0.55}>
               <p className="text-lg sm:text-xl text-[#5C504A] max-w-lg leading-relaxed">
-                From custom software and scalable web platforms to{' '}
-                <span className="text-[#FF6A00] font-semibold">data-driven Digital Marketing</span> —{' '}
-                <strong className="text-[#0A0A0A]">HUSSAIN X SOLUTION</strong> engineers end-to-end technology solutions to accelerate your brand's growth.
+                We engineer custom enterprise software, intuitive web & mobile apps, and high-ROI marketing campaigns that scale your business — from Lahore to the world.
               </p>
             </AnimatedSection>
 

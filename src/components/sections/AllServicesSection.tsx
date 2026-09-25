@@ -12,19 +12,19 @@ const AllServicesSection: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-24 bg-[#FAFAF9]">
+    <section className="py-24 bg-[#F9F8F6]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
             <SectionHeading
               label="All Services"
-              title="25 Services. One Team."
-              accentWord="One Team."
-              description="Click any service to see full details, deliverables, and pricing."
+              title="12 Core Services. One Unified Team."
+              accentWord="One Unified Team."
+              description="Click any service to see full technical details, deliverables, and capabilities."
             />
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#FF6A00] hover:text-[#E85D00] transition-colors whitespace-nowrap shrink-0"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#F5620F] hover:text-[#D9540A] transition-colors whitespace-nowrap shrink-0"
             >
               Get a Custom Quote <ArrowRight size={14} />
             </Link>
@@ -46,7 +46,7 @@ const AllServicesSection: React.FC = () => {
                   number={service.number}
                   title={service.title}
                   description={service.description}
-                  icon={<ServiceIcon name={service.icon} size={28} className="text-[#FF6A00]" />}
+                  icon={<ServiceIcon name={service.icon} size={28} className="text-[#F5620F]" />}
                   gradient={service.gradient}
                 />
               </div>

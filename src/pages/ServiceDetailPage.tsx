@@ -244,14 +244,13 @@ const ServiceDetailPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             {relatedServices.map((relatedService, index) => {
-              const RelatedIconComponent = (LucideIcons as unknown as Record<string, React.ElementType>)[relatedService.icon] || LucideIcons.MonitorSmartphone;
               return (
                 <AnimatedSection key={relatedService.id} delay={index * 0.1} className="h-full">
                   <div onClick={() => navigate(`/services/${relatedService.id}`)} className="cursor-pointer h-full block">
                     <ServiceCard number={relatedService.number}
                       title={relatedService.title}
                       description={relatedService.description}
-                      icon={<RelatedIconComponent size={32} className="text-[#FF6A00]" />}
+                      icon={<ServiceIcon name={relatedService.icon} size={32} className="text-[#FF6A00]" />}
                       gradient={relatedService.gradient}
                     />
                   </div>

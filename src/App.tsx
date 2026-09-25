@@ -4,7 +4,6 @@ import { SmoothScrollProvider } from './components/SmoothScrollProvider';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import HomePage from './pages/HomePage';
-import { CustomCursor } from './components/ui/CustomCursor';
 import { ConsultationModalProvider } from './context/ConsultationModalContext';
 import { ConsultationModal } from './components/ConsultationModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
@@ -23,7 +22,6 @@ function App() {
   return (
     <ConsultationModalProvider>
       <SmoothScrollProvider>
-        <CustomCursor />
         <div className="min-h-screen bg-background text-foreground">
           <Navbar />
           <Suspense fallback={<div className="min-h-screen bg-[#FFFFFF]" />}>

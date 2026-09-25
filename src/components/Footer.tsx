@@ -80,7 +80,7 @@ export function Footer() {
                   to="/services"
                   className="text-sm text-[#F5620F] hover:text-[#FF8A50] font-semibold transition-colors inline-flex items-center gap-1"
                 >
-                  View All 12 Services <ArrowUpRight size={12} />
+                  View All 25 Services <ArrowUpRight size={12} />
                 </Link>
               </li>
             </ul>

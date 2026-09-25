@@ -15,7 +15,7 @@ const ServicesPage: React.FC = () => {
     <div className="min-h-screen bg-[#F9F8F6] pt-24 pb-0">
       <SEOHead
         title="All Services | Software, Web, Mobile, SEO & Digital Marketing"
-        description="Explore 12 core digital services by HUSSAIN X SOLUTION — Custom Software, Web & Mobile Apps, UI/UX, SEO, Digital Marketing, Cloud, AI Automation, and Creative Design."
+        description="Explore all 25 specialized digital services by HUSSAIN X SOLUTION — Custom Software, SaaS, Web & Mobile Apps, UI/UX, SEO, Social Media, Cloud, AI Automation, and Creative Design."
         canonicalPath="/services"
       />
 
@@ -35,7 +35,7 @@ const ServicesPage: React.FC = () => {
             <AnimatedSection>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#F5620F]/25 bg-[#F5620F]/8 text-[#F5620F] text-xs font-mono font-semibold uppercase tracking-widest mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#F5620F] inline-block" />
-                12 Core Services
+                25 Specialized Services
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A0A0A] mb-5 leading-[1.1]">
@@ -46,7 +46,7 @@ const ServicesPage: React.FC = () => {
 
             <AnimatedSection delay={0.1}>
               <p className="text-lg text-[#5C504A] leading-relaxed mb-8 max-w-xl">
-                12 specialized services. One expert engineering team. Zero hand-offs. From idea to launch and scaling, we have you covered.
+                25 specialized digital services across 5 core pillars. One dedicated engineering studio. From architecture to launch and scaling, we have you covered.
               </p>
 
               <div className="flex flex-wrap gap-3">

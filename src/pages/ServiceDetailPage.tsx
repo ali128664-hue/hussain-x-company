@@ -8,51 +8,40 @@ import ServiceCard from '@/components/ui/ServiceCard';
 import ShinyButton from '@/components/ui/ShinyButton';
 import { useConsultationModal } from '@/context/ConsultationModalContext';
 import { SEOHead } from '@/components/SEOHead';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 const slugRedirects: Record<string, string> = {
-  // Legacy slugs mapped to new 12 core services
-  'custom-software-development': 'software-development',
-  'custom-software': 'software-development',
-  'saas-application-development': 'software-development',
-  'saas': 'software-development',
-  'business-automation-services': 'ai-automation',
-  'business-automation': 'ai-automation',
-  'web-development-company': 'web-development',
-  'wordpress-development-services': 'web-development',
-  'wordpress': 'web-development',
+  // Short alias redirects to full canonical SEO slugs
+  'custom-software': 'custom-software-development',
+  'saas': 'saas-application-development',
   'mobile-apps': 'mobile-app-development',
-  'ecommerce-website-development': 'ecommerce-solutions',
-  'ecommerce': 'ecommerce-solutions',
-  'shopify-store-development': 'ecommerce-solutions',
-  'shopify': 'ecommerce-solutions',
-  'ui-ux-design-services': 'ui-ux-design',
-  'branding-and-creative-agency': 'branding-creative',
-  'branding': 'branding-creative',
-  'professional-logo-design': 'branding-creative',
-  'logo-design': 'branding-creative',
-  'professional-video-editing': 'branding-creative',
-  'video-editing': 'branding-creative',
-  'creative-design-services': 'branding-creative',
-  'creative-design': 'branding-creative',
-  'seo-services-company': 'seo-services',
-  'social-media-marketing-services': 'digital-marketing',
-  'social-media-marketing': 'digital-marketing',
-  'digital-marketing-services': 'digital-marketing',
-  'ppc-advertising-management': 'digital-marketing',
-  'ppc': 'digital-marketing',
-  'content-marketing-services': 'digital-marketing',
-  'content-marketing': 'digital-marketing',
-  'ai-automation-solutions': 'ai-automation',
-  'cloud-devops-services': 'cloud-devops',
-  'cyber-security-services': 'cloud-devops',
-  'cyber-security': 'cloud-devops',
-  'api-integration-services': 'cloud-devops',
-  'api-integration': 'cloud-devops',
-  'database-development-services': 'cloud-devops',
-  'database': 'cloud-devops',
-  'software-qa-testing': 'qa-testing',
-  'website-maintenance-support': 'website-support',
-  'maintenance': 'website-support',
+  'api-integration': 'api-integration-services',
+  'business-automation': 'business-automation-services',
+  'web-development': 'web-development-company',
+  'ecommerce': 'ecommerce-website-development',
+  'wordpress': 'wordpress-development-services',
+  'shopify': 'shopify-store-development',
+  'maintenance': 'website-maintenance-support',
+  'ui-ux-design': 'ui-ux-design-services',
+  'branding': 'branding-and-creative-agency',
+  'logo-design': 'professional-logo-design',
+  'video-editing': 'professional-video-editing',
+  'creative-design': 'creative-design-services',
+  'seo-services': 'seo-services-company',
+  'social-media-marketing': 'social-media-marketing-services',
+  'ppc': 'ppc-advertising-management',
+  'digital-marketing': 'digital-marketing-services',
+  'content-marketing': 'content-marketing-services',
+  'ai-automation': 'ai-automation-solutions',
+  'cloud-devops': 'cloud-devops-services',
+  'cyber-security': 'cyber-security-services',
+  'qa-testing': 'software-qa-testing',
+  'database': 'database-development-services',
+  // Backward compatibility from temporary 12-slug experiment
+  'software-development': 'custom-software-development',
+  'ecommerce-solutions': 'ecommerce-website-development',
+  'branding-creative': 'branding-and-creative-agency',
+  'website-support': 'website-maintenance-support',
 };
 
 const ServiceDetailPage: React.FC = () => {
@@ -64,7 +53,7 @@ const ServiceDetailPage: React.FC = () => {
   if (serviceId && slugRedirects[serviceId]) {
     return <Navigate to={`/services/${slugRedirects[serviceId]}`} replace />;
   }
-  
+
   const service = services.find(s => s.id === serviceId);
 
   // Scroll to top on mount or when serviceId changes
@@ -74,22 +63,22 @@ const ServiceDetailPage: React.FC = () => {
 
   if (!service) {
     return (
-      <div className="min-h-screen bg-background flex flex-col items-center justify-center pt-32 pb-20">
-        <h1 className="text-4xl font-bold text-white mb-4">Service not found</h1>
-        <p className="text-slate-400 mb-8">The service you are looking for does not exist.</p>
+      <div className="min-h-screen bg-[#F9F8F6] flex flex-col items-center justify-center pt-32 pb-20 px-6 text-center">
+        <h1 className="text-3xl font-extrabold text-[#111111] mb-4">Service Not Found</h1>
+        <p className="text-[#6B6560] mb-8 max-w-md">The service page you are looking for has moved or does not exist.</p>
         <Link to="/services">
-          <ShinyButton>Back to All Services</ShinyButton>
+          <ShinyButton>Explore All 25 Services</ShinyButton>
         </Link>
       </div>
     );
   }
 
-  // Find related services
+  // Find related services in the same category
   const relatedServices = services
     .filter(s => s.id !== service.id && s.category === service.category)
     .slice(0, 3);
-  
-  // Fill up if we don't have 3
+
+  // Fill up if we don't have 3 in the same category
   if (relatedServices.length < 3) {
     const additional = services
       .filter(s => s.id !== service.id && !relatedServices.find(rs => rs.id === s.id))
@@ -98,10 +87,10 @@ const ServiceDetailPage: React.FC = () => {
   }
 
   const processSteps = [
-    { title: 'Requirement Analysis', description: 'We begin by thoroughly understanding your business goals and technical needs.' },
-    { title: 'Design & Architecture', description: 'Creating blueprints, wireframes, and establishing the technical foundation.' },
-    { title: 'Development & Testing', description: 'Iterative building followed by rigorous quality assurance.' },
-    { title: 'Deployment & Support', description: 'Smooth launch followed by ongoing maintenance and optimization.' }
+    { title: 'Discovery & Scope', description: 'Deep technical analysis of requirements, workflows, and success metrics.' },
+    { title: 'UX Architecture', description: 'Interactive Figma wireframes, data schemas, and technical blueprint approval.' },
+    { title: 'Sprint Development', description: 'Agile engineering with bi-weekly demos, clean code, and test passes.' },
+    { title: 'Deployment & Scaling', description: 'Automated CI/CD launch, monitoring setup, and post-launch support.' },
   ];
 
   const schema = {
@@ -118,70 +107,94 @@ const ServiceDetailPage: React.FC = () => {
         '@type': 'PostalAddress',
         'addressLocality': 'Lahore',
         'addressRegion': 'Punjab',
-        'addressCountry': 'Pakistan'
-      }
+        'addressCountry': 'Pakistan',
+      },
     },
     'serviceType': service.category,
-    'areaServed': 'Pakistan, Global'
+    'areaServed': 'Pakistan, Global',
   };
 
   return (
     <div className="min-h-screen bg-[#FFFFFF] pt-24 pb-0">
       <SEOHead
-        title={`${service.title} | Top ${service.title} Agency`}
+        title={`${service.title} | HUSSAIN X SOLUTION`}
         description={service.description}
         canonicalPath={`/services/${service.id}`}
         schema={schema}
       />
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 bg-[#FFFFFF] border-b border-[#E5DED9]">
-        <div className="absolute inset-0 bg-[#FF6A00]/5 pointer-events-none"></div>
-        <div className="absolute top-10 right-10 p-12 overflow-hidden pointer-events-none opacity-[0.04] select-none flex items-center justify-center">
-          <span className="text-9xl font-bold text-[#FF6A00]">{service.number}</span>
+      <section className="relative overflow-hidden py-20 bg-[#F9F8F6] border-b border-[#E8E4E0]">
+        <div className="absolute inset-0 bg-[#F5620F]/5 pointer-events-none" />
+        <div className="absolute top-10 right-10 p-12 overflow-hidden pointer-events-none opacity-[0.05] select-none flex items-center justify-center">
+          <span className="text-9xl font-black text-[#F5620F]">{service.number}</span>
         </div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div className="container mx-auto px-6 max-w-5xl relative z-10">
           <AnimatedSection>
-            <div className="flex items-center space-x-2 text-sm text-[#5C504A] mb-8">
-              <Link to="/" className="hover:text-[#FF6A00] transition-colors">Home</Link>
+            {/* Breadcrumb */}
+            <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-[#6B6560] mb-8">
+              <Link to="/" className="hover:text-[#F5620F] transition-colors">Home</Link>
               <span>/</span>
-              <Link to="/services" className="hover:text-[#FF6A00] transition-colors">Services</Link>
+              <Link to="/services" className="hover:text-[#F5620F] transition-colors">Services</Link>
               <span>/</span>
-              <span className="text-[#0A0A0A] font-medium">{service.title}</span>
+              <span className="text-[#111111] font-bold">{service.title}</span>
             </div>
-            
-            <div className="max-w-4xl">
-              <div className="w-16 h-16 rounded-2xl bg-white border border-[#E5DED9] shadow-sm flex items-center justify-center mb-8 text-[#FF6A00]">
-                <ServiceIcon name={service.icon} size={36} />
+
+            <div className="max-w-3xl">
+              <div className="w-16 h-16 rounded-2xl bg-white border border-[#E8E4E0] shadow-sm flex items-center justify-center mb-8 text-[#F5620F]">
+                <ServiceIcon name={service.icon} size={32} />
               </div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-[#0A0A0A] mb-6">
+              <h1 className="text-4xl sm:text-5xl font-extrabold text-[#111111] mb-5 tracking-tight leading-[1.1]">
                 {service.title}
               </h1>
-              <p className="text-xl text-[#FF6A00] font-semibold mb-6">
+              <p className="text-lg sm:text-xl text-[#F5620F] font-bold mb-6">
                 {service.tagline}
               </p>
-              <p className="text-lg text-[#5C504A] leading-relaxed">
+              <p className="text-base sm:text-lg text-[#6B6560] leading-relaxed mb-8">
                 {service.description}
               </p>
+              <div className="flex flex-wrap items-center gap-4">
+                <ShinyButton onClick={() => openModal(service.title)}>
+                  Book Free Consultation
+                </ShinyButton>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#111111] hover:text-[#F5620F] transition-colors"
+                >
+                  Contact Our Engineers <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Sub-Services Grid */}
-      <section className="py-20 bg-[#FFFFFF] border-b border-[#E5DED9]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-[#FFFFFF] border-b border-[#E8E4E0]">
+        <div className="container mx-auto px-6 max-w-6xl">
           <AnimatedSection>
-            <SectionHeading label="Detailed Offerings" title="What's Included" />
+            <SectionHeading
+              label="Deliverables"
+              title="What Is Included in This Service"
+              accentWord="What Is Included"
+              description="Every engagement is structured around concrete deliverables, technical excellence, and transparent communication."
+            />
           </AnimatedSection>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
             {service.subServices.map((sub, index) => (
-              <AnimatedSection key={index} delay={index * 0.05} className="h-full">
-                <div className="bg-[#FAF8F6] border border-[#E5DED9] p-6 rounded-xl h-full flex flex-col relative overflow-hidden group hover:border-[#FF6A00]/50 transition-all duration-300 shadow-sm">
-                  <div className="h-0.5 w-12 bg-[#FF6A00] mb-5"></div>
-                  <h3 className="font-bold text-[#0A0A0A] text-lg mb-3 group-hover:text-[#FF6A00] transition-colors">{sub.name}</h3>
-                  <p className="text-sm text-[#5C504A] flex-grow leading-relaxed">{sub.description}</p>
+              <AnimatedSection key={index} delay={index * 0.04} className="h-full">
+                <div className="bg-[#F9F8F6] border border-[#E8E4E0] p-7 rounded-2xl h-full flex flex-col relative overflow-hidden group hover:border-[#F5620F]/50 hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-center gap-2 mb-4">
+                    <CheckCircle2 size={16} className="text-[#F5620F] shrink-0" />
+                    <h3 className="font-bold text-[#111111] text-base group-hover:text-[#F5620F] transition-colors">
+                      {sub.name}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-[#6B6560] leading-relaxed flex-grow">
+                    {sub.description}
+                  </p>
                 </div>
               </AnimatedSection>
             ))}
@@ -191,15 +204,20 @@ const ServiceDetailPage: React.FC = () => {
 
       {/* Technologies Section */}
       {service.technologies && service.technologies.length > 0 && (
-        <section className="py-20 bg-[#FFFFFF] border-b border-[#E5DED9]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-[#F9F8F6] border-b border-[#E8E4E0]">
+          <div className="container mx-auto px-6 max-w-6xl">
             <AnimatedSection>
-              <SectionHeading label="Tech Stack" title="Technologies & Tools" />
+              <SectionHeading
+                label="Tools & Tech"
+                title="Technologies We Master"
+                accentWord="Technologies"
+                description="We use proven, enterprise-grade frameworks and development tools."
+              />
               <div className="flex flex-wrap gap-3 mt-10">
                 {service.technologies.map((tech, index) => (
-                  <span 
+                  <span
                     key={index}
-                    className="px-4 py-2 bg-[#FAF8F6] border border-[#E5DED9] rounded-full text-sm font-semibold text-[#0A0A0A] shadow-sm"
+                    className="px-5 py-2.5 bg-white border border-[#E8E4E0] rounded-full text-xs font-bold text-[#111111] shadow-xs"
                   >
                     {tech}
                   </span>
@@ -211,22 +229,26 @@ const ServiceDetailPage: React.FC = () => {
       )}
 
       {/* Process Section */}
-      <section className="py-20 bg-[#FFFFFF] border-b border-[#E5DED9]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-[#FFFFFF] border-b border-[#E8E4E0]">
+        <div className="container mx-auto px-6 max-w-6xl">
           <AnimatedSection>
-            <SectionHeading label="Methodology" title="Our Development Process" />
+            <SectionHeading
+              label="Workflow"
+              title="Our Engineering Process"
+              accentWord="Engineering Process"
+              description="A battle-tested 4-step framework from inception to production deployment."
+            />
           </AnimatedSection>
-          
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-6 left-0 right-0 h-0.5 bg-[#E5DED9] z-0"></div>
+
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {processSteps.map((step, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
-                <div className="relative z-10 flex flex-col items-start md:items-center text-left md:text-center">
-                  <div className="w-12 h-12 rounded-full bg-[#FAF8F6] border-2 border-[#FF6A00] flex items-center justify-center text-[#FF6A00] font-bold mb-6 shadow-sm">
-                    {index + 1}
+              <AnimatedSection key={index} delay={index * 0.08}>
+                <div className="flex flex-col items-start p-6 rounded-2xl bg-[#F9F8F6] border border-[#E8E4E0] h-full">
+                  <div className="w-10 h-10 rounded-xl bg-[#F5620F] text-white flex items-center justify-center font-black text-sm mb-5 shadow-sm">
+                    0{index + 1}
                   </div>
-                  <h3 className="text-[#0A0A0A] font-bold mb-3">{step.title}</h3>
-                  <p className="text-[#5C504A] text-sm leading-relaxed">{step.description}</p>
+                  <h3 className="text-[#111111] font-bold text-base mb-2">{step.title}</h3>
+                  <p className="text-[#6B6560] text-xs leading-relaxed">{step.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -234,47 +256,42 @@ const ServiceDetailPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-[#FAF8F6] border-b border-[#E5DED9] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#FF6A00]/5 pointer-events-none"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      {/* Related Services */}
+      <section className="py-24 bg-[#F9F8F6]">
+        <div className="container mx-auto px-6 max-w-6xl">
           <AnimatedSection>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A0A0A] mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-[#5C504A] mb-8 max-w-2xl mx-auto">
-              Let's discuss your {service.title} needs and see how we can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <ShinyButton onClick={() => openModal(service.title)}>Book Free Consultation</ShinyButton>
-              <Link to="/services" className="text-[#FF6A00] hover:text-[#E85D00] transition-colors font-semibold">
-                ← Back to All Services
+            <div className="flex items-center justify-between mb-12">
+              <SectionHeading
+                label="Explore More"
+                title="Related Capabilities"
+                accentWord="Related Capabilities"
+              />
+              <Link
+                to="/services"
+                className="text-xs font-bold uppercase tracking-wider text-[#F5620F] hover:text-[#D9540A] transition-colors"
+              >
+                All 25 Services →
               </Link>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
 
-      {/* Related Services */}
-      <section className="py-20 bg-[#FFFFFF]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <SectionHeading label="More Expertise" title="Related Services" />
-          </AnimatedSection>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {relatedServices.map((relatedService, index) => {
-              return (
-                <AnimatedSection key={relatedService.id} delay={index * 0.1} className="h-full">
-                  <div onClick={() => navigate(`/services/${relatedService.id}`)} className="cursor-pointer h-full block">
-                    <ServiceCard number={relatedService.number}
-                      title={relatedService.title}
-                      description={relatedService.description}
-                      icon={<ServiceIcon name={relatedService.icon} size={32} className="text-[#FF6A00]" />}
-                      gradient={relatedService.gradient}
-                    />
-                  </div>
-                </AnimatedSection>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {relatedServices.map((relatedService, index) => (
+              <AnimatedSection key={relatedService.id} delay={index * 0.08} className="h-full">
+                <div
+                  onClick={() => navigate(`/services/${relatedService.id}`)}
+                  className="cursor-pointer h-full block"
+                >
+                  <ServiceCard
+                    number={relatedService.number}
+                    title={relatedService.title}
+                    description={relatedService.description}
+                    icon={<ServiceIcon name={relatedService.icon} size={28} className="text-[#F5620F]" />}
+                    gradient={relatedService.gradient}
+                  />
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
@@ -283,5 +300,3 @@ const ServiceDetailPage: React.FC = () => {
 };
 
 export default ServiceDetailPage;
-
-

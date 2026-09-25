@@ -17,22 +17,22 @@ const values = [
   {
     icon: Target,
     title: 'Results-Driven',
-    desc: 'We don\'t just deliver products — we deliver measurable outcomes. Every project is tied to your business goals.',
+    desc: 'We don\'t just deliver code — we deliver measurable business outcomes tied directly to your revenue goals.',
   },
   {
     icon: Lightbulb,
     title: 'Innovation First',
-    desc: 'From AI automation to modern web frameworks, we use the latest tools to keep your business ahead of the curve.',
+    desc: 'From custom software and AI integrations to modern web frameworks, we keep your business ahead of the curve.',
   },
   {
     icon: Heart,
     title: 'Client-Centric',
-    desc: 'Your success is our success. We build long-term partnerships, not one-off transactions.',
+    desc: 'Your success is our reputation. We build enduring engineering partnerships, not transactional vendor projects.',
   },
   {
     icon: Globe,
-    title: 'Global Reach',
-    desc: 'Based in Lahore, serving clients across Pakistan, the US, UK, UAE, and beyond with enterprise-quality digital solutions.',
+    title: 'Global Delivery',
+    desc: 'Engineered in Lahore, trusted by growing businesses across Pakistan, the US, UK, UAE, and worldwide.',
   },
 ];
 
@@ -50,36 +50,36 @@ const AboutPage: React.FC = () => {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden py-24 bg-[#FAFAF9] border-b border-[#E5DED9] text-center">
+      <section className="relative overflow-hidden py-24 bg-[#F9F8F6] border-b border-[#E8E4E0] text-center">
         <div className="absolute inset-0 pointer-events-none opacity-[0.025]"
           style={{
             backgroundImage: `linear-gradient(#0A0A0A 1px, transparent 1px), linear-gradient(90deg, #0A0A0A 1px, transparent 1px)`,
             backgroundSize: '50px 50px',
           }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#FF6A00]/8 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#F5620F]/8 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto px-6 max-w-3xl relative z-10">
           <AnimatedSection>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FF6A00]/25 bg-[#FF6A00]/8 text-[#FF6A00] text-xs font-mono font-semibold uppercase tracking-widest mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF6A00] inline-block" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#F5620F]/25 bg-[#F5620F]/8 text-[#F5620F] text-xs font-mono font-semibold uppercase tracking-widest mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#F5620F] inline-block" />
               Who We Are
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#0A0A0A] mb-6 leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#111111] mb-6 leading-[1.1]">
               The Team Behind Your{' '}<GradientText>Digital Success</GradientText>
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
-            <p className="text-lg text-[#5C504A] max-w-2xl mx-auto leading-relaxed">
-              <strong className="text-[#0A0A0A]">HUSSAIN X SOLUTION</strong> is a full-service software house and digital growth agency based in Lahore, Pakistan. We help businesses across Pakistan, the US, UK, and UAE transform their digital presence — building products that scale and campaigns that convert.
+            <p className="text-lg text-[#6B6560] max-w-2xl mx-auto leading-relaxed">
+              <strong className="text-[#111111]">HUSSAIN X SOLUTION</strong> is a full-service software house and digital growth agency based in Lahore, Pakistan. We help businesses across Pakistan, the US, UK, and UAE transform their digital presence — building software that scales and campaigns that convert.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-16 border-b border-[#E5DED9] bg-white">
+      <section className="py-16 border-b border-[#E8E4E0] bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => {
@@ -88,13 +88,13 @@ const AboutPage: React.FC = () => {
                 <AnimatedSection key={i} delay={0.08 * i}>
                   <motion.div
                     whileHover={{ y: -3 }}
-                    className="flex flex-col items-center text-center p-6 bg-[#FAFAF9] rounded-2xl border border-[#E5DED9] hover:border-[#FF6A00]/40 hover:shadow-md transition-all duration-300"
+                    className="flex flex-col items-center text-center p-6 bg-[#F9F8F6] rounded-2xl border border-[#E8E4E0] hover:border-[#F5620F]/40 hover:shadow-md transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-[#FF6A00]/8 border border-[#FF6A00]/20 flex items-center justify-center mb-4">
-                      <Icon size={22} className="text-[#FF6A00]" />
+                    <div className="w-12 h-12 rounded-xl bg-[#F5620F]/8 border border-[#F5620F]/20 flex items-center justify-center mb-4">
+                      <Icon size={22} className="text-[#F5620F]" />
                     </div>
-                    <div className="text-3xl font-extrabold text-[#0A0A0A] mb-1 tabular-nums">{stat.value}</div>
-                    <div className="text-xs text-[#5C504A] font-medium">{stat.label}</div>
+                    <div className="text-3xl font-extrabold text-[#111111] mb-1 tabular-nums">{stat.value}</div>
+                    <div className="text-xs text-[#6B6560] font-medium">{stat.label}</div>
                   </motion.div>
                 </AnimatedSection>
               );
@@ -104,7 +104,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Mission */}
-      <section className="py-24 bg-white border-b border-[#E5DED9]">
+      <section className="py-24 bg-white border-b border-[#E8E4E0]">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left">
@@ -114,14 +114,14 @@ const AboutPage: React.FC = () => {
                 accentWord="Real Growth"
                 className="mb-6"
               />
-              <div className="space-y-4 text-[#5C504A] leading-relaxed">
+              <div className="space-y-4 text-[#6B6560] leading-relaxed">
                 <p>
-                  At <strong className="text-[#0A0A0A]">HUSSAIN X SOLUTION</strong>, we believe great software should do more than function — it should grow your business. That's why every solution we build is engineered with your revenue goals, user experience, and long-term scalability in mind.
+                  At <strong className="text-[#111111]">HUSSAIN X SOLUTION</strong>, we believe great software should do more than function — it should grow your business. That is why every solution we build is engineered with your revenue goals, user experience, and long-term scalability in mind.
                 </p>
                 <p>
-                  From our base in Model Town, Lahore, our team of developers, designers, and growth strategists work as an extension of your team — delivering everything from custom web and mobile apps to data-driven SEO and paid advertising campaigns that generate real, measurable results.
+                  From our base in Model Town, Lahore, our engineers, designers, and growth specialists operate as an extension of your team — delivering bespoke web & mobile applications, AI workflows, and targeted performance marketing that generate tangible ROI.
                 </p>
-                <p className="font-semibold text-[#0A0A0A]">
+                <p className="font-semibold text-[#111111]">
                   We don't just complete projects — we build partnerships that last.
                 </p>
               </div>
@@ -129,9 +129,9 @@ const AboutPage: React.FC = () => {
 
             <AnimatedSection direction="right">
               <div className="relative rounded-2xl bg-gradient-to-br from-[#1A0E08] via-[#2B1A12] to-[#0A0A0A] border border-[#3A2920] p-10 flex flex-col items-center justify-center text-center overflow-hidden shadow-2xl min-h-[300px]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-[#FF6A00]/15 blur-[60px] rounded-full pointer-events-none" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-[#F5620F]/15 blur-[60px] rounded-full pointer-events-none" />
                 <img src="/logo-dark.png" alt="HUSSAIN X SOLUTION" className="h-14 w-auto object-contain mx-auto mb-6 relative z-10" />
-                <p className="text-[#FF6A00] font-semibold tracking-widest uppercase text-xs mb-3 relative z-10">
+                <p className="text-[#F5620F] font-semibold tracking-widest uppercase text-xs mb-3 relative z-10">
                   Model Town Q Block, Lahore
                 </p>
                 <p className="text-[#A89A92] text-sm relative z-10 max-w-xs leading-relaxed">
@@ -144,14 +144,14 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-[#FAFAF9]">
+      <section className="py-24 bg-[#F9F8F6]">
         <div className="container mx-auto px-6 max-w-6xl">
           <AnimatedSection>
             <SectionHeading
               label="Our Values"
               title="What Sets Us Apart"
               accentWord="Sets Us Apart"
-              description="The principles that guide every decision, every project, and every client relationship."
+              description="The principles that guide every technical decision, architecture plan, and client engagement."
               align="center"
               className="mb-14"
             />
@@ -164,13 +164,13 @@ const AboutPage: React.FC = () => {
                 <AnimatedSection key={i} delay={0.08 * i}>
                   <motion.div
                     whileHover={{ y: -4 }}
-                    className="group p-7 rounded-2xl bg-white border border-[#E5DED9] hover:border-[#FF6A00]/50 hover:shadow-[0_8px_30px_-8px_rgba(255,106,0,0.15)] transition-all duration-300 h-full"
+                    className="group p-7 rounded-2xl bg-white border border-[#E8E4E0] hover:border-[#F5620F]/50 hover:shadow-[0_8px_30px_-8px_rgba(245,98,15,0.15)] transition-all duration-300 h-full"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-[#FF6A00]/8 border border-[#FF6A00]/20 flex items-center justify-center mb-5 group-hover:bg-[#FF6A00] group-hover:border-[#FF6A00] transition-all duration-300">
-                      <Icon size={20} className="text-[#FF6A00] group-hover:text-white transition-colors duration-300" />
+                    <div className="w-12 h-12 rounded-xl bg-[#F5620F]/8 border border-[#F5620F]/20 flex items-center justify-center mb-5 group-hover:bg-[#F5620F] group-hover:border-[#F5620F] transition-all duration-300">
+                      <Icon size={20} className="text-[#F5620F] group-hover:text-white transition-colors duration-300" />
                     </div>
-                    <h3 className="font-bold text-[#0A0A0A] mb-2 group-hover:text-[#FF6A00] transition-colors duration-200">{val.title}</h3>
-                    <p className="text-sm text-[#5C504A] leading-relaxed">{val.desc}</p>
+                    <h3 className="font-bold text-[#111111] mb-2 group-hover:text-[#F5620F] transition-colors duration-200">{val.title}</h3>
+                    <p className="text-sm text-[#6B6560] leading-relaxed">{val.desc}</p>
                   </motion.div>
                 </AnimatedSection>
               );
